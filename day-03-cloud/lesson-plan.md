@@ -388,6 +388,9 @@
 - Scratch Online
 - Tinkercad (Autodesk account)
 - ThingSpeak (for IoT demo)
+- GitHub (for version control and collaboration)
+- Jupyter Notebooks (cloud-based, optional)
+- Reference: [CHPC DSI Coding School Cloud Computing](https://github.com/ChpcTraining/dsi_coding_school/tree/main/cloud_computing)
 
 ### Handouts
 - Cloud computing guide
