@@ -10,7 +10,7 @@ This document integrates the [CHPC Training DSI Coding School](https://github.co
 
 ## Overview
 
-The CHPC DSI Coding School is a three-year flagship project (2022-2025) funded by the Department of Science and Innovation (DSI) to raise awareness of coding and robotics within the Department of Basic Education. This curriculum aligns with and complements that initiative.
+The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by the Department of Science and Innovation (DSI) to raise awareness of coding and robotics within the Department of Basic Education. This curriculum aligns with and complements that initiative.
 
 ---
 
