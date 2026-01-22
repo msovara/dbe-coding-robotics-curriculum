@@ -507,7 +507,7 @@ The CHPC DSI Coding School and DBE Coding and Robotics Curriculum are complement
 
 ---
 
-**Last Updated:** 2024  
+**Last Updated:** 22 January 2025 
 **Version:** 1.0
 
 **References:**
