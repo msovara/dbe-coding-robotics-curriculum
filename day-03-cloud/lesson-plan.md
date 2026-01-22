@@ -4,12 +4,14 @@
 **Duration:** 6-8 hours (Full Day)
 **Target Audience:** DBE Teachers (Mixed Experience Levels)
 **Prerequisites:** Days 1-2 completion (Scratch and Arduino basics)
+**Reference:** Based on CHPC Training DSI Coding School Cloud Computing curriculum
 **Learning Objectives:**
 - Understand cloud computing concepts
 - Use cloud storage and collaboration tools
 - Integrate Arduino with cloud services
 - Use cloud-based coding platforms
 - Create data visualization projects
+- Understand cloud infrastructure basics
 
 ---
 
@@ -43,18 +45,20 @@
   - **Cloud:** Files on internet servers (like library books, accessible anywhere)
 
 **Cloud Services Overview (15 minutes)**
-- **Types of Cloud Services:**
-  1. **Storage:** Google Drive, OneDrive, Dropbox
-  2. **Software:** Google Docs, Microsoft 365 Online
-  3. **Platforms:** Scratch Online, Tinkercad
-  4. **IoT Services:** ThingSpeak, Adafruit IO
-  5. **Data Analysis:** Google Sheets, Excel Online
+- **Types of Cloud Services (CHPC Approach):**
+  1. **Infrastructure as a Service (IaaS):** Virtual machines, storage, networking
+  2. **Platform as a Service (PaaS):** Development platforms, databases
+  3. **Software as a Service (SaaS):** Google Drive, OneDrive, Dropbox
+  4. **Educational Platforms:** Scratch Online, Tinkercad, GitHub
+  5. **IoT Services:** ThingSpeak, Adafruit IO
+  6. **Data Analysis:** Google Sheets, Excel Online, Jupyter Notebooks
 
 - **Real-World Examples:**
   - Email (Gmail, Outlook)
   - Photos (Google Photos, iCloud)
   - Music (Spotify, Apple Music)
   - Banking apps
+  - HPC Cloud services (CHPC context)
 
 **Benefits for Education (10 minutes)**
 - **Accessibility:** Work from anywhere
