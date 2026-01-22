@@ -1,0 +1,64 @@
+# DBE Coding and Robotics Curriculum - Git Ignore
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.cache
+
+# Personal notes (if any)
+notes.md
+personal-notes/
+TODO-personal.md
+
+# Large binary files (if any)
+*.zip
+*.tar.gz
+*.pdf
+*.ppt
+*.pptx
+
+# Keep PDFs if they're curriculum materials, but ignore large ones
+# Uncomment if you want to ignore all PDFs:
+# *.pdf
+
+# Python (if any Python scripts are added later)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Node modules (if any web tools are added)
+node_modules/
+npm-debug.log
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
