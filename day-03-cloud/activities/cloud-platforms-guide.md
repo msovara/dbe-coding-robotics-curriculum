@@ -9,6 +9,40 @@ This guide introduces cloud platforms useful for coding and robotics education. 
 
 ## Cloud Storage Platforms
 
+### Sebowa CHPC Cloud
+
+**What it is:** CHPC's cloud computing platform for education in South Africa
+
+**Key Features:**
+- Cloud storage and computing resources
+- Educational focus and support
+- South African based
+- Free or low-cost for schools
+- Integration with CHPC tools
+
+**Educational Use:**
+- Student project storage
+- Teacher resource library
+- Collaborative development
+- Data management
+- Remote learning support
+
+**Getting Started:**
+1. Contact CHPC for educational account
+2. Complete account setup process
+3. Access via web interface
+4. Explore dashboard features
+
+**Advantages:**
+- Local South African support
+- Educational pricing
+- CHPC ecosystem integration
+- Research resource access
+
+**See:** [Sebowa Guide](../SEBOWA_GUIDE.md) for detailed information
+
+---
+
 ### Google Drive
 
 **What it is:** File storage and collaboration platform

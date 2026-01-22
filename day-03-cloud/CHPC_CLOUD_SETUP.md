@@ -243,10 +243,21 @@ After completing Day 3:
 
 ---
 
+## Sebowa CHPC Cloud Platform
+
+**Sebowa** is CHPC's cloud computing platform designed for educational use. See the [Sebowa Guide](SEBOWA_GUIDE.md) for detailed information on:
+- Getting started with Sebowa
+- Using Sebowa for coding and robotics education
+- Classroom implementation
+- Integration with other tools
+
+---
+
 ## References
 
 - CHPC Training DSI Coding School: https://github.com/ChpcTraining/dsi_coding_school
 - Cloud Computing Module: https://github.com/ChpcTraining/dsi_coding_school/tree/main/cloud_computing
+- Sebowa Guide: [SEBOWA_GUIDE.md](SEBOWA_GUIDE.md)
 - DBE Curriculum Repository: https://github.com/msovara/dbe-coding-robotics-curriculum
 
 ---

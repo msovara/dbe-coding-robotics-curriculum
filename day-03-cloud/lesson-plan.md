@@ -50,8 +50,9 @@
   2. **Platform as a Service (PaaS):** Development platforms, databases
   3. **Software as a Service (SaaS):** Google Drive, OneDrive, Dropbox
   4. **Educational Platforms:** Scratch Online, Tinkercad, GitHub
-  5. **IoT Services:** ThingSpeak, Adafruit IO
-  6. **Data Analysis:** Google Sheets, Excel Online, Jupyter Notebooks
+  5. **CHPC Cloud (Sebowa):** South African educational cloud platform
+  6. **IoT Services:** ThingSpeak, Adafruit IO
+  7. **Data Analysis:** Google Sheets, Excel Online, Jupyter Notebooks
 
 - **Real-World Examples:**
   - Email (Gmail, Outlook)
@@ -398,6 +399,7 @@
 - Tinkercad quick start
 - Data visualization templates
 - IoT platform comparison
+- Sebowa CHPC Cloud Platform guide
 
 ---
 
