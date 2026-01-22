@@ -147,5 +147,5 @@ By the end of the week, you will be able to:
 
 ---
 
-*Last Updated: 2024 | Version 1.0*
+*Last Updated: 22 January 2025 | Version 1.0*
 
