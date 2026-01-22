@@ -375,8 +375,8 @@ This curriculum was developed to support DBE teachers in bringing coding and rob
 ## Version Information
 
 **Version:** 1.0
-**Date Created:** 2024
-**Last Updated:** 2024
+**Date Created:** 22 January 2025
+**Last Updated:** 2022 January 2025
 **Status:** Complete - Ready for Use
 
 ---
