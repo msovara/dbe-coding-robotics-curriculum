@@ -286,6 +286,6 @@ If participants need more time on certain topics:
 
 ---
 
-**Last Updated:** 2024  
+**Last Updated:** 22 January 2025  
 **Version:** 1.0
 
