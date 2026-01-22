@@ -4,6 +4,7 @@
 **Duration:** 6-8 hours (Full Day)
 **Target Audience:** DBE Teachers (Mixed Experience Levels)
 **Prerequisites:** Days 1-3 completion
+**CHPC Integration:** See [CHPC Computer Hardware Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/computer_hardware) for disassembly/assembly procedures
 **Learning Objectives:**
 - Understand computer hardware components
 - Deep dive into Arduino architecture

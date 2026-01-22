@@ -3,6 +3,7 @@
 
 **Duration:** 6-8 hours (Full Day)
 **Target Audience:** DBE Teachers (Mixed Experience Levels)
+**CHPC Integration:** See [CHPC Scratch Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/scratch) for additional resources
 **Learning Objectives:**
 - Understand computational thinking concepts
 - Master Scratch interface and basic programming concepts

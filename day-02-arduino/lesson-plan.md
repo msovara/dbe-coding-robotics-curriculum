@@ -4,6 +4,7 @@
 **Duration:** 6-8 hours (Full Day)
 **Target Audience:** DBE Teachers (Mixed Experience Levels)
 **Prerequisites:** Day 1 completion (basic Scratch knowledge)
+**CHPC Integration:** See [CHPC Robotics Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics) for robotic arm project and advanced examples
 **Learning Objectives:**
 - Understand Arduino hardware components
 - Set up Scratch for Arduino (S4A)

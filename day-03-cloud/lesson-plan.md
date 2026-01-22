@@ -4,7 +4,8 @@
 **Duration:** 6-8 hours (Full Day)
 **Target Audience:** DBE Teachers (Mixed Experience Levels)
 **Prerequisites:** Days 1-2 completion (Scratch and Arduino basics)
-**Reference:** Based on CHPC Training DSI Coding School Cloud Computing curriculum
+**Reference:** Based on [CHPC Training DSI Coding School Cloud Computing](https://github.com/ChpcTraining/dsi_coding_school/tree/main/cloud_computing) curriculum
+**Virtual Resources:** See [CHPC Virtual Resources](https://github.com/ChpcTraining/dsi_coding_school/tree/main/virtual_resources) for VM setup
 **Learning Objectives:**
 - Understand cloud computing concepts
 - Use cloud storage and collaboration tools

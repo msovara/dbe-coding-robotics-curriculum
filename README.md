@@ -3,6 +3,8 @@
 
 This curriculum is designed for the Department of Basic Education (DBE) in South Africa to train teachers in coding and robotics education.
 
+**Integrated with:** [CHPC Training DSI Coding School](https://github.com/ChpcTraining/dsi_coding_school) - See [CHPC_INTEGRATION.md](CHPC_INTEGRATION.md) for details.
+
 ## Curriculum Overview
 
 - **Duration:** 5 days (full-day workshops, 6-8 hours per day)
