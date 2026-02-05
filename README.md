@@ -17,7 +17,7 @@ This curriculum is designed for the Department of Basic Education (DBE) in South
 - **Day 2:** Physical Computing with Scratch for Arduino
 - **Day 3:** Cloud Computing Fundamentals
 - **Day 4:** Computer and Arduino Hardware Deep Dive
-- **Day 5:** Integration, Assessment, and Capstone Project
+- **Day 5:** Integration, Assessment, and "Lightouse" Project
 
 ## Learning Outcomes
 
