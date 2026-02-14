@@ -65,6 +65,10 @@
 - Micro:bit boards (one per participant or pair)
 - USB cables
 - Computers with internet (MakeCode runs in browser)
+- **Guides:** [microbit-introduction-guide.md](microbit-introduction-guide.md)
+- **Activities:** [activities/microbit-activities.md](activities/microbit-activities.md)
+- **Projects:** [projects/project-templates.md](projects/project-templates.md)
+- **Assessment:** [assessment/rubric.md](assessment/rubric.md)
 - Optional: batteries and battery packs, simple robotics kits (e.g. buggy)
 
 ---

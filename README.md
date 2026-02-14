@@ -44,11 +44,32 @@ dbe-coding-robotics-curriculum/
 │   ├── projects/
 │   └── assessment/
 ├── day-03-arduino/
-│   └── lesson-plan.md
+│   ├── lesson-plan.md
+│   ├── arduino-robotics-guide.md
+│   ├── activities/
+│   │   └── robotics-activities.md
+│   ├── projects/
+│   │   └── project-guides.md
+│   └── assessment/
+│       └── rubric.md
 ├── day-04-microbit/
-│   └── lesson-plan.md
+│   ├── lesson-plan.md
+│   ├── microbit-introduction-guide.md
+│   ├── activities/
+│   │   └── microbit-activities.md
+│   ├── projects/
+│   │   └── project-templates.md
+│   └── assessment/
+│       └── rubric.md
 ├── day-05-microbit-codeclub/
-│   └── lesson-plan.md
+│   ├── lesson-plan.md
+│   ├── code-club-guide.md
+│   ├── activities/
+│   │   └── code-club-activities.md
+│   ├── projects/
+│   │   └── first-code-club-session-template.md
+│   └── assessment/
+│       └── rubric.md
 ├── resources/
 │   ├── cloud-computing/     (reference: former Day 3)
 │   ├── hardware/           (reference: former Day 4)

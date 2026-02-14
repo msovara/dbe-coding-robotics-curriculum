@@ -46,6 +46,10 @@ This curriculum provides a comprehensive week-long (5-day) teacher training prog
 ### Day 3: Coding & Robotics with Arduino
 **Files:**
 - `day-03-arduino/lesson-plan.md` - Complete day plan
+- `day-03-arduino/arduino-robotics-guide.md` - Guide extending Day 2 to robotics
+- `day-03-arduino/activities/robotics-activities.md` - Hands-on activities
+- `day-03-arduino/projects/project-guides.md` - Step-by-step project guides
+- `day-03-arduino/assessment/rubric.md` - Assessment rubric
 
 **Key Topics:**
 - Extended Arduino concepts and multi-sensor projects
@@ -59,6 +63,10 @@ This curriculum provides a comprehensive week-long (5-day) teacher training prog
 ### Day 4: Coding & Robotics with Micro:bit – Part 1
 **Files:**
 - `day-04-microbit/lesson-plan.md` - Complete day plan
+- `day-04-microbit/microbit-introduction-guide.md` - Teacher's guide to Micro:bit and MakeCode
+- `day-04-microbit/activities/microbit-activities.md` - Hands-on activities
+- `day-04-microbit/projects/project-templates.md` - Project templates (name badge, dice, step counter, etc.)
+- `day-04-microbit/assessment/rubric.md` - Assessment rubric
 
 **Key Topics:**
 - Micro:bit hardware and MakeCode
@@ -70,6 +78,10 @@ This curriculum provides a comprehensive week-long (5-day) teacher training prog
 ### Day 5: Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
 **Files:**
 - `day-05-microbit-codeclub/lesson-plan.md` - Complete day plan
+- `day-05-microbit-codeclub/code-club-guide.md` - What is Code Club, setup, resources
+- `day-05-microbit-codeclub/activities/code-club-activities.md` - Planning and mini Code Club activities
+- `day-05-microbit-codeclub/projects/first-code-club-session-template.md` - First session planning template
+- `day-05-microbit-codeclub/assessment/rubric.md` - Assessment rubric
 
 **Key Topics:**
 - Micro:bit Part 2 (radio, variables, deeper projects)
@@ -119,11 +131,32 @@ dbe-coding-robotics-curriculum/
 │   └── assessment/
 │       └── rubric.md
 ├── day-03-arduino/
-│   └── lesson-plan.md
+│   ├── lesson-plan.md
+│   ├── arduino-robotics-guide.md
+│   ├── activities/
+│   │   └── robotics-activities.md
+│   ├── projects/
+│   │   └── project-guides.md
+│   └── assessment/
+│       └── rubric.md
 ├── day-04-microbit/
-│   └── lesson-plan.md
+│   ├── lesson-plan.md
+│   ├── microbit-introduction-guide.md
+│   ├── activities/
+│   │   └── microbit-activities.md
+│   ├── projects/
+│   │   └── project-templates.md
+│   └── assessment/
+│       └── rubric.md
 ├── day-05-microbit-codeclub/
-│   └── lesson-plan.md
+│   ├── lesson-plan.md
+│   ├── code-club-guide.md
+│   ├── activities/
+│   │   └── code-club-activities.md
+│   ├── projects/
+│   │   └── first-code-club-session-template.md
+│   └── assessment/
+│       └── rubric.md
 ├── resources/
 │   ├── cloud-computing/     (reference: former Day 3)
 │   ├── hardware/            (reference: former Day 4)

@@ -64,7 +64,11 @@
 
 - Arduino kits, components (as Day 2)
 - S4A installed and firmware uploaded
-- Reference: Day 2 materials and [resources/hardware](https://github.com/msovara/dbe-coding-robotics-curriculum/tree/main/resources/hardware) for troubleshooting
+- **Guides:** [arduino-robotics-guide.md](arduino-robotics-guide.md)
+- **Activities:** [activities/robotics-activities.md](activities/robotics-activities.md)
+- **Projects:** [projects/project-guides.md](projects/project-guides.md)
+- **Assessment:** [assessment/rubric.md](assessment/rubric.md)
+- **Reference:** Day 2 materials and [resources/hardware](../resources/hardware) for troubleshooting
 
 ---
 

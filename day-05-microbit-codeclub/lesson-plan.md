@@ -66,8 +66,12 @@
 - Micro:bit boards and USB cables
 - Computers with internet (MakeCode, Code Club site)
 - Access to Code Club project pages (e.g. codeclub.org / local partner)
+- **Guides:** [code-club-guide.md](code-club-guide.md)
+- **Activities:** [activities/code-club-activities.md](activities/code-club-activities.md)
+- **Projects:** [projects/first-code-club-session-template.md](projects/first-code-club-session-template.md)
+- **Assessment:** [assessment/rubric.md](assessment/rubric.md)
 - Certificates and evaluation forms
-- Action plan template (can use or adapt from previous Day 5 integration template)
+- Action plan template: [resources/templates/integration-planning-template.md](../resources/templates/integration-planning-template.md)
 
 ---
 
