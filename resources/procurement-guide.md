@@ -522,3 +522,6 @@ When requesting quotes, specify:
 
 **Good luck with your procurement!** The investment in hardware will pay off in student engagement and learning outcomes.
 
+
+
+

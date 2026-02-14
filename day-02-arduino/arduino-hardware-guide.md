@@ -493,3 +493,6 @@ After understanding hardware basics:
 
 Remember: Start simple, build complexity gradually, and always prioritize safety!
 
+
+
+

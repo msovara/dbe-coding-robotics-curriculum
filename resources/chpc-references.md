@@ -45,10 +45,10 @@ This document provides quick access links to all CHPC Training DSI Coding School
 
 ---
 
-### Cloud Computing
+### Cloud Computing (Reference)
 **Link:** https://github.com/ChpcTraining/dsi_coding_school/tree/main/cloud_computing
 
-**DBE Integration:** Day 3 - Cloud Computing Fundamentals
+**DBE Integration:** Reference material in `resources/cloud-computing/` (former Day 3)
 
 **Contents:**
 - Cloud computing concepts
@@ -57,16 +57,14 @@ This document provides quick access links to all CHPC Training DSI Coding School
 - Virtual resources
 
 **Use With:**
-- `day-03-cloud/lesson-plan.md`
-- `day-03-cloud/CHPC_CLOUD_SETUP.md`
-- `day-03-cloud/SEBOWA_GUIDE.md`
+- `resources/cloud-computing/` (README, lesson-plan, CHPC_CLOUD_SETUP, SEBOWA_GUIDE, etc.)
 
 ---
 
-### Computer Hardware
+### Computer Hardware (Reference)
 **Link:** https://github.com/ChpcTraining/dsi_coding_school/tree/main/computer_hardware
 
-**DBE Integration:** Day 4 - Computer and Arduino Hardware Deep Dive
+**DBE Integration:** Reference material in `resources/hardware/` (former Day 4); supports Day 3 Arduino
 
 **Contents:**
 - Hardware disassembly procedures
@@ -75,15 +73,15 @@ This document provides quick access links to all CHPC Training DSI Coding School
 - Hardware troubleshooting
 
 **Use With:**
-- `day-04-hardware/lesson-plan.md`
-- `day-04-hardware/troubleshooting-guide.md`
+- `resources/hardware/` (lesson-plan, troubleshooting-guide)
+- `day-03-arduino/lesson-plan.md` (Arduino troubleshooting reference)
 
 ---
 
-### Virtual Resources
+### Virtual Resources (Reference)
 **Link:** https://github.com/ChpcTraining/dsi_coding_school/tree/main/virtual_resources
 
-**DBE Integration:** Day 3 - Cloud Computing, Day 5 - Extended Learning
+**DBE Integration:** Reference; use with `resources/cloud-computing/`
 
 **Contents:**
 - Linux OS installation on VM
@@ -93,15 +91,14 @@ This document provides quick access links to all CHPC Training DSI Coding School
 - Terminal basics
 
 **Use With:**
-- `day-03-cloud/lesson-plan.md`
-- `day-03-cloud/SEBOWA_GUIDE.md`
+- `resources/cloud-computing/` (Sebowa/cloud reference)
 
 ---
 
 ### CodeClub
 **Link:** https://github.com/ChpcTraining/dsi_coding_school/tree/main/codeclub
 
-**DBE Integration:** All Days - Supplementary Activities
+**DBE Integration:** Day 5 - Code Club Intro; All Days - Supplementary Activities
 
 **Contents:**
 - CodeClub activities
@@ -163,16 +160,22 @@ This document provides quick access links to all CHPC Training DSI Coding School
 - CHPC Robotics: https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics
 - CHPC Scratch: https://github.com/ChpcTraining/dsi_coding_school/tree/main/scratch
 
-### Day 3: Cloud Computing
-- CHPC Cloud Computing: https://github.com/ChpcTraining/dsi_coding_school/tree/main/cloud_computing
-- CHPC Virtual Resources: https://github.com/ChpcTraining/dsi_coding_school/tree/main/virtual_resources
+### Day 3: Coding & Robotics with Arduino
+- CHPC Robotics: https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics
+- DBE: `day-03-arduino/`, reference: `resources/hardware/`
 
-### Day 4: Hardware
-- CHPC Computer Hardware: https://github.com/ChpcTraining/dsi_coding_school/tree/main/computer_hardware
+### Day 4: Coding & Robotics with Micro:bit – Part 1
+- CHPC CodeClub (Micro:bit/Scratch): https://github.com/ChpcTraining/dsi_coding_school/tree/main/codeclub
+- DBE: `day-04-microbit/`
 
-### Day 5: Integration
-- All CHPC modules for reference
+### Day 5: Micro:bit Part 2 (Code Club Intro)
+- CHPC CodeClub: https://github.com/ChpcTraining/dsi_coding_school/tree/main/codeclub
 - CHPC Resources: https://github.com/ChpcTraining/dsi_coding_school/tree/main/resources
+- DBE: `day-05-microbit-codeclub/`, `resources/templates/integration-planning-template.md`
+
+### Reference (cloud and hardware)
+- Cloud: `resources/cloud-computing/` + CHPC cloud_computing, virtual_resources
+- Hardware: `resources/hardware/` + CHPC computer_hardware
 
 ---
 
@@ -204,4 +207,7 @@ For detailed integration instructions, see:
 ---
 
 **Last Updated:** 2024
+
+
+
 

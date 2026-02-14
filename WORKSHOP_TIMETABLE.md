@@ -65,18 +65,17 @@
 
 ---
 
-## Day 3: Cloud Computing Fundamentals
+## Day 3: Coding & Robotics with Arduino
 
 ### Morning Session (09:00 - 13:00)
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 09:00 - 09:15 | 15 min | Day 2 Review & Q&A | Quick review, address questions |
-| 09:15 - 10:15 | 60 min | Introduction to Cloud Computing | What is the cloud, services overview, benefits |
+| 09:00 - 10:15 | 75 min | Review and Extended Arduino Concepts | Day 2 recap, digital/analog I/O, planning robotics projects |
 | 10:15 - 10:30 | 15 min | Preparation for Break | Quick wrap-up before break |
 | 10:30 - 11:00 | 30 min | **Morning Tea Break** | Refreshments |
-| 11:00 - 12:30 | 90 min | Cloud Storage & Collaboration | Google Drive/OneDrive, sharing, real-time collaboration |
-| 12:30 - 13:00 | 30 min | IoT & Cloud Integration | Connecting Arduino to cloud, IoT concepts |
+| 11:00 - 12:30 | 90 min | Arduino Coding Projects | Multi-sensor projects, variables, logic, hands-on build |
+| 12:30 - 13:00 | 30 min | Robotics Applications | Motors/servos, simple robotic behaviours, classroom robotics |
 
 ### Lunch Break (13:00 - 14:00)
 
@@ -84,27 +83,24 @@
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 14:00 - 15:00 | 60 min | Cloud-Based Coding Platforms | Scratch Online, Tinkercad Circuits |
-| 15:00 - 15:30 | 30 min | Data Visualization | Google Sheets, creating charts, data analysis |
+| 14:00 - 15:30 | 90 min | Project Development | Design and build Coding & Robotics project with Arduino |
 | 15:30 - 16:00 | 30 min | **Afternoon Tea Break** | Refreshments |
-| 16:00 - 16:45 | 45 min | Subject-Specific Data Projects | Design data collection projects |
-| 16:15 - 16:45 | 30 min | Subject-Specific Data Projects | Design data collection projects |
-| 16:45 - 17:00 | 15 min | Daily Reflection & Wrap-up | Reflection journal, Q&A, preview Day 4 |
+| 16:00 - 16:45 | 45 min | Share and Reflect | Project showcases, classroom application, daily reflection |
+| 16:45 - 17:00 | 15 min | Wrap-up | Preview Day 4: Micro:bit Part 1 |
 
 ---
 
-## Day 4: Computer and Arduino Hardware Deep Dive
+## Day 4: Coding & Robotics with Micro:bit – Part 1
 
 ### Morning Session (09:00 - 13:00)
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 09:00 - 09:15 | 15 min | Day 3 Review & Q&A | Quick review, address questions |
-| 09:15 - 10:15 | 60 min | Computer Hardware Basics | CPU, RAM, storage, input/output devices |
+| 09:00 - 10:15 | 75 min | Introduction to Micro:bit | Hardware overview, MakeCode, first program on LEDs |
 | 10:15 - 10:30 | 15 min | Preparation for Break | Quick wrap-up before break |
 | 10:30 - 11:00 | 30 min | **Morning Tea Break** | Refreshments |
-| 11:00 - 12:30 | 90 min | Arduino Hardware Architecture | Microcontroller vs. computer, digital vs. analog, power |
-| 12:30 - 13:00 | 30 min | Circuit Building Practice | Building multiple component circuits |
+| 11:00 - 12:30 | 90 min | Inputs and Outputs | Buttons, sensors, LED grid, pins; hands-on projects (dice, step counter, etc.) |
+| 12:30 - 13:00 | 30 min | From Screen to Device | Downloading, flashing, troubleshooting, saving projects |
 
 ### Lunch Break (13:00 - 14:00)
 
@@ -112,27 +108,24 @@
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 14:00 - 15:00 | 60 min | Advanced Components | Motors, displays, communication modules |
-| 15:00 - 15:30 | 30 min | Complete System Project | Build complete system with multiple components |
+| 14:00 - 15:30 | 90 min | Micro:bit and Robotics Ideas | Micro:bit as robot “brain”, pins for motors/servos, classroom project planning |
 | 15:30 - 16:00 | 30 min | **Afternoon Tea Break** | Refreshments |
-| 16:00 - 16:45 | 45 min | Troubleshooting & Maintenance | Systematic troubleshooting, equipment care |
-| 16:15 - 16:45 | 30 min | Troubleshooting & Maintenance | Systematic troubleshooting, equipment care |
-| 16:45 - 17:00 | 15 min | Daily Reflection & Wrap-up | Reflection journal, Q&A, preview Day 5 |
+| 16:00 - 16:45 | 45 min | Consolidation and Reflection | Share Micro:bit project, managing Micro:bits in class, Q&A |
+| 16:45 - 17:00 | 15 min | Wrap-up | Preview Day 5: Micro:bit Part 2 and Code Club |
 
 ---
 
-## Day 5: Integration, Assessment, and Capstone Project
+## Day 5: Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
 
 ### Morning Session (09:00 - 13:00)
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 09:00 - 09:15 | 15 min | Day 4 Review & Q&A | Quick review, address questions |
-| 09:15 - 10:15 | 60 min | Curriculum Integration Workshop | Mapping to DBE subjects, integration strategies |
+| 09:00 - 10:15 | 75 min | Micro:bit Part 2 – Deeper Projects | Review Day 4, radio, variables, one substantial project |
 | 10:15 - 10:30 | 15 min | Preparation for Break | Quick wrap-up before break |
 | 10:30 - 11:00 | 30 min | **Morning Tea Break** | Refreshments |
-| 11:00 - 12:30 | 90 min | Assessment Strategies | Rubrics, portfolios, peer assessment, self-assessment |
-| 12:30 - 13:00 | 30 min | Integration Plan Creation | Create your integration plan for your subject |
+| 11:00 - 12:30 | 90 min | Code Club Introduction | What is Code Club, DBE links, resources, setting up at school |
+| 12:30 - 13:00 | 30 min | Code Club Resources and First Session | Browse projects, choose one for mini Code Club, plan session |
 
 ### Lunch Break (13:00 - 14:00)
 
@@ -140,12 +133,10 @@
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 14:00 - 15:00 | 60 min | Capstone Project (Part 1) | Design and build complete project (all concepts) |
-| 15:00 - 15:30 | 30 min | Capstone Project (Part 2) | Continue building and testing |
+| 14:00 - 15:30 | 90 min | Run a Mini Code Club | Facilitate short Code Club-style session, reflect on what works |
 | 15:30 - 16:00 | 30 min | **Afternoon Tea Break** | Refreshments |
-| 16:00 - 16:30 | 30 min | Project Presentations | Present capstone projects (3 min each) |
-| 16:30 - 16:50 | 20 min | Resource Sharing & Action Plans | Compile resources, create action plans, network |
-| 16:50 - 17:00 | 10 min | Workshop Evaluation & Closing | Complete evaluation, certificates, closing remarks |
+| 16:00 - 16:45 | 45 min | Workshop Wrap-up and Next Steps | Recap week, action planning, sharing, certificates and evaluation |
+| 16:45 - 17:00 | 15 min | Closing | Thank you and closing remarks |
 
 ---
 
@@ -221,12 +212,12 @@
 By the end of the week, participants will:
 - ✅ Understand computational thinking
 - ✅ Master Scratch programming
-- ✅ Use Arduino with S4A
-- ✅ Understand cloud computing basics
-- ✅ Troubleshoot hardware issues
+- ✅ Use Arduino with S4A and build robotics projects
+- ✅ Use Micro:bit with MakeCode for coding and simple robotics
+- ✅ Know how to run a Code Club and use Code Club resources
 - ✅ Integrate coding/robotics into curriculum
 - ✅ Assess student projects
-- ✅ Create lesson plans
+- ✅ Create lesson plans and action plans
 - ✅ Build complete projects
 
 ---

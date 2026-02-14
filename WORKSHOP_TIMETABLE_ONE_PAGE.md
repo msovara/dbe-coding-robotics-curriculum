@@ -64,72 +64,65 @@
 
 ---
 
-## Day 3: Cloud Computing Fundamentals
+## Day 3: Coding & Robotics with Arduino
 
-**Focus:** Leveraging cloud services for collaboration and data visualization
+**Focus:** Extended Arduino projects, sensors/actuators, robotics applications
 
 | Time | Session |
 |------|---------|
-| 09:00 - 09:15 | Day 2 Review & Q&A |
-| 09:15 - 10:15 | Introduction to Cloud Computing |
+| 09:00 - 10:15 | Review and Extended Arduino Concepts |
 | 10:30 - 11:00 | **Morning Tea Break** |
-| 11:00 - 12:30 | Cloud Storage & Collaboration |
-| 12:30 - 13:00 | IoT & Cloud Integration |
+| 11:00 - 12:30 | Arduino Coding Projects |
+| 12:30 - 13:00 | Robotics Applications |
 | 13:00 - 14:00 | **Lunch Break** |
-| 14:00 - 15:00 | Cloud-Based Coding Platforms |
-| 15:00 - 15:30 | Data Visualization |
+| 14:00 - 15:30 | Project Development |
 | 15:30 - 16:00 | **Afternoon Tea Break** |
-| 16:00 - 16:45 | Subject-Specific Data Projects |
-| 16:45 - 17:00 | Daily Reflection & Wrap-up |
+| 16:00 - 16:45 | Share and Reflect |
+| 16:45 - 17:00 | Wrap-up (preview Day 4) |
 
 ---
 
-## Day 4: Computer and Arduino Hardware Deep Dive
+## Day 4: Coding & Robotics with Micro:bit – Part 1
 
-**Focus:** Deep understanding of hardware systems and troubleshooting
+**Focus:** Micro:bit intro, MakeCode, inputs/outputs, flashing programs
 
 | Time | Session |
 |------|---------|
-| 09:00 - 09:15 | Day 3 Review & Q&A |
-| 09:15 - 10:15 | Computer Hardware Basics |
+| 09:00 - 10:15 | Introduction to Micro:bit |
 | 10:30 - 11:00 | **Morning Tea Break** |
-| 11:00 - 12:30 | Arduino Hardware Architecture |
-| 12:30 - 13:00 | Circuit Building Practice |
+| 11:00 - 12:30 | Inputs and Outputs |
+| 12:30 - 13:00 | From Screen to Device |
 | 13:00 - 14:00 | **Lunch Break** |
-| 14:00 - 15:00 | Advanced Components |
-| 15:00 - 15:30 | Complete System Project |
+| 14:00 - 15:30 | Micro:bit and Robotics Ideas |
 | 15:30 - 16:00 | **Afternoon Tea Break** |
-| 16:00 - 16:45 | Troubleshooting & Maintenance |
-| 16:45 - 17:00 | Daily Reflection & Wrap-up |
+| 16:00 - 16:45 | Consolidation and Reflection |
+| 16:45 - 17:00 | Wrap-up (preview Day 5) |
 
 ---
 
-## Day 5: Integration, Assessment, and Capstone Project
+## Day 5: Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
 
-**Focus:** Applying all skills to create curriculum-integrated solutions
+**Focus:** Micro:bit Part 2, Code Club intro, mini Code Club, workshop wrap-up
 
 | Time | Session |
 |------|---------|
-| 09:00 - 09:15 | Day 4 Review & Q&A |
-| 09:15 - 10:15 | Curriculum Integration Workshop |
+| 09:00 - 10:15 | Micro:bit Part 2 – Deeper Projects |
 | 10:30 - 11:00 | **Morning Tea Break** |
-| 11:00 - 12:30 | Assessment Strategies |
-| 12:30 - 13:00 | Integration Plan Creation |
+| 11:00 - 12:30 | Code Club Introduction |
+| 12:30 - 13:00 | Code Club Resources and First Session |
 | 13:00 - 14:00 | **Lunch Break** |
-| 14:00 - 15:00 | Capstone Project (Part 1) |
-| 15:00 - 15:30 | Capstone Project (Part 2) |
+| 14:00 - 15:30 | Run a Mini Code Club |
 | 15:30 - 16:00 | **Afternoon Tea Break** |
-| 16:00 - 16:30 | Project Presentations |
-| 16:30 - 16:50 | Resource Sharing & Action Plans |
-| 16:50 - 17:00 | Workshop Evaluation & Closing |
+| 16:00 - 16:45 | Workshop Wrap-up and Next Steps |
+| 16:45 - 17:00 | Closing |
 
 ---
 
 ## Workshop Outcomes
 
 By the end of the week, you will be able to:
-- ✅ Teach coding and robotics concepts to students
-- ✅ Run similar workshops in your school
+- ✅ Teach coding and robotics concepts to students (Scratch, Arduino, Micro:bit)
+- ✅ Run similar workshops and Code Club sessions in your school
 - ✅ Integrate coding/robotics into existing DBE curriculum subjects
 - ✅ Assess student projects effectively
 - ✅ Troubleshoot technical issues

@@ -445,3 +445,6 @@ DateTime        | Event      | Temp | Light | Notes
 
 Remember: The goal is not just to create charts, but to understand what the data tells us and how we can use that information!
 
+
+
+

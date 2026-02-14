@@ -3,7 +3,7 @@
 
 ## Overview
 
-This curriculum provides a comprehensive week-long (5-day) teacher training program for DBE educators in South Africa. The curriculum covers Scratch programming, Scratch for Arduino, cloud computing, and hardware fundamentals, with a focus on practical classroom integration.
+This curriculum provides a comprehensive week-long (5-day) teacher training program for DBE educators in South Africa. The curriculum covers Scratch programming, Scratch for Arduino, extended Arduino and robotics, Micro:bit (Parts 1 and 2), and Code Club introduction, with a focus on practical classroom integration. Reference material on cloud computing and hardware is in `resources/cloud-computing/` and `resources/hardware/`.
 
 ---
 
@@ -43,47 +43,40 @@ This curriculum provides a comprehensive week-long (5-day) teacher training prog
 
 ---
 
-### Day 3: Cloud Computing Fundamentals
-**Files Created:**
-- `day-03-cloud/lesson-plan.md` - Complete day plan
-- `day-03-cloud/activities/cloud-platforms-guide.md` - Platform comparison and guides
-- `day-03-cloud/projects/data-visualization-templates.md` - 7 ready-to-use templates
-- `day-03-cloud/assessment/rubric.md` - Assessment framework
+### Day 3: Coding & Robotics with Arduino
+**Files:**
+- `day-03-arduino/lesson-plan.md` - Complete day plan
 
 **Key Topics:**
-- Cloud computing concepts
-- Cloud storage and collaboration (Google Drive, OneDrive)
-- IoT and cloud integration
-- Cloud-based coding (Scratch Online, Tinkercad)
-- Data visualization with Google Sheets
+- Extended Arduino concepts and multi-sensor projects
+- Robotics applications (motors, servos, simple behaviours)
+- Project development and classroom robotics
+
+**Reference:** Hardware troubleshooting in `resources/hardware/`.
 
 ---
 
-### Day 4: Computer and Arduino Hardware Deep Dive
-**Files Created:**
-- `day-04-hardware/lesson-plan.md` - Complete day plan
-- `day-04-hardware/troubleshooting-guide.md` - Comprehensive troubleshooting manual
+### Day 4: Coding & Robotics with Micro:bit – Part 1
+**Files:**
+- `day-04-microbit/lesson-plan.md` - Complete day plan
 
 **Key Topics:**
-- Computer hardware components (CPU, RAM, storage)
-- Arduino architecture (microcontroller vs. computer)
-- Advanced components (motors, displays, communication)
-- Systematic troubleshooting approach
-- Equipment maintenance
+- Micro:bit hardware and MakeCode
+- Inputs and outputs (buttons, sensors, LED grid, pins)
+- Flashing programs, Micro:bit and robotics ideas
 
 ---
 
-### Day 5: Integration, Assessment, and Capstone Project
-**Files Created:**
-- `day-05-integration/lesson-plan.md` - Complete day plan
-- `day-05-integration/resources/integration-planning-template.md` - Comprehensive template
+### Day 5: Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
+**Files:**
+- `day-05-microbit-codeclub/lesson-plan.md` - Complete day plan
 
 **Key Topics:**
-- Curriculum integration strategies
-- Assessment methods (rubrics, portfolios, peer assessment)
-- Capstone project development
-- Action planning
-- Resource sharing and networking
+- Micro:bit Part 2 (radio, variables, deeper projects)
+- Code Club introduction, resources, setting up at school
+- Mini Code Club session, workshop wrap-up, action planning, certificates
+
+**Reference:** Integration planning template in `resources/templates/integration-planning-template.md`.
 
 ---
 
@@ -125,24 +118,18 @@ dbe-coding-robotics-curriculum/
 │   │   └── project-guides.md
 │   └── assessment/
 │       └── rubric.md
-├── day-03-cloud/
-│   ├── lesson-plan.md
-│   ├── activities/
-│   │   └── cloud-platforms-guide.md
-│   ├── projects/
-│   │   └── data-visualization-templates.md
-│   └── assessment/
-│       └── rubric.md
-├── day-04-hardware/
-│   ├── lesson-plan.md
-│   └── troubleshooting-guide.md
-├── day-05-integration/
-│   ├── lesson-plan.md
-│   └── resources/
-│       └── integration-planning-template.md
+├── day-03-arduino/
+│   └── lesson-plan.md
+├── day-04-microbit/
+│   └── lesson-plan.md
+├── day-05-microbit-codeclub/
+│   └── lesson-plan.md
 ├── resources/
+│   ├── cloud-computing/     (reference: former Day 3)
+│   ├── hardware/            (reference: former Day 4)
 │   ├── templates/
-│   │   └── lesson-plan-template.md
+│   │   ├── lesson-plan-template.md
+│   │   └── integration-planning-template.md
 │   └── procurement-guide.md
 └── supporting-materials/
     ├── pre-workshop-survey.md
@@ -241,9 +228,7 @@ dbe-coding-robotics-curriculum/
 ### Rubrics Provided
 - Day 1: Computational thinking and Scratch skills
 - Day 2: Hardware and Arduino skills
-- Day 3: Cloud computing skills
-- Day 4: Hardware troubleshooting
-- Day 5: Integration and application
+- Days 3–5: Project and participation (see lesson plans and resources)
 
 ---
 
@@ -252,15 +237,16 @@ dbe-coding-robotics-curriculum/
 ### Project Templates
 - 6 Scratch projects (Day 1)
 - 8 Arduino projects (Day 2)
-- 7 data visualization templates (Day 3)
-- Multiple integration examples (Day 5)
+- Arduino and Micro:bit projects (Days 3–4)
+- Code Club and action planning (Day 5)
+- Data visualization and cloud reference in `resources/cloud-computing/`
 
 ### Guides and References
 - Scratch introduction guide
 - Arduino hardware guide
 - S4A setup instructions
-- Cloud platforms guide
-- Troubleshooting guide
+- Cloud platforms guide (in `resources/cloud-computing/`)
+- Troubleshooting guide (in `resources/hardware/`)
 - Procurement guide
 
 ### Templates
@@ -286,22 +272,19 @@ dbe-coding-robotics-curriculum/
 - Real-world applications
 
 ### Day 3 Highlights
-- Cloud computing concepts
-- Collaboration tools
-- IoT integration
-- Data visualization
+- Extended Arduino and robotics projects
+- Multi-sensor and actuator integration
+- Classroom robotics with Arduino
 
 ### Day 4 Highlights
-- Deep hardware understanding
-- Troubleshooting skills
-- Equipment maintenance
-- Classroom management
+- Micro:bit and MakeCode
+- Inputs, outputs, and simple robotics ideas
+- Managing Micro:bits in class
 
 ### Day 5 Highlights
-- Curriculum integration
-- Assessment strategies
-- Capstone project
-- Implementation planning
+- Micro:bit Part 2 and Code Club introduction
+- Mini Code Club session
+- Action planning and workshop wrap-up
 
 ---
 
@@ -382,4 +365,7 @@ This curriculum was developed to support DBE teachers in bringing coding and rob
 ---
 
 **Thank you for using this curriculum! We hope it empowers you to bring coding and robotics to your students.**
+
+
+
 

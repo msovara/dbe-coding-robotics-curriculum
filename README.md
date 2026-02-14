@@ -15,9 +15,11 @@ This curriculum is designed for the Department of Basic Education (DBE) in South
 
 - **Day 1:** Introduction to Coding with Scratch
 - **Day 2:** Physical Computing with Scratch for Arduino
-- **Day 3:** Cloud Computing Fundamentals
-- **Day 4:** Computer and Arduino Hardware Deep Dive
-- **Day 5:** Integration, Assessment, and "Lightouse" Project
+- **Day 3:** Coding & Robotics with Arduino
+- **Day 4:** Coding & Robotics with Micro:bit – Part 1
+- **Day 5:** Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
+
+Reference material from the former cloud and hardware days is in `resources/cloud-computing/` and `resources/hardware/`.
 
 ## Learning Outcomes
 
@@ -41,22 +43,15 @@ dbe-coding-robotics-curriculum/
 │   ├── activities/
 │   ├── projects/
 │   └── assessment/
-├── day-03-cloud/
-│   ├── lesson-plan.md
-│   ├── activities/
-│   ├── projects/
-│   └── assessment/
-├── day-04-hardware/
-│   ├── lesson-plan.md
-│   ├── activities/
-│   ├── projects/
-│   └── assessment/
-├── day-05-integration/
-│   ├── lesson-plan.md
-│   ├── activities/
-│   ├── projects/
-│   └── assessment/
+├── day-03-arduino/
+│   └── lesson-plan.md
+├── day-04-microbit/
+│   └── lesson-plan.md
+├── day-05-microbit-codeclub/
+│   └── lesson-plan.md
 ├── resources/
+│   ├── cloud-computing/     (reference: former Day 3)
+│   ├── hardware/           (reference: former Day 4)
 │   ├── templates/
 │   ├── rubrics/
 │   └── guides/
@@ -80,5 +75,5 @@ See `resources/procurement-guide.md` for detailed hardware and software requirem
 
 ## Contact and Support
 
-For questions or support, refer to the integration planning templates and resource sharing guides in Day 5 materials.
+For questions or support, refer to the integration planning templates in `resources/templates/` and resource sharing guides in Day 5 materials.
 

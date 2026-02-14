@@ -401,3 +401,6 @@ end
 
 **Remember:** Everyone starts as a beginner. Be patient with yourself and your students. Coding is about experimentation and learning from mistakes!
 
+
+
+

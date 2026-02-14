@@ -21,11 +21,11 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 | CHPC Module | DBE Day | Integration Level | Notes |
 |-------------|---------|-------------------|-------|
 | **scratch/** | Day 1 | Direct Integration | CHPC Scratch materials complement Day 1 |
-| **robotics/** | Day 2 | Direct Integration | CHPC robotics aligns with Arduino/S4A content |
-| **cloud_computing/** | Day 3 | Direct Integration | CHPC cloud computing is primary reference |
-| **computer_hardware/** | Day 4 | Direct Integration | CHPC hardware content aligns with Day 4 |
-| **virtual_resources/** | Day 3, Day 5 | Supplementary | Virtual machines and cloud deployment |
-| **codeclub/** | Day 1-5 | Supplementary | Additional activities and resources |
+| **robotics/** | Day 2, Day 3 | Direct Integration | CHPC robotics aligns with Arduino/S4A; Day 3 = Coding & Robotics with Arduino |
+| **cloud_computing/** | resources/cloud-computing | Reference | Former Day 3; kept in `resources/cloud-computing/` |
+| **computer_hardware/** | resources/hardware | Reference | Former Day 4; kept in `resources/hardware/` |
+| **virtual_resources/** | resources/cloud-computing | Supplementary | Virtual machines and cloud deployment |
+| **codeclub/** | Day 5, Day 1-5 | Direct / Supplementary | Day 5 = Micro:bit Part 2 (Code Club Intro); additional activities |
 | **resources/** | All Days | Supplementary | General resources and materials |
 | **presentations/** | All Days | Reference | Presentation materials for facilitators |
 
@@ -88,81 +88,74 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 
 ---
 
-### Day 3: Cloud Computing Fundamentals
+### Day 3: Coding & Robotics with Arduino
 
 **CHPC Resources:**
-- **Primary:** [CHPC Cloud Computing Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/cloud_computing)
-- **Primary:** [CHPC Virtual Resources](https://github.com/ChpcTraining/dsi_coding_school/tree/main/virtual_resources)
-- **Reference:** [Sebowa CHPC Cloud](https://github.com/ChpcTraining/dsi_coding_school/tree/main/cloud_computing) - Sebowa platform
+- **Primary:** [CHPC Robotics Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics)
 
 **Integration Points:**
-- CHPC cloud computing is the primary reference
-- Sebowa cloud platform setup and usage
-- Virtual machine creation (Windows for Scratch)
-- Cloud deployment concepts
+- CHPC robotics extends Day 2 Arduino/S4A content
+- Use CHPC robotics materials for deeper Arduino and robotics projects
+- Reference CHPC robotic arm and servo examples
 
 **DBE Materials (Keep):**
-- `day-03-cloud/lesson-plan.md` - Detailed DBE lesson plan
-- `day-03-cloud/CHPC_CLOUD_SETUP.md` - CHPC cloud setup reference
-- `day-03-cloud/SEBOWA_GUIDE.md` - Sebowa platform guide
-- `day-03-cloud/activities/cloud-platforms-guide.md` - Platforms guide
-- `day-03-cloud/projects/data-visualization-templates.md` - Templates
-- `day-03-cloud/assessment/rubric.md` - Assessment framework
+- `day-03-arduino/lesson-plan.md` - Detailed DBE lesson plan
+- `resources/hardware/` - Hardware and troubleshooting reference (former Day 4)
 
 **How to Use:**
-1. Use CHPC cloud computing module as primary source
-2. Follow DBE lesson plan for teacher-friendly structure
-3. Reference Sebowa guide for CHPC-specific platform
-4. Use CHPC virtual resources for VM setup
-5. Combine DBE templates with CHPC examples
+1. Follow DBE Day 3 lesson plan for structure
+2. Use CHPC robotics module for advanced examples
+3. Reference `resources/hardware/` for troubleshooting
 
 ---
 
-### Day 4: Computer and Arduino Hardware Deep Dive
+### Day 4: Coding & Robotics with Micro:bit – Part 1
 
 **CHPC Resources:**
-- **Primary:** [CHPC Computer Hardware Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/computer_hardware)
-
-**Integration Points:**
-- CHPC hardware disassembly/assembly procedures
-- Component identification methods
-- Hardware troubleshooting approaches
-- Safety protocols
-
-**DBE Materials (Keep):**
-- `day-04-hardware/lesson-plan.md` - Detailed DBE lesson plan
-- `day-04-hardware/troubleshooting-guide.md` - Troubleshooting guide
-
-**How to Use:**
-1. Follow CHPC hardware disassembly procedures
-2. Use DBE lesson plan for educational context
-3. Reference CHPC safety protocols
-4. Combine DBE troubleshooting with CHPC methods
-
----
-
-### Day 5: Integration, Assessment, and Capstone Project
-
-**CHPC Resources:**
-- **Reference:** All CHPC modules for integration examples
+- **Supplementary:** [CHPC CodeClub](https://github.com/ChpcTraining/dsi_coding_school/tree/main/codeclub) (Micro:bit/Scratch projects)
 - **Supplementary:** [CHPC Resources](https://github.com/ChpcTraining/dsi_coding_school/tree/main/resources)
+
+**Integration Points:**
+- DBE Day 4 focuses on Micro:bit and MakeCode; CHPC CodeClub has additional Micro:bit/Scratch projects
+- Use CHPC resources for extension activities
+
+**DBE Materials (Keep):**
+- `day-04-microbit/lesson-plan.md` - Detailed DBE lesson plan
+
+**How to Use:**
+1. Follow DBE lesson plan for Micro:bit Part 1
+2. Use CHPC CodeClub for extra project ideas
+
+---
+
+### Day 5: Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
+
+**CHPC Resources:**
+- **Primary:** [CHPC CodeClub](https://github.com/ChpcTraining/dsi_coding_school/tree/main/codeclub)
+- **Reference:** [CHPC Resources](https://github.com/ChpcTraining/dsi_coding_school/tree/main/resources)
 - **Reference:** [CHPC Presentations](https://github.com/ChpcTraining/dsi_coding_school/tree/main/presentations)
 
 **Integration Points:**
-- Use CHPC projects as capstone examples
-- Reference CHPC assessment approaches
-- Use CHPC resources for curriculum integration
-- Access CHPC presentation materials
+- Day 5 introduces Code Club; CHPC CodeClub is the main reference
+- Use CHPC projects for mini Code Club session and action planning
+- Integration planning template in `resources/templates/integration-planning-template.md`
 
 **DBE Materials (Keep):**
-- `day-05-integration/lesson-plan.md` - Detailed DBE lesson plan
-- `day-05-integration/resources/integration-planning-template.md` - Template
+- `day-05-microbit-codeclub/lesson-plan.md` - Detailed DBE lesson plan
+- `resources/templates/integration-planning-template.md` - Integration/action planning template
 
 **How to Use:**
-1. Use DBE integration planning template
-2. Reference CHPC projects for capstone ideas
-3. Combine DBE assessment strategies with CHPC approaches
-4. Use CHPC resources for additional materials
+1. Follow DBE lesson plan for Micro:bit Part 2 and Code Club intro
+2. Use CHPC CodeClub for project choices and structure
+3. Use DBE integration template for action plans
+
+---
+
+### Reference: Cloud and Hardware (in resources/)
+
+**Cloud computing** (former Day 3) and **computer hardware** (former Day 4) content are preserved as reference material:
+- **Cloud:** `resources/cloud-computing/` – CHPC cloud, Sebowa, data visualization (see CHPC cloud_computing and virtual_resources)
+- **Hardware:** `resources/hardware/` – Troubleshooting and hardware guides (see CHPC computer_hardware)
 
 ---
 
@@ -174,19 +167,19 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 
 ### 2. Robotics with Scratch for Arduino
 **CHPC Focus:** Robotic arm project, servo control, mechanics  
-**DBE Integration:** Day 2 - Physical computing, Day 4 - Hardware deep dive
+**DBE Integration:** Day 2 - Physical computing, Day 3 - Coding & Robotics with Arduino
 
-### 3. Cloud Computing and Virtual Resources
+### 3. Cloud Computing and Virtual Resources (Reference)
 **CHPC Focus:** Sebowa cloud, virtual machines, cloud deployment  
-**DBE Integration:** Day 3 - Cloud fundamentals, virtual resources
+**DBE Integration:** Reference material in `resources/cloud-computing/`
 
-### 4. Computer Hardware
+### 4. Computer Hardware (Reference)
 **CHPC Focus:** Disassembly, component identification, reassembly  
-**DBE Integration:** Day 4 - Hardware deep dive, troubleshooting
+**DBE Integration:** Reference material in `resources/hardware/`; supports Day 3 Arduino troubleshooting
 
-### 5. Virtual Machines
-**CHPC Focus:** Ubuntu on VirtualBox, Linux terminal, Windows VM for Scratch  
-**DBE Integration:** Day 3 - Virtual resources, Day 5 - Extended learning
+### 5. Code Club and Micro:bit
+**CHPC Focus:** CodeClub activities, projects  
+**DBE Integration:** Day 4 - Micro:bit Part 1, Day 5 - Micro:bit Part 2 and Code Club intro
 
 ---
 
@@ -232,12 +225,12 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 ```
 ChpcTraining/dsi_coding_school/
 ├── scratch/              → Day 1 Integration
-├── robotics/             → Day 2 Integration
-├── cloud_computing/      → Day 3 Primary Reference
-├── computer_hardware/    → Day 4 Integration
-├── virtual_resources/    → Day 3, Day 5 Supplementary
+├── robotics/             → Day 2, Day 3 (Arduino/Robotics) Integration
+├── cloud_computing/      → resources/cloud-computing Reference
+├── computer_hardware/    → resources/hardware Reference
+├── virtual_resources/    → resources/cloud-computing Supplementary
 │   └── linux_os_install/ → Virtual machine setup
-├── codeclub/             → All Days Supplementary
+├── codeclub/             → Day 5 Code Club Intro, All Days Supplementary
 ├── resources/            → All Days Reference
 └── presentations/        → All Days Visual Aids
 ```
@@ -284,13 +277,11 @@ ChpcTraining/dsi_coding_school/
 - CHPC for advanced projects
 - CHPC robotic arm as capstone
 
-### Example 3: Cloud Computing
+### Example 3: Cloud Computing (Reference)
 
 **DBE Approach:**
-- General cloud concepts
-- Educational platforms
-- Teacher applications
-- Student projects
+- Reference material in `resources/cloud-computing/`
+- General cloud concepts, educational platforms
 
 **CHPC Approach:**
 - Sebowa platform specifics
@@ -299,9 +290,8 @@ ChpcTraining/dsi_coding_school/
 - Technical implementation
 
 **Combined Use:**
-- DBE for concepts and applications
-- CHPC for Sebowa platform setup
-- CHPC for virtual machine creation
+- Use `resources/cloud-computing/` and CHPC cloud_computing when covering cloud topics
+- CHPC for Sebowa platform and virtual machine creation
 
 ---
 
@@ -369,9 +359,9 @@ git clone https://github.com/ChpcTraining/dsi_coding_school.git
 
 ### CHPC Timetable Structure
 - 5 days (similar to DBE)
-- Scratch, Robotics, Cloud, Hardware focus
-- Virtual resources integration
-- CodeClub activities
+- Scratch, Robotics, Micro:bit, Code Club focus
+- Cloud and hardware as reference (resources/)
+- CodeClub activities (Day 5)
 
 ### DBE Timetable Structure
 - 5 days (aligned with CHPC)
@@ -513,4 +503,7 @@ The CHPC DSI Coding School and DBE Coding and Robotics Curriculum are complement
 **References:**
 - CHPC DSI Coding School: https://github.com/ChpcTraining/dsi_coding_school
 - DBE Coding and Robotics Curriculum: https://github.com/msovara/dbe-coding-robotics-curriculum
+
+
+
 
