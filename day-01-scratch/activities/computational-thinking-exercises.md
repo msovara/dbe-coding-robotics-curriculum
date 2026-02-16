@@ -53,7 +53,7 @@ Recognize patterns in sequences and data.
 Break complex problems into smaller, manageable parts.
 
 ### Activity
-**Task:** Plan a school science fair
+**Task:** Plan a school science event
 
 **Steps:**
 1. List all the things needed for a science fair
