@@ -44,40 +44,40 @@
 
 ---
 
-## Day 2: Physical Computing with Scratch for Arduino
+## Day 2: Advanced Scratch Programming
 
-**Focus:** Connecting code to the physical world through hardware
+**Focus:** Extending Scratch skills with advanced concepts and curriculum integration
 
 | Time | Session |
 |------|---------|
 | 09:00 - 09:15 | Day 1 Review & Q&A |
-| 09:15 - 10:15 | Arduino Hardware Introduction |
+| 09:15 - 10:15 | Advanced Scratch Concepts (cloning, broadcasting) |
 | 10:30 - 11:00 | **Morning Tea Break** |
-| 11:00 - 12:00 | S4A Setup |
-| 12:00 - 13:00 | First Physical Projects |
+| 11:00 - 12:30 | Complex Projects and Games |
+| 12:30 - 13:00 | Scratch and Curriculum Integration |
 | 13:00 - 14:00 | **Lunch Break** |
-| 14:00 - 15:00 | Sensors & Actuators |
-| 15:00 - 15:30 | Advanced Projects |
+| 14:00 - 15:30 | Extended Project Development |
 | 15:30 - 16:00 | **Afternoon Tea Break** |
-| 16:00 - 16:45 | Subject-Specific Project Design |
-| 16:45 - 17:00 | Daily Reflection & Wrap-up |
+| 16:00 - 16:45 | Assessment, Sharing, and Reflection |
+| 16:45 - 17:00 | Wrap-up (preview Day 3) |
 
 ---
 
-## Day 3: Coding & Robotics with Arduino
+## Day 3: Physical Computing with Scratch for Arduino
 
-**Focus:** Extended Arduino projects, sensors/actuators, robotics applications
+**Focus:** Connecting Scratch to physical hardware, sensors, actuators, robotics
 
 | Time | Session |
 |------|---------|
-| 09:00 - 10:15 | Review and Extended Arduino Concepts |
+| 09:00 - 09:15 | Days 1-2 Review & Q&A |
+| 09:15 - 10:15 | Arduino Hardware Introduction |
 | 10:30 - 11:00 | **Morning Tea Break** |
-| 11:00 - 12:30 | Arduino Coding Projects |
-| 12:30 - 13:00 | Robotics Applications |
+| 11:00 - 12:30 | S4A Setup and First Projects |
+| 12:30 - 13:00 | First Physical Projects |
 | 13:00 - 14:00 | **Lunch Break** |
-| 14:00 - 15:30 | Project Development |
+| 14:00 - 15:30 | Sensors, Actuators, and Multi-Sensor Projects |
 | 15:30 - 16:00 | **Afternoon Tea Break** |
-| 16:00 - 16:45 | Share and Reflect |
+| 16:00 - 16:45 | Robotics Applications and Project Development |
 | 16:45 - 17:00 | Wrap-up (preview Day 4) |
 
 ---

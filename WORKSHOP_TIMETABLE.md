@@ -37,18 +37,18 @@
 
 ---
 
-## Day 2: Physical Computing with Scratch for Arduino
+## Day 2: Advanced Scratch Programming
 
 ### Morning Session (09:00 - 13:00)
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
 | 09:00 - 09:15 | 15 min | Day 1 Review & Q&A | Quick review, address questions |
-| 09:15 - 10:15 | 60 min | Arduino Hardware Introduction | Board components, basic electronics, safety |
+| 09:15 - 10:15 | 60 min | Advanced Scratch Concepts | Cloning, broadcasting, advanced lists, complex logic |
 | 10:15 - 10:30 | 15 min | Preparation for Break | Quick wrap-up before break |
 | 10:30 - 11:00 | 30 min | **Morning Tea Break** | Refreshments |
-| 11:00 - 12:00 | 60 min | S4A Setup | Installing S4A, uploading firmware, testing connection |
-| 12:00 - 13:00 | 60 min | First Physical Projects | Blinking LED, button control, interactive light show |
+| 11:00 - 12:30 | 90 min | Complex Projects and Games | Design and build games or interactive projects with multiple features |
+| 12:30 - 13:00 | 30 min | Scratch and Curriculum Integration | Scratch for Maths, Languages, Science, Social Studies |
 
 ### Lunch Break (13:00 - 14:00)
 
@@ -56,26 +56,25 @@
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 14:00 - 15:00 | 60 min | Sensors & Actuators | Light sensors, temperature sensors, servo motors |
-| 15:00 - 15:30 | 30 min | Advanced Projects | Temperature monitor, smart plant monitor |
+| 14:00 - 15:30 | 90 min | Extended Project Development | Design and build a curriculum-integrated Scratch project |
 | 15:30 - 16:00 | 30 min | **Afternoon Tea Break** | Refreshments |
-| 16:00 - 16:45 | 45 min | Subject-Specific Project Design | Design projects for your subject area |
-| 16:15 - 16:45 | 30 min | Subject-Specific Project Design | Design projects for your subject area |
-| 16:45 - 17:00 | 15 min | Daily Reflection & Wrap-up | Reflection journal, Q&A, preview Day 3 |
+| 16:00 - 16:45 | 45 min | Assessment, Sharing, and Reflection | Assessment strategies, sharing projects, classroom management, daily reflection |
+| 16:45 - 17:00 | 15 min | Wrap-up | Preview Day 3: Physical Computing with Arduino |
 
 ---
 
-## Day 3: Coding & Robotics with Arduino
+## Day 3: Physical Computing with Scratch for Arduino
 
 ### Morning Session (09:00 - 13:00)
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 09:00 - 10:15 | 75 min | Review and Extended Arduino Concepts | Day 2 recap, digital/analog I/O, planning robotics projects |
+| 09:00 - 09:15 | 15 min | Days 1-2 Review & Q&A | Quick review of Scratch, introduction to physical computing |
+| 09:15 - 10:15 | 60 min | Arduino Hardware Introduction | Board components, basic electronics, safety |
 | 10:15 - 10:30 | 15 min | Preparation for Break | Quick wrap-up before break |
 | 10:30 - 11:00 | 30 min | **Morning Tea Break** | Refreshments |
-| 11:00 - 12:30 | 90 min | Arduino Coding Projects | Multi-sensor projects, variables, logic, hands-on build |
-| 12:30 - 13:00 | 30 min | Robotics Applications | Motors/servos, simple robotic behaviours, classroom robotics |
+| 11:00 - 12:30 | 90 min | Scratch for Arduino (S4A) Setup | Installing S4A, uploading firmware, testing connection, first projects (blinking LED, button control) |
+| 12:30 - 13:00 | 30 min | First Physical Projects | Build and test basic projects |
 
 ### Lunch Break (13:00 - 14:00)
 
@@ -83,9 +82,9 @@
 
 | Time | Duration | Activity | Description |
 |------|----------|----------|-------------|
-| 14:00 - 15:30 | 90 min | Project Development | Design and build Coding & Robotics project with Arduino |
+| 14:00 - 15:30 | 90 min | Sensors, Actuators, and Multi-Sensor Projects | Light sensors, temperature, servos, motors; combine inputs for decision-making; robotics applications |
 | 15:30 - 16:00 | 30 min | **Afternoon Tea Break** | Refreshments |
-| 16:00 - 16:45 | 45 min | Share and Reflect | Project showcases, classroom application, daily reflection |
+| 16:00 - 16:45 | 45 min | Robotics Applications and Project Development | Design and build a robotics/coding project; share and discuss classroom applications |
 | 16:45 - 17:00 | 15 min | Wrap-up | Preview Day 4: Micro:bit Part 1 |
 
 ---

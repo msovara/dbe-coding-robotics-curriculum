@@ -3,7 +3,7 @@
 
 ## Overview
 
-This curriculum provides a comprehensive week-long (5-day) teacher training program for DBE educators in South Africa. The curriculum covers Scratch programming, Scratch for Arduino, extended Arduino and robotics, Micro:bit (Parts 1 and 2), and Code Club introduction, with a focus on practical classroom integration. Reference material on cloud computing and hardware is in `resources/cloud-computing/` and `resources/hardware/`.
+This curriculum provides a comprehensive week-long (5-day) teacher training program for DBE educators in South Africa. The curriculum covers Scratch programming (Days 1-2), Physical Computing with Scratch for Arduino (Day 3), Micro:bit (Parts 1 and 2, Days 4-5), and Code Club introduction, with a focus on practical classroom integration. Reference material on cloud computing and hardware is in `resources/cloud-computing/` and `resources/hardware/`.
 
 ---
 
@@ -25,36 +25,39 @@ This curriculum provides a comprehensive week-long (5-day) teacher training prog
 
 ---
 
-### Day 2: Physical Computing with Scratch for Arduino
-**Files Created:**
-- `day-02-arduino/lesson-plan.md` - Complete day plan
-- `day-02-arduino/arduino-hardware-guide.md` - Comprehensive hardware guide
-- `day-02-arduino/s4a-setup-instructions.md` - Step-by-step setup guide
-- `day-02-arduino/activities/wiring-diagrams.md` - Visual wiring guides for 8 projects
-- `day-02-arduino/projects/project-guides.md` - Detailed project instructions
-- `day-02-arduino/assessment/rubric.md` - Assessment framework
+### Day 2: Advanced Scratch Programming
+**Files:**
+- `day-02-scratch/lesson-plan.md` - Complete day plan
+- `day-02-scratch/scratch-advanced-guide.md` - Advanced Scratch concepts guide
+- `day-02-scratch/activities/advanced-scratch-activities.md` - Hands-on activities
+- `day-02-scratch/projects/project-templates.md` - Advanced project templates (games, simulations, interactive stories)
+- `day-02-scratch/assessment/rubric.md` - Assessment rubric
 
 **Key Topics:**
-- Arduino hardware components
-- S4A setup and firmware upload
-- Digital and analog I/O
-- Sensors and actuators
-- Physical computing projects
+- Advanced Scratch concepts (cloning, broadcasting, advanced lists)
+- Complex projects and games
+- Curriculum integration (Maths, Languages, Science, Social Studies)
+- Assessment strategies and classroom management
 
 ---
 
-### Day 3: Coding & Robotics with Arduino
+### Day 3: Physical Computing with Scratch for Arduino
 **Files:**
 - `day-03-arduino/lesson-plan.md` - Complete day plan
-- `day-03-arduino/arduino-robotics-guide.md` - Guide extending Day 2 to robotics
-- `day-03-arduino/activities/robotics-activities.md` - Hands-on activities
-- `day-03-arduino/projects/project-guides.md` - Step-by-step project guides
+- `day-03-arduino/arduino-hardware-guide.md` - Comprehensive hardware guide
+- `day-03-arduino/s4a-setup-instructions.md` - Step-by-step setup guide
+- `day-03-arduino/arduino-robotics-guide.md` - Robotics applications guide
+- `day-03-arduino/activities/wiring-diagrams.md` - Visual wiring guides
+- `day-03-arduino/activities/robotics-activities.md` - Robotics activities
+- `day-03-arduino/projects/project-guides.md` - Detailed project instructions
 - `day-03-arduino/assessment/rubric.md` - Assessment rubric
 
 **Key Topics:**
-- Extended Arduino concepts and multi-sensor projects
-- Robotics applications (motors, servos, simple behaviours)
-- Project development and classroom robotics
+- Arduino hardware components and basic electronics
+- S4A setup and firmware upload
+- Digital and analog I/O, sensors and actuators
+- Multi-sensor projects and robotics applications (motors, servos, behaviours)
+- Physical computing and classroom robotics
 
 **Reference:** Hardware troubleshooting in `resources/hardware/`.
 

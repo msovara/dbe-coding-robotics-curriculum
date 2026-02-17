@@ -14,8 +14,8 @@ This curriculum is designed for the Department of Basic Education (DBE) in South
 ## Structure
 
 - **Day 1:** Introduction to Coding with Scratch
-- **Day 2:** Physical Computing with Scratch for Arduino
-- **Day 3:** Coding & Robotics with Arduino
+- **Day 2:** Advanced Scratch Programming
+- **Day 3:** Physical Computing with Scratch for Arduino
 - **Day 4:** Coding & Robotics with Micro:bit – Part 1
 - **Day 5:** Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
 
@@ -38,11 +38,15 @@ dbe-coding-robotics-curriculum/
 │   ├── activities/
 │   ├── projects/
 │   └── assessment/
-├── day-02-arduino/
+├── day-02-scratch/
 │   ├── lesson-plan.md
+│   ├── scratch-advanced-guide.md
 │   ├── activities/
+│   │   └── advanced-scratch-activities.md
 │   ├── projects/
+│   │   └── project-templates.md
 │   └── assessment/
+│       └── rubric.md
 ├── day-03-arduino/
 │   ├── lesson-plan.md
 │   ├── arduino-robotics-guide.md

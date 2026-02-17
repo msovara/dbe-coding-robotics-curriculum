@@ -1,9 +1,9 @@
 # Arduino Coding & Robotics Guide
 ## Day 3 – Extending Physical Computing to Robotics
 
-This guide supports Day 3 of the DBE Coding and Robotics workshop. It builds on Day 2 (Scratch for Arduino / S4A) and focuses on more complex projects, multi-sensor integration, and simple robotics applications.
+This guide supports Day 3 of the DBE Coding and Robotics workshop. It extends the Arduino basics covered in Day 3 and focuses on more complex projects, multi-sensor integration, and simple robotics applications.
 
-**Prerequisites:** Completion of Day 1 (Scratch) and Day 2 (Arduino/S4A basics).  
+**Prerequisites:** Completion of Days 1-2 (Scratch) and Day 3 Arduino basics (S4A setup, first projects).  
 **Reference:** [resources/hardware](../resources/hardware/) for troubleshooting and hardware deep-dive.
 
 ---
