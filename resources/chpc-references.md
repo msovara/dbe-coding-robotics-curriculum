@@ -12,7 +12,7 @@ This document provides quick access links to all CHPC Training DSI Coding School
 ### Scratch Programming
 **Link:** https://github.com/ChpcTraining/dsi_coding_school/tree/main/scratch
 
-**DBE Integration:** Day 1 - Introduction to Coding with Scratch
+**DBE Integration:** Day 1 - Introduction to Coding with Scratch, Day 2 - Advanced Scratch Programming
 
 **Contents:**
 - Scratch coding sessions
@@ -39,9 +39,9 @@ This document provides quick access links to all CHPC Training DSI Coding School
 - Servo control examples
 
 **Use With:**
-- `day-02-arduino/lesson-plan.md`
-- `day-02-arduino/projects/project-guides.md`
-- `day-02-arduino/arduino-hardware-guide.md`
+- `day-03-arduino/lesson-plan.md`
+- `day-03-arduino/projects/project-guides.md`
+- `day-03-arduino/arduino-hardware-guide.md`
 
 ---
 
