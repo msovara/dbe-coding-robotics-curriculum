@@ -123,20 +123,22 @@ dbe-coding-robotics-curriculum/
 │   │   └── project-templates.md
 │   └── assessment/
 │       └── rubric.md
-├── day-02-arduino/
+├── day-02-scratch/
 │   ├── lesson-plan.md
-│   ├── arduino-hardware-guide.md
-│   ├── s4a-setup-instructions.md
+│   ├── scratch-advanced-guide.md
 │   ├── activities/
-│   │   └── wiring-diagrams.md
+│   │   └── advanced-scratch-activities.md
 │   ├── projects/
-│   │   └── project-guides.md
+│   │   └── project-templates.md
 │   └── assessment/
 │       └── rubric.md
 ├── day-03-arduino/
 │   ├── lesson-plan.md
+│   ├── arduino-hardware-guide.md
+│   ├── s4a-setup-instructions.md
 │   ├── arduino-robotics-guide.md
 │   ├── activities/
+│   │   ├── wiring-diagrams.md
 │   │   └── robotics-activities.md
 │   ├── projects/
 │   │   └── project-guides.md
@@ -263,8 +265,9 @@ dbe-coding-robotics-curriculum/
 
 ### Rubrics Provided
 - Day 1: Computational thinking and Scratch skills
-- Day 2: Hardware and Arduino skills
-- Days 3–5: Project and participation (see lesson plans and resources)
+- Day 2: Advanced Scratch (cloning, broadcasting, curriculum integration)
+- Day 3: Hardware, S4A, and Arduino/robotics project skills
+- Days 4–5: Micro:bit and Code Club (see lesson plans and resources)
 
 ---
 
@@ -272,8 +275,9 @@ dbe-coding-robotics-curriculum/
 
 ### Project Templates
 - 6 Scratch projects (Day 1)
-- 8 Arduino projects (Day 2)
-- Arduino and Micro:bit projects (Days 3–4)
+- Advanced Scratch projects – games, simulations (Day 2)
+- 8+ Arduino projects (Day 3)
+- Micro:bit projects (Days 4–5)
 - Code Club and action planning (Day 5)
 - Data visualization and cloud reference in `resources/cloud-computing/`
 

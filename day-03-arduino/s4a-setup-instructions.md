@@ -422,7 +422,7 @@ ls /dev/ttyACM*  # or /dev/ttyUSB*
 - [ ] Firmware uploaded
 - [ ] Correct COM port selected
 - [ ] Simple test program works
-- [ ] Ready for Day 2 projects!
+- [ ] Ready for Day 3 projects!
 
 ---
 
@@ -446,7 +446,7 @@ ls /dev/ttyACM*  # or /dev/ttyUSB*
 After successful setup:
 1. Practice with simple projects
 2. Explore S4A blocks
-3. Try Day 2 projects
+3. Try Day 3 projects
 4. Experiment with sensors
 5. Design your own projects
 

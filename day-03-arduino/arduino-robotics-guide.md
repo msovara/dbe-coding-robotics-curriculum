@@ -8,7 +8,7 @@ This guide supports Day 3 of the DBE Coding and Robotics workshop. It extends th
 
 ---
 
-## What We Build On (Day 2 Recap)
+## What We Build On (Day 3 Morning Recap)
 
 - **S4A:** Scratch for Arduino – block-based control of Arduino pins
 - **Digital I/O:** Turn outputs on/off (e.g. LEDs), read buttons
@@ -32,7 +32,7 @@ This guide supports Day 3 of the DBE Coding and Robotics workshop. It extends th
 - Links to DBE Technology and coding outcomes
 - Reusable project ideas (science, maths, technology)
 - Low-cost robotics without full robot kits (Arduino + a few components)
-- Builds on equipment many schools already have (Arduino from Day 2)
+- Builds on equipment many schools already have (Arduino from Day 3)
 
 ---
 
@@ -85,8 +85,8 @@ For detailed wiring and troubleshooting, see [resources/hardware](../resources/h
 
 | Topic            | Where to look                          |
 |------------------|----------------------------------------|
-| S4A setup         | day-02-arduino/s4a-setup-instructions.md |
-| Wiring diagrams   | day-02-arduino/activities/wiring-diagrams.md |
+| S4A setup         | day-03-arduino/s4a-setup-instructions.md |
+| Wiring diagrams   | day-03-arduino/activities/wiring-diagrams.md |
 | Project ideas     | day-03-arduino/projects/project-guides.md |
 | Troubleshooting   | resources/hardware/troubleshooting-guide.md |
 

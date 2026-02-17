@@ -1,5 +1,5 @@
-# Day 2 Assessment Rubric
-## Physical Computing with Arduino
+# Day 3 Assessment Rubric
+## Physical Computing with Scratch for Arduino
 
 ## Overall Assessment Framework
 

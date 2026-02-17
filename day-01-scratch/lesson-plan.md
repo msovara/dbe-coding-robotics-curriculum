@@ -279,7 +279,7 @@
 1. Complete reflection journal
 2. Finish lesson plan draft
 3. Explore Scratch community projects
-4. Review Arduino hardware basics (handout provided)
+4. Optional: Try cloning or broadcasting in Scratch (preview of Day 2)
 
 ---
 
@@ -295,5 +295,5 @@
 
 ## Next Day Preview
 
-Tomorrow we'll connect Scratch to physical hardware using Arduino! We'll make LEDs light up, read sensors, and create interactive physical projects.
+Tomorrow we'll extend our Scratch skills with advanced concepts: cloning, broadcasting, and more complex projects. We'll also explore how to integrate Scratch across the curriculum (Day 2: Advanced Scratch Programming).
 

@@ -110,7 +110,7 @@ Write down 2–3 concrete next steps for using Scratch, Arduino, and/or Micro:bi
 2. **Include at least:**
    - One thing you will do in the next 2 weeks (e.g. try one Scratch/Micro:bit lesson with one class; speak to principal about Code Club).
    - One thing you will do in the next term (e.g. run first Code Club session; plan one Arduino project with Grade 6).
-   - One resource you will use (e.g. Day 4 project templates, Code Club Micro:bit project, Day 2 wiring diagrams).
+   - One resource you will use (e.g. Day 4 project templates, Code Club Micro:bit project, Day 3 wiring diagrams).
 3. **Share** one step with a partner. Partner asks one question or gives one encouragement.
 4. **Optional:** Collect contact details (with permission) to stay in touch or share resources later.
 

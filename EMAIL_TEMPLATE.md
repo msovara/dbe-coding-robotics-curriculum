@@ -102,8 +102,8 @@ You are invited to attend a <strong>5-day Coding and Robotics Teacher Training W
 This hands-on program covers:
 <ul>
 <li><strong>Day 1:</strong> Scratch programming and computational thinking</li>
-<li><strong>Day 2:</strong> Arduino physical computing with Scratch for Arduino</li>
-<li><strong>Day 3:</strong> Coding & Robotics with Arduino</li>
+<li><strong>Day 2:</strong> Advanced Scratch Programming (cloning, broadcasting, curriculum integration)</li>
+<li><strong>Day 3:</strong> Physical Computing with Scratch for Arduino</li>
 <li><strong>Day 4:</strong> Coding & Robotics with Micro:bit – Part 1</li>
 <li><strong>Day 5:</strong> Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)</li>
 </ul>
@@ -139,8 +139,8 @@ WORKSHOP OVERVIEW:
 This comprehensive, hands-on program will cover:
 
 Day 1: Scratch programming fundamentals and computational thinking
-Day 2: Physical computing with Arduino and Scratch for Arduino (S4A)
-Day 3: Coding & Robotics with Arduino
+Day 2: Advanced Scratch Programming (cloning, broadcasting, curriculum integration)
+Day 3: Physical Computing with Scratch for Arduino
 Day 4: Coding & Robotics with Micro:bit – Part 1
 Day 5: Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
 

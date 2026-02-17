@@ -1,4 +1,4 @@
-# Wiring Diagrams for Day 2 Projects
+# Wiring Diagrams for Day 3 Projects
 ## Visual Guides for Building Circuits
 
 ## Diagram Legend

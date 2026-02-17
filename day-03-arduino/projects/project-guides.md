@@ -1,4 +1,4 @@
-# Day 2 Project Guides
+# Day 3 Project Guides
 ## Step-by-Step Instructions for Arduino Projects
 
 ## Project 1: Blinking LED (Beginner)

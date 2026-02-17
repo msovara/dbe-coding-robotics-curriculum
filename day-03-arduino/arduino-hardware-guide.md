@@ -488,7 +488,7 @@ After understanding hardware basics:
 1. Practice building simple circuits
 2. Experiment with different components
 3. Combine multiple components
-4. Move to Day 2 projects
+4. Move to Day 3 projects
 5. Design your own projects
 
 Remember: Start simple, build complexity gradually, and always prioritize safety!

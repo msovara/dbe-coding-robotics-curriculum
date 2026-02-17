@@ -99,39 +99,21 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 - Use CHPC presentation materials
 
 **DBE Materials (Keep):**
-- `day-02-arduino/lesson-plan.md` - Detailed DBE lesson plan
-- `day-02-arduino/arduino-hardware-guide.md` - Hardware guide
-- `day-02-arduino/s4a-setup-instructions.md` - Setup guide
-- `day-02-arduino/activities/wiring-diagrams.md` - Wiring diagrams
-- `day-02-arduino/projects/project-guides.md` - Project guides
-- `day-02-arduino/assessment/rubric.md` - Assessment framework
+- `day-03-arduino/lesson-plan.md` - Detailed DBE lesson plan
+- `day-03-arduino/arduino-hardware-guide.md` - Hardware guide
+- `day-03-arduino/s4a-setup-instructions.md` - Setup guide
+- `day-03-arduino/activities/wiring-diagrams.md` - Wiring diagrams
+- `day-03-arduino/activities/robotics-activities.md` - Robotics activities
+- `day-03-arduino/projects/project-guides.md` - Project guides
+- `day-03-arduino/assessment/rubric.md` - Assessment framework
+- `resources/hardware/` - Hardware and troubleshooting reference
 
 **How to Use:**
-1. Follow DBE lesson plan for structure
+1. Follow DBE Day 3 lesson plan for structure (Arduino basics + robotics)
 2. Reference CHPC robotics arm project (advanced)
 3. Use CHPC materials for additional examples
 4. Combine DBE wiring diagrams with CHPC projects
-
----
-
-### Day 3: Coding & Robotics with Arduino
-
-**CHPC Resources:**
-- **Primary:** [CHPC Robotics Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics)
-
-**Integration Points:**
-- CHPC robotics extends Day 2 Arduino/S4A content
-- Use CHPC robotics materials for deeper Arduino and robotics projects
-- Reference CHPC robotic arm and servo examples
-
-**DBE Materials (Keep):**
-- `day-03-arduino/lesson-plan.md` - Detailed DBE lesson plan
-- `resources/hardware/` - Hardware and troubleshooting reference (former Day 4)
-
-**How to Use:**
-1. Follow DBE Day 3 lesson plan for structure
-2. Use CHPC robotics module for advanced examples
-3. Reference `resources/hardware/` for troubleshooting
+5. Reference `resources/hardware/` for troubleshooting
 
 ---
 
@@ -189,13 +171,9 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 
 ### 1. Scratch Programming
 **CHPC Focus:** Visual programming fundamentals, interactive projects  
-**DBE Integration:** Day 1 - Foundation, Day 2 - Physical computing extension
+**DBE Integration:** Day 1 - Introduction to Coding with Scratch, Day 2 - Advanced Scratch Programming
 
-### 2. Advanced Scratch Programming
-**CHPC Focus:** Complex Scratch projects, games, simulations  
-**DBE Integration:** Day 2 - Advanced Scratch (cloning, broadcasting, curriculum integration)
-
-### 3. Robotics with Scratch for Arduino
+### 2. Robotics with Scratch for Arduino
 **CHPC Focus:** Robotic arm project, servo control, mechanics  
 **DBE Integration:** Day 3 - Physical Computing with Arduino (basics + robotics)
 

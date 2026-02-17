@@ -46,7 +46,7 @@ _________________
 
 ---
 
-### Day 2: Physical Computing with Arduino
+### Day 2: Advanced Scratch Programming
 
 **Rating (1-5):** [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
 
@@ -63,7 +63,7 @@ _________________
 
 ---
 
-### Day 3: Cloud Computing Fundamentals
+### Day 3: Physical Computing with Scratch for Arduino
 
 **Rating (1-5):** [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
 
@@ -80,7 +80,7 @@ _________________
 
 ---
 
-### Day 4: Hardware Deep Dive
+### Day 4: Coding & Robotics with Micro:bit – Part 1
 
 **Rating (1-5):** [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
 
@@ -97,7 +97,7 @@ _________________
 
 ---
 
-### Day 5: Integration and Capstone
+### Day 5: Coding & Robotics with Micro:bit – Part 2 (Code Club Intro)
 
 **Rating (1-5):** [ ] 1 [ ] 2 [ ] 3 [ ] 4 [ ] 5
 
@@ -126,10 +126,10 @@ _________________
 - [ ] Not Relevant
 
 **Which topics were most relevant?**
-- [ ] Scratch programming
-- [ ] Arduino hardware
-- [ ] Cloud computing
-- [ ] Hardware troubleshooting
+- [ ] Scratch programming (Days 1–2)
+- [ ] Arduino / S4A physical computing (Day 3)
+- [ ] Micro:bit (Days 4–5)
+- [ ] Code Club (Day 5)
 - [ ] Curriculum integration
 - [ ] Assessment strategies
 - [ ] All topics
@@ -170,21 +170,21 @@ _________________
 
 **Rate your improvement in each area (1-5):**
 
-**Scratch Programming:**
+**Scratch Programming (Days 1–2):**
 - [ ] 1 - No improvement
 - [ ] 2 - Slight improvement
 - [ ] 3 - Moderate improvement
 - [ ] 4 - Significant improvement
 - [ ] 5 - Major improvement
 
-**Arduino Hardware:**
+**Arduino / S4A Physical Computing (Day 3):**
 - [ ] 1 - No improvement
 - [ ] 2 - Slight improvement
 - [ ] 3 - Moderate improvement
 - [ ] 4 - Significant improvement
 - [ ] 5 - Major improvement
 
-**Cloud Computing:**
+**Micro:bit (Days 4–5):**
 - [ ] 1 - No improvement
 - [ ] 2 - Slight improvement
 - [ ] 3 - Moderate improvement
