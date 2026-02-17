@@ -77,7 +77,7 @@ For detailed wiring and troubleshooting, see [resources/hardware](../resources/h
 ## CHPC and Further Resources
 
 - **CHPC Robotics Module:** [CHPC DSI Coding School – robotics](https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics) for advanced projects (e.g. robotic arm).
-- **DBE Day 2 materials:** [day-02-arduino](../day-02-arduino/) for wiring diagrams, project guides, and S4A setup.
+- **DBE Day 3 materials:** [day-03-arduino](../day-03-arduino/) for wiring diagrams, project guides, and S4A setup.
 
 ---
 

@@ -11,8 +11,8 @@ A comprehensive 5-day workshop designed to equip teachers with coding and roboti
 
 **Topics Covered:**
 - **Day 1:** Scratch programming fundamentals and computational thinking
-- **Day 2:** Physical computing with Arduino and Scratch for Arduino (S4A)
-- **Day 3:** Coding & Robotics with Arduino (extended projects, sensors, robotics)
+- **Day 2:** Advanced Scratch Programming (cloning, broadcasting, curriculum integration)
+- **Day 3:** Physical Computing with Scratch for Arduino (hardware, S4A, sensors, robotics)
 - **Day 4:** Coding & Robotics with Micro:bit – Part 1 (MakeCode, inputs/outputs)
 - **Day 5:** Coding & Robotics with Micro:bit – Part 2 (Code Club Intro, wrap-up, action planning)
 

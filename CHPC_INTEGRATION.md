@@ -20,8 +20,8 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 
 | CHPC Module | DBE Day | Integration Level | Notes |
 |-------------|---------|-------------------|-------|
-| **scratch/** | Day 1 | Direct Integration | CHPC Scratch materials complement Day 1 |
-| **robotics/** | Day 2, Day 3 | Direct Integration | CHPC robotics aligns with Arduino/S4A; Day 3 = Coding & Robotics with Arduino |
+| **scratch/** | Day 1, Day 2 | Direct Integration | CHPC Scratch materials complement Days 1-2 |
+| **robotics/** | Day 3 | Direct Integration | CHPC robotics aligns with Arduino/S4A on Day 3 |
 | **cloud_computing/** | resources/cloud-computing | Reference | Former Day 3; kept in `resources/cloud-computing/` |
 | **computer_hardware/** | resources/hardware | Reference | Former Day 4; kept in `resources/hardware/` |
 | **virtual_resources/** | resources/cloud-computing | Supplementary | Virtual machines and cloud deployment |
@@ -60,7 +60,33 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 
 ---
 
-### Day 2: Physical Computing with Scratch for Arduino
+### Day 2: Advanced Scratch Programming
+
+**CHPC Resources:**
+- **Primary:** [CHPC Scratch Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/scratch)
+- **Supplementary:** [CodeClub Resources](https://github.com/ChpcTraining/dsi_coding_school/tree/main/codeclub)
+
+**Integration Points:**
+- Use CHPC Scratch materials for advanced concepts (cloning, broadcasting)
+- Reference CHPC Scratch projects for complex games and simulations
+- Use CHPC presentation materials for teaching
+
+**DBE Materials (Keep):**
+- `day-02-scratch/lesson-plan.md` - Detailed DBE lesson plan
+- `day-02-scratch/scratch-advanced-guide.md` - Advanced Scratch guide
+- `day-02-scratch/activities/advanced-scratch-activities.md` - Activities
+- `day-02-scratch/projects/project-templates.md` - Project templates
+- `day-02-scratch/assessment/rubric.md` - Assessment framework
+
+**How to Use:**
+1. Start with DBE lesson plan for structure
+2. Supplement with CHPC Scratch examples
+3. Use CHPC projects as extension activities
+4. Reference CHPC presentations for visual aids
+
+---
+
+### Day 3: Physical Computing with Scratch for Arduino
 
 **CHPC Resources:**
 - **Primary:** [CHPC Robotics Module](https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics)
@@ -165,9 +191,13 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 **CHPC Focus:** Visual programming fundamentals, interactive projects  
 **DBE Integration:** Day 1 - Foundation, Day 2 - Physical computing extension
 
-### 2. Robotics with Scratch for Arduino
+### 2. Advanced Scratch Programming
+**CHPC Focus:** Complex Scratch projects, games, simulations  
+**DBE Integration:** Day 2 - Advanced Scratch (cloning, broadcasting, curriculum integration)
+
+### 3. Robotics with Scratch for Arduino
 **CHPC Focus:** Robotic arm project, servo control, mechanics  
-**DBE Integration:** Day 2 - Physical computing, Day 3 - Coding & Robotics with Arduino
+**DBE Integration:** Day 3 - Physical Computing with Arduino (basics + robotics)
 
 ### 3. Cloud Computing and Virtual Resources (Reference)
 **CHPC Focus:** Sebowa cloud, virtual machines, cloud deployment  
@@ -224,8 +254,8 @@ The CHPC DSI Coding School is a six-year flagship project (2022-2028) funded by 
 
 ```
 ChpcTraining/dsi_coding_school/
-├── scratch/              → Day 1 Integration
-├── robotics/             → Day 2, Day 3 (Arduino/Robotics) Integration
+├── scratch/              → Day 1, Day 2 Integration
+├── robotics/             → Day 3 (Arduino/Robotics) Integration
 ├── cloud_computing/      → resources/cloud-computing Reference
 ├── computer_hardware/    → resources/hardware Reference
 ├── virtual_resources/    → resources/cloud-computing Supplementary

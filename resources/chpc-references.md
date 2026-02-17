@@ -30,7 +30,7 @@ This document provides quick access links to all CHPC Training DSI Coding School
 ### Robotics
 **Link:** https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics
 
-**DBE Integration:** Day 2 - Physical Computing with Scratch for Arduino
+**DBE Integration:** Day 3 - Physical Computing with Scratch for Arduino
 
 **Contents:**
 - Robotics introduction

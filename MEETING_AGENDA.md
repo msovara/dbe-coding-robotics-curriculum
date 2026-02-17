@@ -29,8 +29,8 @@
 | Day | Theme | Main focus |
 |-----|--------|------------|
 | **Day 1** | Introduction to Coding with Scratch | Computational thinking, Scratch basics, events & control, classroom use |
-| **Day 2** | Physical Computing with Scratch for Arduino | Arduino/S4A setup, sensors & actuators, first physical projects |
-| **Day 3** | Coding & Robotics with Arduino | Multi-sensor projects, robotics behaviours, project development |
+| **Day 2** | Advanced Scratch Programming | Cloning, broadcasting, complex games, curriculum integration |
+| **Day 3** | Physical Computing with Scratch for Arduino | Arduino hardware, S4A setup, sensors/actuators, robotics applications |
 | **Day 4** | Coding & Robotics with Micro:bit – Part 1 | Micro:bit & MakeCode, inputs/outputs, flashing, robotics ideas |
 | **Day 5** | Coding & Robotics with Micro:bit – Part 2 (Code Club Intro) | Micro:bit Part 2, Code Club intro, mini Code Club, wrap-up & action planning |
 
