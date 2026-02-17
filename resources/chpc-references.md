@@ -156,12 +156,13 @@ This document provides quick access links to all CHPC Training DSI Coding School
 - CHPC CodeClub: https://github.com/ChpcTraining/dsi_coding_school/tree/main/codeclub
 - CHPC Presentations: https://github.com/ChpcTraining/dsi_coding_school/tree/main/presentations
 
-### Day 2: Arduino/Robotics
-- CHPC Robotics: https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics
+### Day 2: Advanced Scratch
 - CHPC Scratch: https://github.com/ChpcTraining/dsi_coding_school/tree/main/scratch
+- DBE: `day-02-scratch/`
 
-### Day 3: Coding & Robotics with Arduino
+### Day 3: Arduino/Robotics
 - CHPC Robotics: https://github.com/ChpcTraining/dsi_coding_school/tree/main/robotics
+- DBE: `day-03-arduino/`, reference: `resources/hardware/`
 - DBE: `day-03-arduino/`, reference: `resources/hardware/`
 
 ### Day 4: Coding & Robotics with Micro:bit – Part 1
