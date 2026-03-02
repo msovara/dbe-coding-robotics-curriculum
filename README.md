@@ -1,6 +1,8 @@
 # DBE Coding and Robotics Curriculum
 ## Week-Long Teacher Training Workshop
 
+**Repository:** [https://github.com/msovara/dbe-coding-robotics-curriculum](https://github.com/msovara/dbe-coding-robotics-curriculum)
+
 This curriculum is designed for the Department of Basic Education (DBE) in South Africa to train teachers in coding and robotics education.
 
 **Integrated with:** [CHPC Training DSI Coding School](https://github.com/ChpcTraining/dsi_coding_school) - See [CHPC_INTEGRATION.md](CHPC_INTEGRATION.md) for details.
@@ -85,6 +87,19 @@ dbe-coding-robotics-curriculum/
     ├── daily-reflection-template.md
     └── evaluation-form.md
 ```
+
+## Streamlit App (Browse Curriculum in the Browser)
+
+**App URL (when running locally):** [http://localhost:8501](http://localhost:8501)
+
+From the repo root, install and run:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Then open the URL above (or the one shown in the terminal) to browse the curriculum by day, view timetables, and access resources and supporting materials.
 
 ## How to Use This Curriculum
 
