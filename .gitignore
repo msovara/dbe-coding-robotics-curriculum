@@ -60,7 +60,12 @@ npm-debug.log
 # Build outputs
 dist/
 build/
+site/
 *.egg-info/
+
+# MkDocs: symlinks/junctions created by scripts/link-docs-for-mkdocs.* (curriculum stays at repo root)
+docs/*
+!docs/index.md
 
 
 

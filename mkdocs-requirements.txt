@@ -1,0 +1,3 @@
+# Build static site for GitHub Pages (local: see GITHUB_PAGES.md)
+# Run scripts/link-docs-for-mkdocs.sh (or .ps1 on Windows) before mkdocs serve/build.
+mkdocs-material>=9.5.0,<10

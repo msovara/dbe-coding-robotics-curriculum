@@ -1,0 +1,151 @@
+# DBE Coding & Robotics Curriculum – static site for GitHub Pages
+# Local preview: pip install -r mkdocs-requirements.txt && mkdocs serve
+# Live site (after enabling Pages → GitHub Actions): https://msovara.github.io/dbe-coding-robotics-curriculum/
+
+site_name: DBE Coding & Robotics Curriculum
+site_description: Week-long teacher training workshop – South Africa DBE
+site_author: DBE / CHPC integration
+site_url: https://msovara.github.io/dbe-coding-robotics-curriculum/
+repo_url: https://github.com/msovara/dbe-coding-robotics-curriculum
+repo_name: dbe-coding-robotics-curriculum
+edit_uri: edit/main/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: ["..", ".", "docs"]
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Day 1 – Scratch:
+      - Lesson plan: day-01-scratch/lesson-plan.md
+      - Scratch introduction guide: day-01-scratch/scratch-introduction-guide.md
+      - Activities:
+          - Computational thinking exercises: day-01-scratch/activities/computational-thinking-exercises.md
+      - Projects:
+          - Project templates: day-01-scratch/projects/project-templates.md
+      - Assessment:
+          - Rubric: day-01-scratch/assessment/rubric.md
+  - Day 2 – Advanced Scratch:
+      - Lesson plan: day-02-scratch/lesson-plan.md
+      - Scratch advanced guide: day-02-scratch/scratch-advanced-guide.md
+      - Activities:
+          - Advanced Scratch activities: day-02-scratch/activities/advanced-scratch-activities.md
+      - Projects:
+          - Project templates: day-02-scratch/projects/project-templates.md
+      - Assessment:
+          - Rubric: day-02-scratch/assessment/rubric.md
+  - Day 3 – Arduino:
+      - Lesson plan: day-03-arduino/lesson-plan.md
+      - Arduino robotics guide: day-03-arduino/arduino-robotics-guide.md
+      - Arduino hardware guide: day-03-arduino/arduino-hardware-guide.md
+      - S4A setup instructions: day-03-arduino/s4a-setup-instructions.md
+      - Activities:
+          - Wiring diagrams: day-03-arduino/activities/wiring-diagrams.md
+      - Projects:
+          - Project guides: day-03-arduino/projects/project-guides.md
+      - Assessment:
+          - Rubric: day-03-arduino/assessment/rubric.md
+  - "Day 4 – Micro:bit":
+      - Lesson plan: day-04-microbit/lesson-plan.md
+      - "Micro:bit introduction guide": day-04-microbit/microbit-introduction-guide.md
+      - Activities:
+          - "Micro:bit activities": day-04-microbit/activities/microbit-activities.md
+      - Projects:
+          - Project templates: day-04-microbit/projects/project-templates.md
+      - Assessment:
+          - Rubric: day-04-microbit/assessment/rubric.md
+  - "Day 5 – Micro:bit & Code Club":
+      - Lesson plan: day-05-microbit-codeclub/lesson-plan.md
+      - Code Club guide: day-05-microbit-codeclub/code-club-guide.md
+      - Activities:
+          - Code Club activities: day-05-microbit-codeclub/activities/code-club-activities.md
+      - Projects:
+          - First Code Club session template: day-05-microbit-codeclub/projects/first-code-club-session-template.md
+      - Assessment:
+          - Rubric: day-05-microbit-codeclub/assessment/rubric.md
+  - Timetable:
+      - One-page timetable: WORKSHOP_TIMETABLE_ONE_PAGE.md
+      - Full timetable: WORKSHOP_TIMETABLE.md
+  - Resources:
+      - Curriculum summary: CURRICULUM-SUMMARY.md
+      - CHPC integration: CHPC_INTEGRATION.md
+      - Procurement guide: resources/procurement-guide.md
+      - CHPC references: resources/chpc-references.md
+      - Integration planning template: resources/templates/integration-planning-template.md
+      - Lesson plan template: resources/templates/lesson-plan-template.md
+      - Cloud computing (reference):
+          - Overview: resources/cloud-computing/README.md
+          - Lesson plan: resources/cloud-computing/lesson-plan.md
+          - CHPC cloud setup: resources/cloud-computing/CHPC_CLOUD_SETUP.md
+          - Sebowa guide: resources/cloud-computing/SEBOWA_GUIDE.md
+          - Activities:
+              - Cloud platforms guide: resources/cloud-computing/activities/cloud-platforms-guide.md
+          - Projects:
+              - Data visualization templates: resources/cloud-computing/projects/data-visualization-templates.md
+          - Assessment:
+              - Rubric: resources/cloud-computing/assessment/rubric.md
+      - Hardware (reference):
+          - Overview: resources/hardware/README.md
+          - Lesson plan: resources/hardware/lesson-plan.md
+          - Troubleshooting guide: resources/hardware/troubleshooting-guide.md
+  - Supporting materials:
+      - Meeting agenda: MEETING_AGENDA.md
+      - Pre-workshop survey: supporting-materials/pre-workshop-survey.md
+      - Daily reflection template: supporting-materials/daily-reflection-template.md
+      - Workshop evaluation form: supporting-materials/workshop-evaluation-form.md
+      - Email template: EMAIL_TEMPLATE.md
+      - Email workshop summary: EMAIL_WORKSHOP_SUMMARY.md
+  - Meta:
+      - GitHub setup: GITHUB_SETUP.md
+      - GitHub Pages (how this site is published): GITHUB_PAGES.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/msovara/dbe-coding-robotics-curriculum

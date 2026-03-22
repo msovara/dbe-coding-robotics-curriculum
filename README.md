@@ -88,6 +88,14 @@ dbe-coding-robotics-curriculum/
     └── evaluation-form.md
 ```
 
+## GitHub Pages (Public Website)
+
+The curriculum is also published as a **static website** (no Python required for readers).
+
+- **Live site:** [https://msovara.github.io/dbe-coding-robotics-curriculum/](https://msovara.github.io/dbe-coding-robotics-curriculum/)  
+  *(Works after you enable **Settings → Pages → Source: GitHub Actions** and the deploy workflow has run.)*
+- **How it works:** see [GITHUB_PAGES.md](GITHUB_PAGES.md).
+
 ## Streamlit App (Browse Curriculum in the Browser)
 
 **App URL (when running locally):** [http://localhost:8501](http://localhost:8501)
