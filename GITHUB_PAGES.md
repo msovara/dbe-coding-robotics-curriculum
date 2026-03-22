@@ -15,6 +15,26 @@ This repository includes a **static documentation site** built with [MkDocs](htt
 3. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch” using `/docs` unless you switch to that model).
 4. Save if prompted.
 
+### If you see “404 There isn’t a GitHub Pages site here”
+
+Work through these in order:
+
+1. **Correct URL** — For this repo the site is a **project** page, not your user homepage:
+   - Use: `https://msovara.github.io/dbe-coding-robotics-curriculum/` (include the **repo name** path).
+   - Not: `https://msovara.github.io/` alone (that is a different site or empty).
+
+2. **Pages source must be GitHub Actions** — **Settings → Pages → Build and deployment → Source → GitHub Actions**. If it still says “Deploy from a branch” or “None”, Pages will not publish this workflow’s output.
+
+3. **Workflow must finish successfully** — **Actions** tab → **Deploy MkDocs to GitHub Pages**. Open the latest run:
+   - If **build** failed (red), open the log and fix the error (often a missing file or MkDocs warning treated as error).
+   - If **deploy** is **yellow / waiting**, click it and **approve** the deployment (some accounts/orgs require a one-time approval for the `github-pages` environment).
+
+4. **Actions permissions for `GITHUB_TOKEN`** — **Settings → Actions → General → Workflow permissions** → choose **Read and write permissions** (and allow GitHub Actions to create PRs if prompted). Then re-run the workflow.
+
+5. **Private repository** — On a free personal account, GitHub Pages for **private** repos may be unavailable or limited. The repo must be **public** (or your plan must allow private Pages).
+
+6. **Wait a minute** — After the first successful deploy, the site can take **1–2 minutes** to appear; hard-refresh the browser.
+
 ## How deployment works
 
 - Workflow file: `.github/workflows/github-pages.yml`
