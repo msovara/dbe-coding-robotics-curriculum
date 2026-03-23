@@ -27,6 +27,8 @@ This guide supports Day 2 of the DBE Coding and Robotics workshop. It builds on 
 
 **Example:** Create 10 clones of a sprite, each moving in different directions.
 
+**Ready-to-type scripts:** Step-by-step block stacks for cloning, broadcasting, a catch game, lives, and a list-based quiz are in **[activities/advanced-scratch-activities.md](activities/advanced-scratch-activities.md)** (“Example block scripts” under each activity).
+
 ---
 
 ### Broadcasting

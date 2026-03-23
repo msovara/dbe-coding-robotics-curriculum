@@ -21,7 +21,7 @@
 - Cloning: creating multiple copies of sprites
 - Broadcasting: communication between sprites
 - Lists: managing multiple data items
-- Hands-on: Quick project using cloning or broadcasting
+- Hands-on: Quick project using cloning or broadcasting (starter **block scripts** in [activities/advanced-scratch-activities.md](activities/advanced-scratch-activities.md))
 
 ### 10:30 - 11:00 **Morning Tea Break**
 
