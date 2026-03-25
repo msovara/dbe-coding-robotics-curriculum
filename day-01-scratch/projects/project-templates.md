@@ -246,77 +246,51 @@
 **Learning Objectives:**
 - Use operators
 - Apply conditions (if-then-else)
+- Use `repeat until` for a game loop
 - Create interactive games
 
 ### Instructions
 
-1. **Create variables:**
-   - "Secret Number" (the number to guess)
-   - "Guess" (player's guess)
-   - "Attempts" (number of tries)
+1. **Create variables** (For all sprites or for this sprite only—your choice):
+   - `secret number` — the hidden value (1–10)
+   - `guess` — the player’s latest answer
+   - `attempts` — how many guesses so far
 
-2. **Set up the game:**
-   ```
-   when green flag clicked
-   set [Secret Number] to pick random 1 to 10
-   set [Attempts] to 0
-   say [I'm thinking of a number between 1 and 10. Can you guess it?]
-   ```
+2. **Build this complete script** on one sprite (e.g. the cat).  
+   It matches the usual classroom layout: intro → loop with **Too low** / **Too high** → final line **`Correct! Attempts: …`**.
 
-3. **Get player input:**
-   ```
-   when green flag clicked
-   set [Secret Number] to pick random 1 to 10
-   set [Attempts] to 0
-   say [I'm thinking of a number between 1 and 10. Can you guess it?]
-   ask [What's your guess?] and wait
-   set [Guess] to answer
-   ```
+```text
+When green flag clicked
+  set (secret number) to (pick random (1) to (10))
+  set (attempts) to (0)
+  say [I am thinking of a number between 1 and 10, can you guess it?] for (2) seconds
+  repeat until <(guess) = (secret number)>
+    ask [Enter your guess:] and wait
+    set (guess) to (answer)
+    change (attempts) by (1)
+    if <(guess) < (secret number)> then
+      say [Too low!] for (2) seconds
+    else
+      if <(guess) > (secret number)> then
+        say [Too high!] for (2) seconds
 
-4. **Check the guess:**
-   ```
-   when green flag clicked
-   set [Secret Number] to pick random 1 to 10
-   set [Attempts] to 0
-   say [I'm thinking of a number between 1 and 10. Can you guess it?]
-   ask [What's your guess?] and wait
-   set [Guess] to answer
-   change [Attempts] by 1
-   
-   if [Guess] = [Secret Number] then
-      say [Correct! You guessed it in] + [Attempts] + [tries!]
-   else
-      if [Guess] > [Secret Number] then
-         say [Too high! Try again.]
-      else
-         say [Too low! Try again.]
-      end
-   end
-   ```
+  say (join [Correct! Attempts: ] (attempts)) for (2) seconds
+```
 
-5. **Add game loop:**
-   ```
-   when green flag clicked
-   set [Secret Number] to pick random 1 to 10
-   set [Attempts] to 0
-   say [I'm thinking of a number between 1 and 10. Can you guess it?]
-   
-   repeat until [Guess] = [Secret Number]
-      ask [What's your guess?] and wait
-      set [Guess] to answer
-      change [Attempts] by 1
-      
-      if [Guess] = [Secret Number] then
-         say [Correct! You guessed it in] + [Attempts] + [tries!]
-      else
-         if [Guess] > [Secret Number] then
-            say [Too high! Try again.]
-         else
-            say [Too low! Try again.]
-         end
-      end
-   end
-   ```
+*Nest the `if` / `else` blocks inside the `repeat until`. The final **`say (join …)`** block attaches **under** the `when green flag clicked` hat, **after** the whole `repeat until` loop—not inside the loop.*
+
+3. **What you should see when you run it**
+   - After each wrong guess: **Too low!** or **Too high!** (for 2 seconds).
+   - When the guess is correct, the loop stops (no “too low/high” on that turn).
+   - Then the sprite says **`Correct! Attempts: `** followed by the number of tries, e.g. `Correct! Attempts: 4`.
+
+### Common mistake (wrong `if` inside the loop)
+
+Some scripts use an **else** branch like “if guess = secret number then say Too high”. That is **backwards**: when the guess **equals** the secret, the game is **correct**, not too high.
+
+- **Too low** → `guess < secret number`
+- **Too high** → `guess > secret number`
+- **Correct** → handled by **exiting** `repeat until`; the **join** line runs **after** the loop.
 
 ### Extensions
 - Increase number range
