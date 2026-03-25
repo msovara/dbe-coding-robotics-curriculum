@@ -34,6 +34,7 @@ TODO-personal.md
 
 # Large binary files (if any)
 *.zip
+!exports/dbe-scratch-days-1-2.zip
 *.tar.gz
 *.pdf
 *.ppt

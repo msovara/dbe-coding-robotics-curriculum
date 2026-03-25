@@ -31,7 +31,8 @@ for f in \
   EMAIL_TEMPLATE.md \
   EMAIL_WORKSHOP_SUMMARY.md \
   GITHUB_SETUP.md \
-  GITHUB_PAGES.md; do
+  GITHUB_PAGES.md \
+  CHPC_DSI_CODING_SCHOOL_PR.md; do
   link_file "$f"
 done
 

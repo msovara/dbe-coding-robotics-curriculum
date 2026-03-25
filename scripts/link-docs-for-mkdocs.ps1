@@ -23,7 +23,7 @@ $files = @(
     "WORKSHOP_TIMETABLE_ONE_PAGE.md", "WORKSHOP_TIMETABLE.md",
     "CURRICULUM-SUMMARY.md", "CHPC_INTEGRATION.md", "MEETING_AGENDA.md",
     "EMAIL_TEMPLATE.md", "EMAIL_WORKSHOP_SUMMARY.md",
-    "GITHUB_SETUP.md", "GITHUB_PAGES.md"
+    "GITHUB_SETUP.md", "GITHUB_PAGES.md", "CHPC_DSI_CODING_SCHOOL_PR.md"
 )
 foreach ($f in $files) {
     $target = Join-Path $Root $f

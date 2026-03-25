@@ -144,6 +144,7 @@ nav:
   - Meta:
       - GitHub setup: GITHUB_SETUP.md
       - GitHub Pages (how this site is published): GITHUB_PAGES.md
+      - PR Scratch materials to CHPC dsi_coding_school: CHPC_DSI_CODING_SCHOOL_PR.md
 
 extra:
   social:

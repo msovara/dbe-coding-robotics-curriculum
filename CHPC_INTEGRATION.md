@@ -4,7 +4,9 @@
 This document integrates the [CHPC Training DSI Coding School](https://github.com/ChpcTraining/dsi_coding_school) repository content with the DBE Coding and Robotics Curriculum, providing cross-references and alignment between the two curricula.
 
 **CHPC Repository:** https://github.com/ChpcTraining/dsi_coding_school  
-**DBE Curriculum Repository:** https://github.com/msovara/dbe-coding-robotics-curriculum
+**DBE Curriculum Repository:** https://github.com/msovara/dbe-coding-robotics-curriculum  
+
+**Contributing Scratch Days 1–2 back into CHPC:** step-by-step **remote → branch → push → PR** instructions (including the Windows path issue) are in **[CHPC_DSI_CODING_SCHOOL_PR.md](CHPC_DSI_CODING_SCHOOL_PR.md)**.
 
 ---
 
