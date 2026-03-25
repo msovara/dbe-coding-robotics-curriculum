@@ -183,61 +183,87 @@
 
 ---
 
-## Project 4: Score Keeper (Variables)
-**Time:** 45-60 minutes
+## Project 4: Score Keeper with timer (Variables + loops)
+**Time:** 45–60 minutes  
 **Learning Objectives:**
-- Create and use variables
-- Understand variable values
-- Use operators
+- Create and use variables (`score`, `time`)
+- Use `forever`, `repeat until`, and conditions together
+- Coordinate two scripts that both start with the green flag
 
 ### Instructions
 
-1. **Create a variable:**
-   - Go to Variables section
-   - Click "Make a Variable"
-   - Name it "Score"
-   - Choose "For all sprites" or "For this sprite only"
+1. **Create two variables** (For all sprites is easiest so you can show monitors on the stage):
+   - `score` — how many times the player caught the sprite
+   - `time` — seconds left in the round
 
-2. **Set initial score:**
-   ```
-   when green flag clicked
-   set [Score] to 0
-   ```
+2. **Build three scripts** on the **same** sprite (e.g. the cat). Together they give: reset score, countdown, click to score, sprite jumps to a new random place every second while time is left, then **Game Over!**
 
-3. **Increase score on click:**
-   ```
-   when this sprite clicked
-   change [Score] by 1
-   play sound [pop]
-   ```
+**Script 1 — reset score when the game starts**
 
-4. **Add visual feedback:**
-   ```
-   when this sprite clicked
-   change [Score] by 1
-   change size by 10
-   play sound [pop]
-   wait 0.2 seconds
-   change size by -10
-   ```
+```text
+When green flag clicked
+  set (score) to (0)
+```
 
-5. **Add win condition:**
-   ```
-   when green flag clicked
-   set [Score] to 0
-   forever
-      if [Score] > 10 then
-         say [You Win!] for 2 seconds
-         stop [all]
-      end
-   end
-   ```
+**Script 2 — click adds a point; sprite keeps jumping while time remains**
+
+```text
+When this sprite clicked
+  change (score) by (1)
+  forever
+    if <(time) > (0)> then
+      go to (random position)
+      wait (1) seconds
+```
+
+*Motion:* use **`go to`** and choose **random position** from the dropdown (Scratch 3).
+
+**Script 3 — 10 second countdown, then message**
+
+```text
+When green flag clicked
+  set (time) to (10)
+  repeat until <(time) = (0)>
+    wait (1) seconds
+    change (time) by (-1)
+
+  say [Game Over!] for (2) seconds
+```
+
+*The final **`say [Game Over!]`** attaches **under** the green flag, **after** the `repeat until` loop—not inside the loop.*
+
+### What you should see when you run it
+
+1. Green flag: **`score`** resets to **0**, **`time`** counts down from **10** to **0** (about 10 seconds).  
+2. Before time runs out, each **click** on the sprite adds **1** to **`score`** and starts the sprite jumping to a **random position** every **1** second (only while **`time` > 0**).  
+3. When **`time`** reaches **0**, the sprite says **`Game Over!`** for 2 seconds.
+
+### Common mistake: many `forever` loops from repeated clicks
+
+Every time the player **clicks**, Script 2 starts **another** `forever` loop. Several clicks → several loops running at once (weird speed / behaviour).
+
+**Recommended fix** — keep **one** movement loop on the green flag, and use the click **only** for scoring:
+
+```text
+When green flag clicked
+  forever
+    if <(time) > (0)> then
+      go to (random position)
+      wait (1) seconds
+
+When this sprite clicked
+  if <(time) > (0)> then
+    change (score) by (1)
+```
+
+*Then the sprite moves automatically during the round; clicks only increase `score`. Remove the old “click + forever” stack if you use this pattern.*
 
 ### Extensions
-- Add multiple scoring objects
-- Create a timer
-- Add different point values
-- Create a high score system
+- Add **`play sound [pop] until done`** when the sprite is clicked  
+- Show **`join [Score: ] (score)`** with a `say` block or variable monitor  
+- Change starting time (e.g. 20) or count faster  
+- Add **You Win!** if `score` reaches a target before time runs out  
+- Use several sprites, each with its own click script sharing the same `score` and `time`
 
 ---
 
