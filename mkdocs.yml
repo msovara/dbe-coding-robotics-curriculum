@@ -59,6 +59,9 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      # Keep the on-page contents sidebar readable on long pages such as the
+      # Day 2 facilitator memo, where every sprite has its own h4 heading.
+      toc_depth: 3
 
 nav:
   - Home: index.md
