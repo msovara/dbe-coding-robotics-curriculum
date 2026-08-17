@@ -130,7 +130,11 @@ forever
     change x by (10)
 ```
 
-#### Fruit sprite — create clones
+#### Fruit sprite (both scripts on this one sprite)
+
+Put **both** hats on the **same** `Fruit` sprite. Do not create a second fruit sprite.
+
+**Script 1 — original Fruit (hidden): spawn clones**
 
 ```text
 when green flag clicked
@@ -140,7 +144,7 @@ forever
   wait (pick random (1) to (3)) seconds
 ```
 
-#### Fruit sprite — make each clone fall
+**Script 2 — each clone: appear, fall, score or miss**
 
 ```text
 when I start as a clone
