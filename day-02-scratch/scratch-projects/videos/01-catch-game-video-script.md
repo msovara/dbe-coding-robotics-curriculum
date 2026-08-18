@@ -77,7 +77,7 @@ The Fruit sprite needs **two separate scripts on the same sprite**. Script one: 
 
 ### 7 — Fruit script 2
 
-Script two starts with **when I start as a clone**. Go to a random x between −200 and 200, and y 170, then **show**. **Repeat until** touching the Basket **or** y is below −170: change y by −5 and wait 0.03 seconds. **If** touching the Basket, change **score** by 1 and **delete this clone**.
+Script two starts with **when I start as a clone**. Go to a random x between −200 and 200, and y 170, then **show**. Inside **forever**: **if** touching the Basket **or** y is below −170, **stop this script**; otherwise change y by −5 and wait 0.03 seconds. After the loop, **if** touching the Basket, change **score** by 1, then **delete this clone**.
 
 ### 8 — Referee
 
@@ -89,7 +89,7 @@ Click the green flag. Move the basket with the arrow keys. Check that the origin
 
 ### 10 — Common fixes
 
-If clones never appear, make sure script one **hides** the original and uses **create clone of myself**. If the score does not update, confirm **score** is **for all sprites**. For the win condition, **score > 19** equals twenty points.
+If clones never appear, make sure script one **hides** the original and uses **create clone of myself**. If fruit clones appear but **do not fall**, check script two: use **forever** with **if touching or off bottom → stop this script**, not `repeat until not touching`. If the score does not update, confirm **score** is **for all sprites**. For the win condition, **score > 19** equals twenty points.
 
 ### 11 — Next steps
 

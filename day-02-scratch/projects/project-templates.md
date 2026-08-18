@@ -87,13 +87,17 @@ Script 2 — each clone: appear, fall, score or miss
 when I start as a clone
 go to x: (pick random (-200) to (200)) y: (170)
 show
-repeat until <<touching (Basket)?> or <(y position) < (-170)>>
+forever
+  if <<touching (Basket)?> or <(y position) < (-170)>> then
+    stop (this script)
   change y by (-5)
   wait (0.03) seconds
 if <touching (Basket)?> then
   change (score) by (1)
 delete this clone
 ```
+
+**Facilitator note:** This matches the working `.sb3`. Use **`forever` + `if … stop (this script)`** for the fall loop. Do **not** use `repeat until <not <touching …> or …>` — that stops on the first frame and the fruit never falls.
 
 **Referee sprite**
 
