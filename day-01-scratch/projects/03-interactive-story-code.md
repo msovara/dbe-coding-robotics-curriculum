@@ -3,12 +3,13 @@
 **Time:** 60–90 minutes  
 **Concepts:** events, backdrops, broadcast
 
-**Download the Scratch file (use this link):**  
-[Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+!!! tip "Download the Scratch file from this page"
 
-Then in Scratch: **File → Load from your computer**. Click the **green flag**, **click** Child, then press the **right arrow** twice.
+    **[Download `03-interactive-story.sb3`](03-interactive-story.sb3)**
 
-Exercises are at the bottom of this same page.
+    Then in Scratch: **File → Load from your computer**. Click the **green flag**, **click** Child, then press the **right arrow** twice.
+
+    Exercises are at the bottom of this same page.
 
 ### Task
 
@@ -25,9 +26,7 @@ Make a three-scene story: Home → Road → School. The player turns the page wi
 
 ### Memo: suggested Scratch script
 
-**Scratch file:** [`03-interactive-story.sb3`](../scratch-projects/solutions/03-interactive-story.sb3) — open in Scratch to see and test the blocks.
-
-**Download:** [Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+**Scratch file:** [`03-interactive-story.sb3`](03-interactive-story.sb3) — download from this page, then **File → Load from your computer**.
 
 **Facilitator annotations (what to say for each block):** [Interactive Story facilitator annotations](03-interactive-story-facilitator-guide.md) — separate from the scripts below; use while explaining, not in Scratch.
 
@@ -110,7 +109,7 @@ say [We arrived on time. Next time I will leave earlier.] for (2) seconds
 
 ## Exercises
 
-**Download the demo first:** [Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+**Download the demo first:** [Download `03-interactive-story.sb3`](03-interactive-story.sb3)
 
 Load it with **File → Load from your computer**. Use the scripts above as the answer key.
 
