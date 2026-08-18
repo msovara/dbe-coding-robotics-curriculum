@@ -9,9 +9,9 @@ Run:
 from __future__ import annotations
 
 import json
-import shutil
 import subprocess
 import sys
+import uuid
 import zipfile
 from pathlib import Path
 
@@ -63,6 +63,77 @@ SPRITE_LAYOUT = {
     "Referee": {"costumes": [COSTUME_REFEREE], "size": 85, "y": 40, "visible": False},
 }
 
+# Teaching notes attached as Scratch comment bubbles (same text as 01-catch-game-block-annotations.md).
+BLOCK_ANNOTATIONS: dict[str, list[list[str]]] = {
+    "Basket": [
+        [
+            "Start when the player clicks the green flag.",
+            "Place the bowl at the bottom centre (x 0, y −145).",
+            "Show the basket on the stage.",
+            "Repeat movement checks for the whole game.",
+            "If the left arrow key is pressed…",
+            "Move the basket 10 steps left.",
+            "If the right arrow key is pressed…",
+            "Move the basket 10 steps right.",
+        ],
+    ],
+    "Fruit": [
+        [
+            "Start when the game begins.",
+            "Hide the original fruit — only clones should appear.",
+            "Keep spawning clones for the whole game.",
+            "Create a copy of this sprite (runs the clone script).",
+            "Wait 1–3 seconds before spawning the next clone.",
+        ],
+        [
+            "Runs once for each new fruit clone.",
+            "Random x at the top of the stage (y 170).",
+            "Show this clone (the original stays hidden).",
+            "Fall until caught by the basket or off the bottom.",
+            "Move down 5 steps (falling).",
+            "Short pause so the fall looks smooth.",
+            "Did this clone land on the basket?",
+            "Add 1 point for a catch.",
+            "Remove this clone (catch or miss).",
+        ],
+    ],
+    "Referee": [
+        [
+            "Start when the game begins.",
+            "Reset score to 0 for a new game.",
+            "Hide the referee until the player wins.",
+            "Keep checking the score.",
+            "Brief pause (~20 checks per second).",
+            "Has the player reached 20 points? (score > 19)",
+            "Tell all sprites the game is won.",
+            "Stop this script after broadcasting win.",
+        ],
+        [
+            "Runs when the win message is broadcast.",
+            "Show the referee on the stage.",
+            'Say "You win!" for 3 seconds.',
+            "Stop every script — game over.",
+        ],
+    ],
+}
+
+SKIP_COMMENT_OPCODES = frozenset(
+    {
+        "control_create_clone_of_menu",
+        "sensing_touchingobjectmenu",
+        "sensing_touchingobject",
+        "sensing_keyoptions",
+        "sensing_keypressed",
+        "operator_random",
+        "operator_not",
+        "operator_or",
+        "operator_lt",
+        "operator_gt",
+        "motion_yposition",
+        "data_variable",
+    }
+)
+
 
 def run_py2sb3() -> None:
     cmd = [sys.executable, "-m", "scratch.cli", "py2sb3", str(PY2SB3_SOURCE), str(PY2SB3_OUTPUT)]
@@ -113,6 +184,96 @@ def patch_score_fields(project: dict, id_map: dict[str, str]) -> None:
             monitor["id"] = next(iter(set(id_map.values())))
 
 
+def patch_clone_menus(project: dict) -> None:
+    """py2sb3 emits 'myself'; Scratch VM expects '_myself_' in clone menus."""
+    for target in project["targets"]:
+        for block in target.get("blocks", {}).values():
+            if block.get("opcode") != "control_create_clone_of_menu":
+                continue
+            field = block.get("fields", {}).get("CLONE_OPTION")
+            if field and field[0] == "myself":
+                field[0] = "_myself_"
+
+
+def _walk_script_blocks(blocks: dict, start_id: str):
+    """Yield blocks in execution order (substack before next sibling)."""
+    current = start_id
+    while current:
+        block = blocks[current]
+        yield current, block
+        for key in sorted(block.get("inputs", {})):
+            value = block["inputs"][key]
+            if (
+                isinstance(value, list)
+                and len(value) > 1
+                and isinstance(value[1], str)
+                and value[1] in blocks
+            ):
+                yield from _walk_script_blocks(blocks, value[1])
+        current = block.get("next")
+
+
+def _annotatable_blocks(blocks: dict, start_id: str) -> list[str]:
+    ids: list[str] = []
+    for block_id, block in _walk_script_blocks(blocks, start_id):
+        if block.get("shadow"):
+            continue
+        if block["opcode"] in SKIP_COMMENT_OPCODES:
+            continue
+        ids.append(block_id)
+    return ids
+
+
+def _attach_comment(
+    target: dict,
+    block_id: str,
+    text: str,
+    blocks: dict,
+    index: int,
+) -> None:
+    comment_id = uuid.uuid4().hex[:20]
+    block = blocks[block_id]
+    anchor_x = block.get("x", 0)
+    anchor_y = block.get("y", index * 24)
+    target.setdefault("comments", {})[comment_id] = {
+        "blockId": block_id,
+        "x": anchor_x + 260,
+        "y": anchor_y,
+        "width": 220,
+        "height": min(120, 40 + text.count("\n") * 16),
+        "minimized": False,
+        "text": text,
+    }
+    block["comment"] = comment_id
+
+
+def patch_block_comments(project: dict) -> None:
+    """Attach Scratch comment bubbles to main blocks (visible in the editor)."""
+    for target in project["targets"]:
+        if target["isStage"]:
+            continue
+        sprite = target["name"]
+        scripts = BLOCK_ANNOTATIONS.get(sprite)
+        if not scripts:
+            continue
+        blocks = target["blocks"]
+        hats = [(bid, b) for bid, b in blocks.items() if b.get("topLevel")]
+        hats.sort(key=lambda item: item[1].get("y", 0))
+        if len(hats) != len(scripts):
+            raise RuntimeError(
+                f"{sprite}: expected {len(scripts)} scripts, found {len(hats)} top-level blocks"
+            )
+        for (hat_id, _), notes in zip(hats, scripts):
+            block_ids = _annotatable_blocks(blocks, hat_id)
+            if len(block_ids) != len(notes):
+                raise RuntimeError(
+                    f"{sprite}: annotation count {len(notes)} != blocks {len(block_ids)} "
+                    f"({[blocks[b]['opcode'] for b in block_ids]})"
+                )
+            for index, (block_id, text) in enumerate(zip(block_ids, notes)):
+                _attach_comment(target, block_id, text, blocks, index)
+
+
 def patch_sprites(project: dict) -> None:
     stage = project["targets"][0]
     stage["costumes"] = [COSTUME_BACKDROP]
@@ -136,7 +297,9 @@ def build_catch_game_project() -> dict:
         project = json.loads(zf.read("project.json"))
     id_map = collect_score_ids(project)
     patch_score_fields(project, id_map)
+    patch_clone_menus(project)
     patch_sprites(project)
+    patch_block_comments(project)
     project.setdefault("monitors", [])
     score_id = next(iter(set(id_map.values())))
     project["monitors"] = [
