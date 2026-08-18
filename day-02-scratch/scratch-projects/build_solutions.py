@@ -22,6 +22,10 @@ OUTPUT_DIR = ROOT / "solutions"
 PY2SB3_CATCH = ROOT / "catch_game_py2sb3.py"
 PY2SB3_WATER = ROOT / "water_cycle_py2sb3.py"
 PY2SB3_STORY = ROOT / "interactive_story_py2sb3.py"
+PY2SB3_DAY1_STORY = (
+    ROOT.parent.parent / "day-01-scratch" / "scratch-projects" / "interactive_story_day1_py2sb3.py"
+)
+DAY1_OUTPUT_DIR = ROOT.parent.parent / "day-01-scratch" / "scratch-projects" / "solutions"
 PY2SB3_OUTPUT = ROOT / "_py2sb3_build.sb3"
 STAGE_COUNTERS = ("evaporated", "condensed", "precipitated", "ground_water")
 STORY_VARS = ("choice",)
@@ -32,6 +36,7 @@ VAR_DISPLAY_NAMES = {
 }
 BROADCAST_DISPLAY_NAMES = {
     "scene_1": "scene 1",
+    "scene_2": "scene 2",
     "path_A": "path A",
     "path_B": "path B",
     "ending_A": "ending A",
@@ -295,6 +300,70 @@ def story_backdrops() -> list[dict]:
         write_svg_costume(name, svg, 240, 180)
         for name, svg in STORY_BACKDROP_SVG.items()
     ]
+
+
+DAY1_STORY_BACKDROP_SVG = {
+    "Home": (
+        b'<svg version="1.1" width="480" height="360" viewBox="0 0 480 360" '
+        b'xmlns="http://www.w3.org/2000/svg">'
+        b'<rect width="480" height="360" fill="#f3e6d4"/>'
+        b'<rect y="250" width="480" height="110" fill="#c4a484"/>'
+        b'<rect x="70" y="90" width="160" height="160" fill="#e8c39e"/>'
+        b'<rect x="90" y="120" width="50" height="50" fill="#7eb6d9"/>'
+        b'<rect x="160" y="120" width="50" height="50" fill="#7eb6d9"/>'
+        b'<rect x="130" y="180" width="40" height="70" fill="#8d6e63"/>'
+        b'<rect x="300" y="140" width="110" height="110" fill="#d7ccc8"/>'
+        b"</svg>"
+    ),
+    "Road": (
+        b'<svg version="1.1" width="480" height="360" viewBox="0 0 480 360" '
+        b'xmlns="http://www.w3.org/2000/svg">'
+        b'<rect width="480" height="360" fill="#87ceeb"/>'
+        b'<rect y="200" width="480" height="160" fill="#7cb342"/>'
+        b'<rect y="250" width="480" height="70" fill="#616161"/>'
+        b'<rect x="20" y="280" width="40" height="8" fill="#fdd835"/>'
+        b'<rect x="90" y="280" width="40" height="8" fill="#fdd835"/>'
+        b'<rect x="160" y="280" width="40" height="8" fill="#fdd835"/>'
+        b'<rect x="230" y="280" width="40" height="8" fill="#fdd835"/>'
+        b'<rect x="300" y="280" width="40" height="8" fill="#fdd835"/>'
+        b'<rect x="370" y="280" width="40" height="8" fill="#fdd835"/>'
+        b'<rect x="440" y="280" width="30" height="8" fill="#fdd835"/>'
+        b"</svg>"
+    ),
+    "School": (
+        b'<svg version="1.1" width="480" height="360" viewBox="0 0 480 360" '
+        b'xmlns="http://www.w3.org/2000/svg">'
+        b'<rect width="480" height="360" fill="#bbdefb"/>'
+        b'<rect y="260" width="480" height="100" fill="#8d6e63"/>'
+        b'<rect x="90" y="80" width="300" height="180" fill="#ef9a9a"/>'
+        b'<polygon points="90,80 240,20 390,80" fill="#c62828"/>'
+        b'<rect x="210" y="180" width="60" height="80" fill="#5d4037"/>'
+        b'<rect x="120" y="110" width="50" height="40" fill="#fff59d"/>'
+        b'<rect x="310" y="110" width="50" height="40" fill="#fff59d"/>'
+        b'<rect x="120" y="170" width="50" height="40" fill="#fff59d"/>'
+        b'<rect x="310" y="170" width="50" height="40" fill="#fff59d"/>'
+        b"</svg>"
+    ),
+}
+
+
+def day1_story_backdrops() -> list[dict]:
+    return [
+        write_svg_costume(name, svg, 240, 180)
+        for name, svg in DAY1_STORY_BACKDROP_SVG.items()
+    ]
+
+
+DAY1_STORY_LAYOUT = {
+    "Child": {"costumes": [COSTUME_AVERY], "size": 80, "x": -80, "y": -60},
+    "Friend": {
+        "costumes": [COSTUME_PICO],
+        "size": 90,
+        "x": 80,
+        "y": -60,
+        "visible": False,
+    },
+}
 
 
 def run_py2sb3(source: Path) -> None:
@@ -596,6 +665,18 @@ def build_story_project() -> dict:
     return project
 
 
+def build_day1_story_project() -> dict:
+    project = load_py2sb3(PY2SB3_DAY1_STORY)
+    merge_sprite_onto_stage(project, "StageBackdrops")
+    patch_broadcast_display_names(project, BROADCAST_DISPLAY_NAMES)
+    patch_stop_mutations(project)
+    patch_stage_broadcasts(project)
+    patch_sprites(project, DAY1_STORY_LAYOUT, stage_costumes=day1_story_backdrops())
+    project["monitors"] = []
+    project["targets"][0]["currentCostume"] = 0
+    return project
+
+
 def ensure_sprite_assets() -> None:
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     required = [
@@ -635,6 +716,7 @@ def write_sb3(project: dict, output_path: Path) -> None:
     ensure_sprite_assets()
     grass_costume()
     story_backdrops()
+    day1_story_backdrops()
     output_path.parent.mkdir(parents=True, exist_ok=True)
     needed = collect_project_assets(project)
     with zipfile.ZipFile(output_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
@@ -659,6 +741,10 @@ def main() -> None:
     story_out = OUTPUT_DIR / "05-interactive-story.sb3"
     write_sb3(story, story_out)
     print(f"Wrote {story_out}")
+    day1 = build_day1_story_project()
+    day1_out = DAY1_OUTPUT_DIR / "03-interactive-story.sb3"
+    write_sb3(day1, day1_out)
+    print(f"Wrote {day1_out}")
 
 
 if __name__ == "__main__":

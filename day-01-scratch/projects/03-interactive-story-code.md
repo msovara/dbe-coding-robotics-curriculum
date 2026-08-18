@@ -18,9 +18,13 @@ Make a three-scene story: Home → Road → School. The player turns the page wi
 
 ### Memo: suggested Scratch script
 
+**Scratch file:** [`03-interactive-story.sb3`](../scratch-projects/solutions/03-interactive-story.sb3) — open in Scratch to see and test the blocks.
+
+**Download:** [Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+
 **Facilitator annotations (what to say for each block):** [Interactive Story facilitator annotations](03-interactive-story-facilitator-guide.md) — separate from the scripts below; use while explaining, not in Scratch.
 
-**How to run:** Green flag (Home, Child speaks) → **click** Child → **right arrow** (Road, Friend appears) → **right arrow** (School, ending line).
+**How to run:** Load the `.sb3` (**File → Load from your computer**). Green flag (Home, Child speaks) → **click** Child → **right arrow** (Road, Friend appears) → **right arrow** (School, ending line).
 
 **Setup:** sprites `Child`, `Friend`. Backdrops `Home`, `Road`, `School` (in that order). Message `scene 2`. Friend starts hidden.
 
@@ -85,7 +89,7 @@ switch backdrop to (next backdrop)
 say [We arrived on time. Next time I will leave earlier.] for (2) seconds
 ```
 
-**Check:** three named backdrops; Friend hidden on green flag; `scene 2` spelled the same on broadcast and receive.
+**Check:** three named backdrops; Friend hidden on green flag; `scene 2` spelled the same on broadcast and receive. In the `.sb3`, each arrow script also checks the backdrop name so the first press is Road and the second is School.
 
 **Other say lines (same scripts, change only the text)**
 

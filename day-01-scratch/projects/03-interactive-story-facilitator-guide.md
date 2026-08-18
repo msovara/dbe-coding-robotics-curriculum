@@ -9,6 +9,7 @@
 |------|---------|
 | [Project 3 memo](project-templates.md#project-3-interactive-story-intermediate) | Clean block scripts (answer key) |
 | [Interactive Story memo](03-interactive-story-code.md) | Same scripts on a short GitHub Pages page |
+| [`03-interactive-story.sb3`](../scratch-projects/solutions/03-interactive-story.sb3) | Working project to demo |
 
 ---
 
@@ -184,5 +185,6 @@ Use the [memo](03-interactive-story-code.md) for the scripts. These are classroo
 
 ## Links
 
+- **Download `.sb3`:** [raw GitHub file](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)  
 - **Memo (scripts):** [Interactive Story memo](03-interactive-story-code.md)  
 - **Day 2 (do not teach today):** [Interactive Story with choices](../day-02-scratch/scratch-projects/05-interactive-story-facilitator-annotations.md) · [Download Day 2 `.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/05-interactive-story.sb3)
