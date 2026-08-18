@@ -93,15 +93,16 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 | Block | What it does | What to say |
 |-------|----------------|-------------|
 | `when I receive (evaporate)` | Starts when the sun is clicked. | “This hat only runs after the broadcast — not on green flag.” |
+| `go to x: (-100) y: (-100)` | Reset to the surface **before** rising. | “If the droplet is already high (editor leftover), skip this and the `if y > 90` fires immediately — counters stay 0.” |
 | `show` | Make sure the droplet is visible. | “It may have been hidden at the top from the last cycle.” |
 | `forever` | Keep rising until high enough. | “Same pattern as Catch Game: `forever` + `if` + `stop`, not a broken `repeat until not`.” |
+| `change y by (5)` | Move **up** first. | “Positive y = up. Check height **after** the move, not before.” |
+| `wait (0.05) seconds` | Slow the rise so it is visible. | “Without `wait`, it jumps to the cloud instantly.” |
 | `if ‹(y position) > (90)›` | Near the top of the stage. | “90 is just below the cloud. Teachers can change this height.” |
+| `change (evaporated) by (1)` | One evaporation event. | “Count **once per cycle**, like `condensed` — not every 0.05 seconds.” |
 | `hide` | Droplet becomes vapour (unseen). | “We hide it so the **cloud** can take over the story.” |
 | `broadcast (condense)` | Next step of the cycle. | “Cleanup (hide) **before** `stop` — same lesson as deleting fruit clones.” |
 | `stop (this script)` | Leave the rise loop. | “Must be last inside the `if`.” |
-| `change y by (5)` | Move **up**. | “Positive y = up. Evaporation is water going into the air.” |
-| `change (evaporated) by (1)` | Count rise steps. | “This counts motion steps, not ‘one evaporation’. That is OK for a first model.” |
-| `wait (0.05) seconds` | Slow the rise so it is visible. | “Without `wait`, it jumps to the cloud instantly.” |
 
 ---
 
@@ -132,12 +133,12 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 | `go to x: (-70) y: (100)` | Appear under the cloud. | “Teleport to the sky; we are not showing every vapour molecule.” |
 | `show` | Raindrop becomes visible. | “After hide during evaporation, we must `show` again.” |
 | `forever` | Fall until the ground. | “Mirror of rising: now y decreases.” |
+| `change y by (-6)` | Move **down** first. | “Negative y = falling rain. Check landing **after** the move.” |
+| `wait (0.05) seconds` | Visible fall speed. | “Match the evaporation wait so up and down feel related.” |
 | `if ‹touching (Ground)? or (y position) < (-150)›` | Has rain reached the land? | “Grass strip across the bottom, plus a y check so rain cannot fall forever.” |
+| `change (precipitated) by (1)` | One rain event. | “Count **once per cycle**, when rain lands.” |
 | `broadcast (collected)` | Start collection. | “Broadcast **before** `stop` so the next script can run.” |
 | `stop (this script)` | Stop falling. | “If you only `stop` and never broadcast, the cycle hangs.” |
-| `change y by (-6)` | Move **down**. | “Negative y = falling rain.” |
-| `change (precipitated) by (1)` | Count fall steps. | “Again: steps of motion, useful as a visible counter.” |
-| `wait (0.05) seconds` | Visible fall speed. | “Match the evaporation wait so up and down feel related.” |
 
 ---
 
@@ -170,6 +171,7 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 | Ground is a small tree | Rain never “lands”; droplet falls off stage | Use a **full-width grass** costume named **Ground** |
 | Cloud not hidden on green flag | Cloud visible from the start | Add `hide` on Cloud’s flag script |
 | `repeat until not …` for rising/falling | Droplet never moves (same Catch Game bug) | Use `forever` + `if` + `stop this script` |
+| Check `y > 90` **before** moving, and skip `go to` start | Droplet already high → hides immediately; all counters stay 0 | `go to` the pond first; move; **then** check height |
 | `stop` before `broadcast` | Cycle stops in the sky or mid-fall | Broadcast **then** stop, inside the `if` |
 | Sprite named “Trees” but code says `Ground` | Rain never “lands” | Rename sprite to **Ground** |
 | Variables “for this sprite only” | Counters stay 0 | Recreate as **for all sprites** |

@@ -29,26 +29,27 @@ class Droplet:
         show()
 
     def when_broadcast_evaporate(self):
+        go_to_xy(-100, -100)
         show()
         while True:
+            change_y(5)
+            wait(0.05)
             if y_position() > 90:
+                evaporated += 1
                 hide()
                 broadcast("condense")
                 stop("this script")
-            change_y(5)
-            evaporated += 1
-            wait(0.05)
 
     def when_broadcast_rain(self):
         go_to_xy(-70, 100)
         show()
         while True:
+            change_y(-6)
+            wait(0.05)
             if touching("Ground") or y_position() < -150:
+                precipitated += 1
                 broadcast("collected")
                 stop("this script")
-            change_y(-6)
-            precipitated += 1
-            wait(0.05)
 
     def when_broadcast_collected(self):
         ground_water += 1

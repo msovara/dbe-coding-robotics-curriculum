@@ -201,6 +201,32 @@ def patch_variable_fields(project: dict, id_map: dict[str, str]) -> None:
                 var_field[0] = rename[var_field[0]]
 
 
+def patch_stop_mutations(project: dict) -> None:
+    """Scratch requires a mutation on control_stop; without it, stop can be ignored."""
+    for target in project["targets"]:
+        for block in target.get("blocks", {}).values():
+            if block.get("opcode") != "control_stop":
+                continue
+            option = (block.get("fields") or {}).get("STOP_OPTION", ["all"])[0]
+            hasnext = "true" if option == "other scripts in sprite" else "false"
+            block["mutation"] = {
+                "tagName": "mutation",
+                "children": [],
+                "hasnext": hasnext,
+            }
+
+
+def patch_stage_broadcasts(project: dict) -> None:
+    """Scratch stores message names on the Stage; py2sb3 leaves that object empty."""
+    stage = project["targets"][0]
+    merged: dict[str, str] = dict(stage.get("broadcasts") or {})
+    for target in project["targets"]:
+        merged.update(target.get("broadcasts") or {})
+        if not target["isStage"]:
+            target["broadcasts"] = {}
+    stage["broadcasts"] = merged
+
+
 def patch_clone_menus(project: dict) -> None:
     """py2sb3 writes 'myself'; Scratch only spawns clones when the menu value is '_myself_'."""
     for target in project["targets"]:
@@ -263,6 +289,8 @@ def build_catch_game_project() -> dict:
     id_map = collect_stage_variable_ids(project, ("score",))
     patch_variable_fields(project, id_map)
     patch_clone_menus(project)
+    patch_stop_mutations(project)
+    patch_stage_broadcasts(project)
     patch_sprites(project, SPRITE_LAYOUT)
     score_id = next(iter(set(id_map.values())))
     project["monitors"] = [make_monitor(score_id, "score", 5, 5)]
@@ -273,6 +301,8 @@ def build_water_cycle_project() -> dict:
     project = load_py2sb3(PY2SB3_WATER)
     id_map = collect_stage_variable_ids(project, STAGE_COUNTERS)
     patch_variable_fields(project, id_map)
+    patch_stop_mutations(project)
+    patch_stage_broadcasts(project)
     patch_sprites(project, WATER_LAYOUT)
     stage_vars = project["targets"][0].get("variables", {})
     monitors = []

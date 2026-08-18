@@ -38,6 +38,13 @@ You were **not** running it wrong — an earlier version of the generated file h
    - “Collection” and **ground water** increases
 5. Click the Sun again to run another cycle.
 
+**If something still looks wrong**
+
+| Symptom | Likely cause |
+|---------|----------------|
+| Counters stay 0; droplet stuck near the top | Old `.sb3` — **re-download**. Evaporation must `go to` the pond **before** checking `y > 90`. |
+| Cloud never appears | `broadcast condense` is missing, or Cloud is not listening for `condense` |
+
 **Download:** `https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/04-water-cycle.sb3`
 
 Teaching notes: [04-water-cycle-facilitator-annotations.md](04-water-cycle-facilitator-annotations.md).

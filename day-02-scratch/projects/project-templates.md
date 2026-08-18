@@ -387,15 +387,16 @@ show
 
 ```text
 when I receive (evaporate)
+go to x: (-100) y: (-100)
 show
 forever
+  change y by (5)
+  wait (0.05) seconds
   if <(y position) > (90)> then
+    change (evaporated) by (1)
     hide
     broadcast (condense)
     stop (this script)
-  change y by (5)
-  change (evaporated) by (1)
-  wait (0.05) seconds
 ```
 
 **Cloud**
@@ -423,12 +424,12 @@ when I receive (rain)
 go to x: (-70) y: (100)
 show
 forever
+  change y by (-6)
+  wait (0.05) seconds
   if <<touching (Ground)?> or <(y position) < (-150)>> then
+    change (precipitated) by (1)
     broadcast (collected)
     stop (this script)
-  change y by (-6)
-  change (precipitated) by (1)
-  wait (0.05) seconds
 ```
 
 **Droplet — collection (same sprite)**
@@ -450,7 +451,7 @@ show
 
 Optional: clicking the Cloud can also `broadcast (rain)`.
 
-**Check:** message names match everywhere; Ground is where the droplet can touch it; Cloud starts hidden; `broadcast` is **inside** the `if`, **before** `stop (this script)`.
+**Check:** message names match everywhere; Ground is where the droplet can touch it; Cloud starts hidden; evaporation **starts at y −100** (do not check height before the first move); `broadcast` is **inside** the `if`, **before** `stop (this script)`.
 
 ---
 
