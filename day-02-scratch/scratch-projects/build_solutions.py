@@ -125,7 +125,8 @@ class Blocks:
             yield bid
         finally:
             self._mouth = saved_mouth
-            self._stack_last = bid if saved_mouth is None else saved_last
+            # The closed C-block is the sibling anchor for the parent mouth/stack.
+            self._stack_last = bid
 
     def var_reporter(self, name: str, var_id: str) -> str:
         return self.bool_block("data_variable", fields={"VARIABLE": [name, var_id]})
@@ -153,6 +154,19 @@ class Blocks:
 
     def or_bool(self, left: str, right: str) -> str:
         return self.bool_block("operator_or", inputs={"OPERAND1": [2, left], "OPERAND2": [2, right]})
+
+    def pick_random(self, low: int, high: int) -> str:
+        bid = _id()
+        self.data[bid] = {
+            "opcode": "operator_random",
+            "next": None,
+            "parent": None,
+            "inputs": {"FROM": [1, _num(low)], "TO": [1, _num(high)]},
+            "fields": {},
+            "shadow": False,
+            "topLevel": False,
+        }
+        return bid
 
 
 def default_costume() -> list[dict[str, Any]]:
@@ -243,13 +257,15 @@ def build_catch_game() -> dict[str, Any]:
     with fruit.mouth("control_forever"):
         clone_menu = fruit.menu_shadow("control_create_clone_of_menu", "CLONE_OPTION", "myself")
         fruit.stmt("control_create_clone_of", inputs={"CLONE_OPTION": [1, clone_menu]})
-        fruit.stmt("control_wait", inputs={"DURATION": [1, [4, "pick random 1 to 3"]]})
+        wait_rand = fruit.pick_random(1, 3)
+        fruit.stmt("control_wait", inputs={"DURATION": [3, wait_rand, [4, "1"]]})
 
     clone = Blocks()
     clone.hat("control_start_as_clone", x=40, y=220)
+    rand_x = clone.pick_random(-200, 200)
     clone.stmt(
         "motion_gotoxy",
-        inputs={"X": [1, [4, "pick random -200 to 200"]], "Y": [1, _num(170)]},
+        inputs={"X": [3, rand_x, [4, "0"]], "Y": [1, _num(170)]},
     )
     clone.stmt("looks_show")
     y_pos = clone.bool_block("motion_yposition")
@@ -263,7 +279,7 @@ def build_catch_game() -> dict[str, Any]:
             fields={"VARIABLE": ["score", score_id]},
             inputs={"VALUE": [1, _num(1)]},
         )
-        clone.stmt("control_delete_this_clone")
+    clone.stmt("control_delete_this_clone")
 
     referee = Blocks()
     referee.hat("event_whenflagclicked", x=40, y=40)
@@ -306,10 +322,28 @@ def build_catch_game() -> dict[str, Any]:
         "targets": [
             make_stage(variables={score_id: ["score", 0]}, broadcasts={win_id: "win"}),
             make_sprite("Basket", basket, 1, y=-145),
-            make_sprite("Fruit", fruit_all, 2, visible=False),
+            make_sprite("Fruit", fruit_all, 2, visible=True),
             make_sprite("Referee", referee, 3, visible=False),
         ],
-        "monitors": [],
+        "monitors": [
+            {
+                "id": score_id,
+                "mode": "default",
+                "opcode": "data_variable",
+                "params": {"VARIABLE": "score"},
+                "spriteName": None,
+                "targetId": None,
+                "value": 0,
+                "width": 0,
+                "height": 0,
+                "x": 5,
+                "y": 5,
+                "visible": True,
+                "sliderMin": 0,
+                "sliderMax": 100,
+                "isDiscrete": True,
+            }
+        ],
         "extensions": [],
         "meta": {
             "semver": "3.0.0",

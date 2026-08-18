@@ -70,6 +70,8 @@ docs/*
 
 # Scratch project build temp files
 day-02-scratch/scratch-projects/_verify/
+day-02-scratch/scratch-projects/_debug/
+day-02-scratch/scratch-projects/_debug_blocks.py
 day-02-scratch/scratch-projects/_template.zip
 day-02-scratch/scratch-projects/sample*
 day-02-scratch/scratch-projects/videos/_video_build/

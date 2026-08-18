@@ -2,12 +2,30 @@
 
 This folder holds **real Scratch block projects** you can open in the editor for testing — easier than reading the text memos in [project-templates.md](../projects/project-templates.md).
 
-## Quick start
+## How to run `01-catch-game.sb3`
 
-1. Open [scratch.mit.edu](https://scratch.mit.edu/projects/editor/) (or the Scratch desktop app).
-2. **File → Load from your computer**
-3. Choose a file from **`solutions/`**, for example `01-catch-game.sb3`.
-4. Click the **green flag** to test.
+You were **not** running it wrong — an earlier version of the generated file had broken block links. Re-download or rebuild after pulling the latest fix.
+
+1. **Load the project** — Scratch → **File → Load from your computer** → choose `01-catch-game.sb3`.
+2. **Use the editor stage** (normal size is fine). Full screen is optional; it does not change how scripts run.
+3. Click the **green flag** once (top of the stage, not the “Full screen” button alone).
+4. You should see:
+   - **score** in the top-left corner (stage monitor)
+   - **Basket** (cat costume) at the bottom — move with **←** and **→**
+   - **Fruit clones** falling from the top every 1–3 seconds (original Fruit hides on flag)
+   - **Referee** stays hidden until you reach **score 20**, then says “You win!”
+5. Click the **red stop sign** to reset, then green flag again for a new game.
+
+**If something still looks wrong**
+
+| Symptom | Likely cause |
+|---------|----------------|
+| Only the basket moves | Old `.sb3` — re-download or run `build_solutions.py` again |
+| No fruit falling | Green flag not clicked, or project did not load fully — reload the file |
+| Cannot catch fruit | Sprites overlap visually (all use cat costume) — widen the basket under the fruit |
+| No win message | Score must reach **20**; watch the score monitor |
+
+Swap cat costumes for basket/fruit/backdrop from the Scratch library when demoing to learners.
 
 You can also drag an `.sb3` onto [TurboWarp](https://turbowarp.org/) for a fast preview without signing in.
 

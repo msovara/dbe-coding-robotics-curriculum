@@ -47,6 +47,8 @@ Make a game where a basket at the bottom of the stage catches falling fruit. The
 
 **Video solution:** [`01-catch-game-solution.mp4`](../scratch-projects/videos/01-catch-game-solution.mp4) (~8 min walkthrough). Facilitator script: [video script](../scratch-projects/videos/01-catch-game-video-script.md).
 
+**How to run:** Load the `.sb3`, click the **green flag** once (normal stage size is fine). Move the basket with **←/→**; fruit clones fall every few seconds; **score** shows top-left; win at 20. See [scratch-projects README](../scratch-projects/README.md#how-to-run-01-catch-gamesb3) if only one sprite seems to work.
+
 **Setup:** sprites `Basket`, `Fruit`, optional `Referee`. Variable `score` (for all sprites). Message `win`.
 
 **Basket sprite**
