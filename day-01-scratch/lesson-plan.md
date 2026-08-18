@@ -108,6 +108,7 @@
   - Use events to trigger scene changes
   - Add user interaction
   - **How to teach and exercises:** [Interactive Story (Day 1) facilitator guide](projects/03-interactive-story-facilitator-guide.md)
+  - **Scratch code (GitHub Pages):** [Interactive Story code](projects/03-interactive-story-code.md)
 
 **Lunch Break (12:00 - 13:00)**
 

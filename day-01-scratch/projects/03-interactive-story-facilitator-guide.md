@@ -1,16 +1,76 @@
 # Interactive Story (Day 1) — Facilitator teaching guide
 
 **Audience:** Facilitators and provincial specialists (Day 1 workshop)  
-**Use this for:** How to **teach** the linear story, what to **say**, and classroom **exercises** — not text to paste into Scratch.
+**Scratch scripts (copy these):** they are on this page under [Scratch code](#scratch-code) and on the short page [Interactive Story code](03-interactive-story-code.md).
 
 **Companion files**
 
 | File | Purpose |
 |------|---------|
-| **[Project 3 memo — all Scratch code](project-templates.md#memo-suggested-scratch-script)** | Every block script in **one** place |
-| [Day 2 branching story](../day-02-scratch/scratch-projects/05-interactive-story-facilitator-annotations.md) | Choices, `ask`, `if`, broadcasts — **tomorrow** |
+| **[Interactive Story code](03-interactive-story-code.md)** | Block scripts only — open this on GitHub Pages |
+| [Project 3 memo](project-templates.md#memo-suggested-scratch-script) | Same scripts inside the Day 1 project list |
+| [Day 2 branching story](../day-02-scratch/scratch-projects/05-interactive-story-facilitator-annotations.md) | Choices, `ask`, `if` — **tomorrow** |
 
-> **Copy scripts from the memo only:** [Memo: suggested Scratch script](project-templates.md#memo-suggested-scratch-script). This page is how to teach and which exercise to run. Do not hunt for code in the exercises below.
+---
+
+## Scratch code
+
+**Setup:** sprites `Child`, `Friend`. Backdrops `Home`, `Road`, `School` (in that order). Message `scene 2`.
+
+### Stage
+
+```text
+when green flag clicked
+switch backdrop to (Home)
+```
+
+```text
+when I receive (scene 2)
+switch backdrop to (Road)
+```
+
+### Child
+
+```text
+when green flag clicked
+show
+go to x: (-80) y: (-60)
+switch backdrop to (Home)
+say [I missed the taxi. I am late for school.] for (2) seconds
+```
+
+```text
+when this sprite clicked
+say [I need help. Press the right arrow.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+broadcast (scene 2)
+hide
+```
+
+### Friend
+
+```text
+when green flag clicked
+hide
+go to x: (80) y: (-60)
+```
+
+```text
+when I receive (scene 2)
+show
+say [Walk with me. Press the arrow again.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+say [We arrived on time. Next time I will leave earlier.] for (2) seconds
+```
+
+**How to run:** green flag → click Child → right arrow → right arrow again.
 
 ---
 
@@ -133,7 +193,7 @@ The memo’s Scene 2 says “user makes choices.” On **Day 1** that means clic
 
 ## Exercises
 
-**All block scripts are in the [Project 3 memo](project-templates.md#memo-suggested-scratch-script).** Use that page to copy code. Use this list only for the classroom task.
+**All block scripts are on this page under [Scratch code](#scratch-code)** and on [Interactive Story code](03-interactive-story-code.md).
 
 Do not start with Exercise 6 unless the group has finished Exercise 2.
 
@@ -235,5 +295,5 @@ If you have the full 60–90 minutes from the project template, add Exercise 4, 
 
 ## Links
 
-- **All Scratch code (one place):** [Project 3 memo](project-templates.md#memo-suggested-scratch-script)  
+- **Scratch code on GitHub Pages:** [Interactive Story code](03-interactive-story-code.md)  
 - **Day 2 (do not teach today):** [Interactive Story with choices](../day-02-scratch/scratch-projects/05-interactive-story-facilitator-annotations.md) · [Download Day 2 `.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/05-interactive-story.sb3)

@@ -147,7 +147,7 @@ On Day 1, “user interaction” means **click** and **arrow**, not `ask` / `if`
 
 ### Memo: suggested Scratch script
 
-All Day 1 story code is here. Copy from this section only.
+The same scripts are also on the short GitHub Pages page **[Interactive Story code](03-interactive-story-code.md)** (Day 1 → Projects → Interactive Story code).
 
 **Setup:** sprites `Child`, `Friend`. Backdrops `Home`, `Road`, `School` (in that order). Message `scene 2`.
 
