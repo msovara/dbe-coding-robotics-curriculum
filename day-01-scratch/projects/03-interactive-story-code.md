@@ -3,6 +3,13 @@
 **Time:** 60–90 minutes  
 **Concepts:** events, backdrops, broadcast
 
+**Download the Scratch file (use this link):**  
+[Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+
+Then in Scratch: **File → Load from your computer**. Click the **green flag**, **click** Child, then press the **right arrow** twice.
+
+Exercises are at the bottom of this same page.
+
 ### Task
 
 Make a three-scene story: Home → Road → School. The player turns the page with a **click** and the **right arrow**.
@@ -98,3 +105,23 @@ say [We arrived on time. Next time I will leave earlier.] for (2) seconds
 | Kindness | My classmate dropped their books. | I will help you pick them up. | Thank you. Press the arrow. | We did it together. Kindness helps. |
 | Water | The tap is running. We are wasting water. | Close the tap. Save water. | The tap is closed. Press the arrow. | We saved water. |
 | Two languages | Hello! Sawubona! | How are you? Unjani? | I am fine. Ngiyaphila. | Goodbye! Hamba kahle! |
+
+---
+
+## Exercises
+
+**Download the demo first:** [Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+
+Load it with **File → Load from your computer**. Use the scripts above as the answer key.
+
+| # | Task | Time |
+|---|------|------|
+| 1 | Paper: Scene 1 late for school, Scene 3 on time. Write Scene 2. Name three events. | 10 min |
+| 2 | Build **Child** only from the memo (or play the `.sb3` and look at Child). | 15 min |
+| 3 | Debug: missing `for (2) seconds`; Friend visible on flag; wrong backdrop order. | 10 min |
+| 4 | Add **Friend** hide/show from the memo. | 10 min |
+| 5 | Change only `say` text (kindness / water / two languages). | 15 min |
+| 6 | Full memo with `broadcast (scene 2)`. No Forest/Space choices. | 10 min |
+| 7 | Exit ticket: flag starts at _____; click is for _____; arrow is for _____. | 3 min |
+
+**Facilitator annotations (what to say):** [Interactive Story facilitator annotations](03-interactive-story-facilitator-guide.md)
