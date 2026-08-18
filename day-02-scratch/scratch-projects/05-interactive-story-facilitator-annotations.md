@@ -9,6 +9,7 @@
 |------|---------|
 | [Project 5 memo](../projects/project-templates.md#project-5-interactive-story-with-choices) | Clean block scripts (answer key) |
 | [`05-interactive-story.sb3`](solutions/05-interactive-story.sb3) | Working project to demo |
+| [Day 1 linear story](../../day-01-scratch/projects/03-interactive-story-facilitator-guide.md) | Click/arrow “turn the page” — teach this **before** choices |
 
 ---
 

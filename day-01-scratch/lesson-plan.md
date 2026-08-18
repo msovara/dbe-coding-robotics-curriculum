@@ -107,6 +107,7 @@
   - Create a story with multiple scenes
   - Use events to trigger scene changes
   - Add user interaction
+  - **How to teach and exercises:** [Interactive Story (Day 1) facilitator guide](projects/03-interactive-story-facilitator-guide.md)
 
 **Lunch Break (12:00 - 13:00)**
 
