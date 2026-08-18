@@ -68,6 +68,9 @@ site/
 docs/*
 !docs/index.md
 
-
+# Scratch project build temp files
+day-02-scratch/scratch-projects/_verify/
+day-02-scratch/scratch-projects/_template.zip
+day-02-scratch/scratch-projects/sample*
 
 

@@ -13,6 +13,8 @@ Do **not** start from the memo. The memo is the answer key, not the briefing.
 
 **How to read memo scripts:** Each indented line is a block nested inside the block above it. Scratch has no `end` block. Close C-shaped blocks by snapping the next block underneath. Two hats on one sprite means **two scripts on the same sprite**, not two sprites.
 
+**Open real Scratch blocks (for testing):** Download `.sb3` files from [`scratch-projects/solutions/`](../scratch-projects/README.md) and use **File → Load from your computer** in Scratch. See the [scratch-projects README](../scratch-projects/README.md) for the full list and how to add more solutions.
+
 ---
 
 ## Project 1: Catch Game
@@ -40,6 +42,8 @@ Make a game where a basket at the bottom of the stage catches falling fruit. The
 - Speed increases over time.
 
 ### Memo: suggested Scratch script
+
+**Scratch file:** [`01-catch-game.sb3`](../scratch-projects/solutions/01-catch-game.sb3) — open in Scratch to see and test the blocks.
 
 **Setup:** sprites `Basket`, `Fruit`, optional `Referee`. Variable `score` (for all sprites). Message `win`.
 
