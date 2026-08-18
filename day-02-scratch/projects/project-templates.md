@@ -481,6 +481,14 @@ Make a short story with two paths and two endings, driven by the player’s answ
 
 ### Memo: suggested Scratch script
 
+**Scratch file:** [`05-interactive-story.sb3`](../scratch-projects/solutions/05-interactive-story.sb3) — open in Scratch to see and test the blocks.
+
+**Download:** [Download `05-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/05-interactive-story.sb3)
+
+**Facilitator annotations (what to say for each block):** [Interactive Story facilitator annotations](../scratch-projects/05-interactive-story-facilitator-annotations.md) — separate from the scripts below.
+
+**How to run:** Load the `.sb3` and click the **green flag**. Type `A` or `a` for the forest, or anything else for space. On the next question type `YES` or `yes` for ending A; anything else for ending B.
+
 **Setup:** sprites `Guide`, `Scientist`, `Robot`. Backdrops `Laboratory`, `Forest`, `Space`, `Ending A`, `Ending B`. Messages `scene 1`, `path A`, `path B`, `ending A`, `ending B`. Variable `choice`. List `story choices`.
 
 **Stage**
@@ -543,14 +551,17 @@ hide
 ```text
 when I receive (path A)
 show
+go to x: (20) y: (-70)
 say [The forest sensor has found an injured animal.] for (2) seconds
 ask [Help the animal? Type YES or NO.] and wait
 add (answer) to (story choices)
-if <(answer) = [yes]> then
+if <<<(answer) = [yes]> or <(answer) = [YES]>> or <(answer) = [Yes]>> then
   say [Your kindness saves the animal!] for (2) seconds
+  hide
   broadcast (ending A)
 else
   say [You return to the laboratory.] for (2) seconds
+  hide
   broadcast (ending B)
 ```
 
@@ -564,20 +575,23 @@ hide
 ```text
 when I receive (path B)
 show
+go to x: (30) y: (-60)
 say [An asteroid is approaching the spacecraft!] for (2) seconds
 ask [Use the shield? Type YES or NO.] and wait
 add (answer) to (story choices)
-if <(answer) = [yes]> then
+if <<<(answer) = [yes]> or <(answer) = [YES]>> or <(answer) = [Yes]>> then
   say [The shield protects the spacecraft!] for (2) seconds
+  hide
   broadcast (ending A)
 else
   say [The crew returns safely to Earth.] for (2) seconds
+  hide
   broadcast (ending B)
 ```
 
 Optional **Narrator** can join the first stored choice to **The end!** on `ending A` or `ending B`.
 
-**Check:** message names match; unused sprites stay hidden; first choice accepts `A` or `a`.
+**Check:** message names match (including spaces); unused sprites stay hidden; first choice accepts `A` or `a`; YES/NO accepts `yes`, `YES`, and `Yes`.
 
 ---
 

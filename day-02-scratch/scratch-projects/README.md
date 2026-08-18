@@ -49,6 +49,30 @@ You were **not** running it wrong — an earlier version of the generated file h
 
 Teaching notes: [04-water-cycle-facilitator-annotations.md](04-water-cycle-facilitator-annotations.md).
 
+## How to run `05-interactive-story.sb3`
+
+1. **Load the project** — Scratch → **File → Load from your computer** → `05-interactive-story.sb3`.
+2. Click the **green flag**. The laboratory backdrop appears and the Guide asks a question.
+3. Type **A** or **a** for the forest, or anything else for space.
+4. On the next question type **YES** or **yes** for ending A; anything else for ending B.
+5. You should see:
+   - backdrop changes (Laboratory → Forest or Space → Ending A or B)
+   - Scientist (Pico) or Robot appear on their path, then hide
+   - `story choices` list fill with the answers you typed
+6. Click the green flag again to replay (the list clears).
+
+**If something still looks wrong**
+
+| Symptom | Likely cause |
+|---------|----------------|
+| Ask box never appears | Old `.sb3` — **re-download**. Stage must `broadcast scene 1`. |
+| Forest never shows after typing A | Message name must be `path A` (with a space), not `pathA`. |
+| Typed YES but got ending B | The `if` must accept `yes`, `YES`, and `Yes`. |
+
+**Download:** `https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/05-interactive-story.sb3`
+
+Teaching notes: [05-interactive-story-facilitator-annotations.md](05-interactive-story-facilitator-annotations.md).
+
 ## What is in `solutions/`
 
 | File | Project | Status |
@@ -60,7 +84,8 @@ Teaching notes: [04-water-cycle-facilitator-annotations.md](04-water-cycle-facil
 | `03-platformer.sb3` | Project 3: Platformer | *Planned* |
 | `04-water-cycle.sb3` | Project 4: Water Cycle | Generated (matches memo script) |
 | [Water Cycle facilitator annotations](04-water-cycle-facilitator-annotations.md) | What to **say** for each block | Separate teaching guide (not in Scratch) |
-| `05-*` | Project 5 | *Planned* |
+| `05-interactive-story.sb3` | Project 5: Interactive Story | Generated (matches memo script) |
+| [Interactive Story facilitator annotations](05-interactive-story-facilitator-annotations.md) | What to **say** for each block | Separate teaching guide (not in Scratch) |
 
 You can also drag an `.sb3` onto [TurboWarp](https://turbowarp.org/) for a fast preview without signing in.
 
@@ -76,7 +101,7 @@ Keep solutions aligned with the **memo** in `project-templates.md` so they stay 
 
 ## Regenerate generated files
 
-The catch game and water cycle are built from Python (not hand-edited in Scratch):
+The catch game, water cycle, and interactive story are built from Python (not hand-edited in Scratch):
 
 ```bash
 python day-02-scratch/scratch-projects/build_solutions.py

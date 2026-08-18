@@ -10,6 +10,9 @@ Official Scratch library costumes, bundled so the `.sb3` files open with the int
 | `406808d86aff20a15d592b308e166a32.svg` | **Sun** | Sun |
 | `1c44b7494dec047371f74c705f1d99fc.svg` | **Ball** (costume e) | Droplet |
 | `d903687e5ae79a777b4720f3bc7966fa.svg` | Custom full-width grass | Ground |
+| `f52bde34d8027aab14b53f228fe5cc14.svg` | **Avery** | Guide |
+| `e7ce31db37f7abd2901499db2e9ad83a.svg` | **Pico** | Scientist |
+| `89679608327ad572b93225d06fe9edda.svg` | **Robot** | Robot |
 
 Source: [Scratch sprite library](https://github.com/scratchfoundation/scratch-gui/tree/develop/src/lib/libraries) (MIT-licensed Scratch assets).
 
