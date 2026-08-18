@@ -43,24 +43,22 @@ Make a game where a basket at the bottom of the stage catches falling fruit. The
 
 ### Memo: suggested Scratch script
 
-**Scratch file:** [`01-catch-game.sb3`](../scratch-projects/solutions/01-catch-game.sb3) — open in Scratch to see and test the blocks. **Block annotations:** each block has a yellow comment bubble in Scratch; full table in [block-by-block guide](../scratch-projects/01-catch-game-block-annotations.md).
+**Scratch file:** [`01-catch-game.sb3`](../scratch-projects/solutions/01-catch-game.sb3) — open in Scratch to see and test the blocks.
 
 **Video solution:** [`01-catch-game-solution.mp4`](../scratch-projects/videos/01-catch-game-solution.mp4) (~8 min walkthrough). Facilitator script: [video script](../scratch-projects/videos/01-catch-game-video-script.md).
-
-**How to run:** Load the `.sb3`, click the **green flag** once (normal stage size is fine). Move the basket with **←/→**; fruit clones fall every few seconds; **score** shows top-left; win at 20. See [scratch-projects README](../scratch-projects/README.md#how-to-run-01-catch-gamesb3) if only one sprite seems to work.
 
 **Setup:** sprites `Basket`, `Fruit`, optional `Referee`. Variable `score` (for all sprites). Message `win`.
 
 **Basket sprite**
 
 ```text
-when green flag clicked          → start when the player begins the game
-go to x: (0) y: (-145)           → bottom centre of the stage
-show                             → make the basket visible
+when green flag clicked
+go to x: (0) y: (-145)
+show
 forever
-  if <key (left arrow) pressed?> then   → player moves left
+  if <key (left arrow) pressed?> then
     change x by (-10)
-  if <key (right arrow) pressed?> then  → player moves right
+  if <key (right arrow) pressed?> then
     change x by (10)
 ```
 
@@ -71,48 +69,43 @@ Put **both** hats on the same `Fruit` sprite.
 Script 1 — original Fruit (hidden): spawn clones
 
 ```text
-when green flag clicked          → start the game
-hide                             → hide the original (only clones appear)
+when green flag clicked
+hide
 forever
-  create clone of (myself)       → spawn one falling apple
-  wait (pick random (1) to (3)) seconds   → pause before the next spawn
+  create clone of (myself)
+  wait (pick random (1) to (3)) seconds
 ```
 
 Script 2 — each clone: appear, fall, score or miss
 
 ```text
-when I start as a clone          → runs for each new apple
-go to x: (pick random (-200) to (200)) y: (170)   → random spot at top
-show                             → show this clone only
-repeat until <<touching (Basket)?> or <(y position) < (-170)>>   → until catch or miss
-  change y by (-5)               → fall downward
-  wait (0.03) seconds            → smooth animation
-if <touching (Basket)?> then     → caught?
-  change (score) by (1)          → add 1 point
-delete this clone                → remove this apple
+when I start as a clone
+go to x: (pick random (-200) to (200)) y: (170)
+show
+repeat until <<touching (Basket)?> or <(y position) < (-170)>>
+  change y by (-5)
+  wait (0.03) seconds
+if <touching (Basket)?> then
+  change (score) by (1)
+delete this clone
 ```
 
 **Referee sprite**
 
 ```text
-when green flag clicked          → start the game
-set (score) to (0)               → reset score
-hide                             → hidden until win
-forever
-  wait (0.05) seconds            → check score regularly
-  if <(score) > (19)> then       → 20 points = win
-    broadcast (win)
-    stop (this script)
+when green flag clicked
+set (score) to (0)
+hide
+wait until <(score) > (19)>
+broadcast (win)
 ```
 
 ```text
-when I receive (win)             → react to win message
-show                             → show referee
+when I receive (win)
+show
 say [You win!] for (3) seconds
-stop (all)                       → end the game
+stop (all)
 ```
-
-**Full annotations:** [01-catch-game-block-annotations.md](../scratch-projects/01-catch-game-block-annotations.md)
 
 **Check:** original Fruit is hidden; every clone is deleted; `score` is for all sprites; `score > 19` is the same as 20 or more.
 

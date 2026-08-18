@@ -16,8 +16,6 @@ You were **not** running it wrong — an earlier version of the generated file h
    - **Referee** (Scratch library sprite) hidden until **score 20**, then says “You win!”
 5. Click the **red stop sign** to reset, then green flag again for a new game.
 
-**Block annotations:** Open each sprite’s code — yellow **comment bubbles** on blocks explain what each one does. Printable tables: [01-catch-game-block-annotations.md](01-catch-game-block-annotations.md).
-
 **If something still looks wrong**
 
 | Symptom | Likely cause |
@@ -33,8 +31,7 @@ You were **not** running it wrong — an earlier version of the generated file h
 
 | File | Project | Status |
 |------|---------|--------|
-| `01-catch-game.sb3` | Project 1: Catch Game | Generated (matches memo script; blocks annotated) |
-| [01-catch-game-block-annotations.md](01-catch-game-block-annotations.md) | Catch Game **block guide** | What each block does |
+| `01-catch-game.sb3` | Project 1: Catch Game | Generated (matches memo script) |
 | [`01-catch-game-solution.mp4`](videos/01-catch-game-solution.mp4) | Catch Game **video walkthrough** (~8 min) | Generated (slides + narration) |
 | `02-quiz-game.sb3` | Project 2: Interactive Quiz | *Add manually or extend build script* |
 | `03-platformer.sb3` | Project 3: Platformer | *Planned* |

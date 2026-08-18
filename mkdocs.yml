@@ -81,8 +81,6 @@ nav:
           - Advanced Scratch activities: day-02-scratch/activities/advanced-scratch-activities.md
       - Projects:
           - Project templates: day-02-scratch/projects/project-templates.md
-          - Catch Game block annotations: day-02-scratch/scratch-projects/01-catch-game-block-annotations.md
-          - Scratch solution projects (.sb3): day-02-scratch/scratch-projects/README.md
           - Catch Game video solution: day-02-scratch/scratch-projects/videos/01-catch-game-video-script.md
       - Assessment:
           - Rubric: day-02-scratch/assessment/rubric.md
