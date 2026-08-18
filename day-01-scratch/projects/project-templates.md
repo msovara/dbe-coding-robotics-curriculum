@@ -123,7 +123,9 @@
 - Create scenes with backgrounds
 - Add user interaction
 
-**Facilitator teaching guide (how to teach, what to say, exercises):** [Interactive Story (Day 1) facilitator guide](03-interactive-story-facilitator-guide.md) — separate from the build steps below.
+**How to read memo scripts:** Each indented line is a block nested inside the block above it. Scratch has no `end` block.
+
+**Facilitator teaching guide (how to teach, what to say, exercises with full scripts):** [Interactive Story (Day 1) facilitator guide](03-interactive-story-facilitator-guide.md) — separate from the build steps below.
 
 Day 1 is a **linear** story (click and arrow to turn the page). Branching choices (`ask`, `if`, path A/B) are [Day 2 Project 5](../day-02-scratch/projects/project-templates.md#project-5-interactive-story-with-choices).
 

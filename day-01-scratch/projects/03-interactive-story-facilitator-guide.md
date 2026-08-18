@@ -131,6 +131,8 @@ The memo’s Scene 2 says “user makes choices.” On **Day 1** that means clic
 
 ## Exercises
 
+Each Scratch exercise below has the **full block script**. Learners copy these after the paper or debug step. Do not start with Exercise 6 unless the group has already finished Exercise 2.
+
 ### Exercise 1 — Unplugged: broken instructions (10 min)
 
 Give this storyboard. Ask what is missing.
@@ -140,74 +142,319 @@ Give this storyboard. Ask what is missing.
 
 **Task:** Write Scene 2 in three sentences. Then list **three Scratch events** you would use (flag, click, key).
 
-**Success:** Scene 2 connects the problem to the ending; events are named.
+**Sample Scene 2 (facilitator answer):** A friend sees the child and says they can walk together. They take the road to school. The child starts to smile.
 
-### Exercise 2 — Scratch: three named backdrops (15 min)
+**Three events (facilitator answer):**
 
-**Must have**
+| Event | Why |
+|-------|-----|
+| `when green flag clicked` | Open Scene 1 (late for school) |
+| `when this sprite clicked` | Friend speaks in Scene 2 |
+| `when [right arrow] key pressed` | Turn the page to Scene 3 (on time) |
 
-1. Backdrops named `Home`, `Road`, `School` (or their own three names).  
-2. Green flag → first backdrop and a `say` line.  
-3. Click the sprite → one line of dialogue.  
-4. Right arrow → next backdrop.
+If they code it afterwards, use the Exercise 2 / 5 scripts with these lines:
 
-**Check:** Someone else can play it without explanation.
+```text
+when green flag clicked
+switch backdrop to (Scene 1)
+say [I missed the taxi. I am late for school.] for (2) seconds
+```
 
-### Exercise 3 — Debug (pairs, 10 min)
-
-Write these bugs on the board. Each pair finds and fixes **one**.
-
-| Bug | What they see | Fix |
-|-----|----------------|-----|
-| Backdrop still called `backdrop1` | Arrow seems to do nothing useful | Rename to Scene 1, 2, 3 |
-| Speech on green flag with plain `say` (no time) | Bubble flashes and vanishes | Use `say [] for (2) seconds` |
-| Second character visible in Scene 1 | Two people in the opening | `hide` that sprite on green flag |
-| Arrow script on the unused sprite | Arrow works only if that sprite is selected | Put the key script on the sprite they use, or on **Stage** |
-| `next backdrop` with backdrops in the wrong order | Story jumps Home → School | Drag backdrops into order 1–2–3 |
-
-### Exercise 4 — Hide the unused character (10 min)
-
-Add a second sprite.
-
-- Green flag: Sprite A `show`, Sprite B `hide`.  
-- When they move to Scene 2: Sprite A `hide`, Sprite B `show`.
-
-**Success:** Only the character who belongs in that scene is visible.
-
-### Exercise 5 — Language / Life Skills story (15–20 min)
-
-Pick **one** prompt:
-
-- A learner helps a classmate (kindness).  
-- Water is wasted, then saved (vocabulary that returns on Day 2 Water Cycle).  
-- A character greets in English and one home language.
-
-Same three-scene rule. At least **two** `say` lines in full sentences.
-
-### Exercise 6 — Broadcast preview (optional, 10 min, stronger groups)
-
-Do **not** add Forest/Space choices yet. This is the Day 1 homework preview (“try broadcasting”).
+```text
+when this sprite clicked
+say [Walk with me. We can still get there.] for (2) seconds
+```
 
 ```text
 when [right arrow] key pressed
-broadcast (scene 2)
+switch backdrop to (next backdrop)
+```
+
+On Scene 3 the same sprite (or a second click) can say:
+
+```text
+when this sprite clicked
+say [We arrived on time. Next time I will leave earlier.] for (2) seconds
+```
+
+**Success:** Scene 2 connects the problem to the ending; events are named.
+
+---
+
+### Exercise 2 — Scratch: three named backdrops (15 min)
+
+**Setup:** Backdrops named `Home`, `Road`, `School`, in that order. One sprite (for example the cat).
+
+**Sprite — Script 1 (start at Home)**
+
+```text
+when green flag clicked
+switch backdrop to (Home)
+say [I am at home. I must go to school.] for (2) seconds
+```
+
+**Sprite — Script 2 (talk when clicked)**
+
+```text
+when this sprite clicked
+say [Hello! Press the right arrow to continue.] for (2) seconds
+```
+
+**Sprite — Script 3 (turn the page)**
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+```
+
+**How to run:** Green flag → click the sprite → right arrow (Home → Road) → right arrow (Road → School).
+
+**Check:** Someone else can play it without explanation.
+
+---
+
+### Exercise 3 — Debug (pairs, 10 min)
+
+Write **one** broken script on the board. Pairs fix it. Facilitator answer is the **fixed** column.
+
+**Bug A — bubble vanishes**
+
+Broken:
+
+```text
+when green flag clicked
+switch backdrop to (Scene 1)
+say [Once upon a time...]
+```
+
+Fixed:
+
+```text
+when green flag clicked
+switch backdrop to (Scene 1)
+say [Once upon a time...] for (2) seconds
+```
+
+**Bug B — extra character in Scene 1**
+
+Broken (Friend sprite):
+
+```text
+when green flag clicked
+show
+```
+
+Fixed (Friend sprite):
+
+```text
+when green flag clicked
+hide
+```
+
+**Bug C — arrow does nothing (script on the wrong sprite)**
+
+Put this on the **main** sprite (or on the **Stage**), not on a hidden sprite:
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+```
+
+**Bug D — backdrops in the wrong order**
+
+No new blocks. In the Backdrops pane, drag them to: `Home`, then `Road`, then `School`. Then this script works:
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+```
+
+---
+
+### Exercise 4 — Hide the unused character (10 min)
+
+**Sprites:** `Child` (Sprite A), `Friend` (Sprite B).  
+**Backdrops:** `Home`, `Road`, `School` in that order.
+
+**Child**
+
+```text
+when green flag clicked
+show
+go to x: (-80) y: (-60)
+switch backdrop to (Home)
+say [I am late.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+hide
+```
+
+**Friend**
+
+```text
+when green flag clicked
+hide
+go to x: (80) y: (-60)
+```
+
+```text
+when [right arrow] key pressed
+show
+say [Walk with me!] for (2) seconds
+```
+
+**How to run:** Green flag — only Child is visible. Right arrow — Child hides, Friend appears.
+
+**Success:** Only the character who belongs in that scene is visible.
+
+---
+
+### Exercise 5 — Language / Life Skills story (15–20 min)
+
+**Setup:** Backdrops `Home`, `Road`, `School`. One sprite.
+
+**Prompt A — kindness (full memo script)**
+
+```text
+when green flag clicked
+switch backdrop to (Home)
+say [My classmate dropped their books.] for (2) seconds
+```
+
+```text
+when this sprite clicked
+say [I will help you pick them up.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+```
+
+On the last scene, click again (same sprite, extra script is optional). Simpler: change the click line after they reach School, or add:
+
+```text
+when [space] key pressed
+switch backdrop to (School)
+say [We did it together. Kindness helps.] for (2) seconds
+```
+
+**Prompt B — water (full memo script)**
+
+```text
+when green flag clicked
+switch backdrop to (Home)
+say [The tap is running. We are wasting water.] for (2) seconds
+```
+
+```text
+when this sprite clicked
+say [Close the tap. Save water.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+```
+
+**Prompt C — two languages (full memo script)**
+
+```text
+when green flag clicked
+switch backdrop to (Home)
+say [Hello! Sawubona!] for (2) seconds
+```
+
+```text
+when this sprite clicked
+say [How are you? Unjani?] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+```
+
+Same three-scene rule. At least **two** `say` lines in full sentences.
+
+---
+
+### Exercise 6 — Broadcast preview (optional, 10 min, stronger groups)
+
+Do **not** add Forest/Space choices yet. Message name: `scene 2`.
+
+**Stage**
+
+```text
+when green flag clicked
+switch backdrop to (Scene 1)
 ```
 
 ```text
 when I receive (scene 2)
 switch backdrop to (Scene 2)
-show
 ```
+
+```text
+when I receive (scene 3)
+switch backdrop to (Scene 3)
+```
+
+**Child**
+
+```text
+when green flag clicked
+show
+go to x: (-80) y: (-60)
+say [I missed the taxi.] for (2) seconds
+```
+
+```text
+when this sprite clicked
+say [I need help.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+broadcast (scene 2)
+hide
+```
+
+**Friend**
+
+```text
+when green flag clicked
+hide
+go to x: (80) y: (-60)
+```
+
+```text
+when I receive (scene 2)
+show
+say [Walk with me. Press the arrow again.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+broadcast (scene 3)
+```
+
+**How to run:** Green flag → click Child → right arrow (Friend appears, Scene 2) → right arrow (Scene 3).
 
 **Success:** Two sprites react to **one** message. That is the seed of Day 2 Guide / Scientist / Robot.
 
+---
+
 ### Exercise 7 — Exit ticket (3 min, paper)
 
-Complete:
+Complete (facilitator answers in brackets):
 
-1. Green flag should always start at scene ______ .  
-2. `when this sprite clicked` is for ______ ; `when key pressed` is for ______ .  
-3. Tomorrow’s story will let the player **choose**. Today’s story only lets the player ______ .
+1. Green flag should always start at scene ______ . **[1 / Home / Scene 1]**  
+2. `when this sprite clicked` is for ______ ; `when key pressed` is for ______ . **[talking / turning the page]**  
+3. Tomorrow’s story will let the player **choose**. Today’s story only lets the player ______ . **[turn the page / continue]**
 
 ---
 
