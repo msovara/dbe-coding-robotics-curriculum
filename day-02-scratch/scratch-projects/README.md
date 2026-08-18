@@ -16,6 +16,7 @@ You can also drag an `.sb3` onto [TurboWarp](https://turbowarp.org/) for a fast 
 | File | Project | Status |
 |------|---------|--------|
 | `01-catch-game.sb3` | Project 1: Catch Game | Generated (matches memo script) |
+| [`01-catch-game-solution.mp4`](videos/01-catch-game-solution.mp4) | Catch Game **video walkthrough** (~8 min) | Generated (slides + narration) |
 | `02-quiz-game.sb3` | Project 2: Interactive Quiz | *Add manually or extend build script* |
 | `03-platformer.sb3` | Project 3: Platformer | *Planned* |
 | `04-water-cycle.sb3` | Project 4: Water Cycle | *Planned* |

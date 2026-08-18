@@ -45,6 +45,8 @@ Make a game where a basket at the bottom of the stage catches falling fruit. The
 
 **Scratch file:** [`01-catch-game.sb3`](../scratch-projects/solutions/01-catch-game.sb3) — open in Scratch to see and test the blocks.
 
+**Video solution:** [`01-catch-game-solution.mp4`](../scratch-projects/videos/01-catch-game-solution.mp4) (~8 min walkthrough). Facilitator script: [video script](../scratch-projects/videos/01-catch-game-video-script.md).
+
 **Setup:** sprites `Basket`, `Fruit`, optional `Referee`. Variable `score` (for all sprites). Message `win`.
 
 **Basket sprite**
