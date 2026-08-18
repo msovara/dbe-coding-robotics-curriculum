@@ -24,7 +24,11 @@ class Fruit:
     def when_i_start_as_clone(self):
         go_to_xy(pick_random(-200, 200), 170)
         show()
-        while not (touching("Basket") or y_position() < -170):
+        # forever + if + stop — py2sb3 mis-compiles "while not (A or B)" as
+        # "repeat until not (A or B)", which exits on the first frame.
+        while True:
+            if touching("Basket") or y_position() < -170:
+                stop("this script")
             change_y(-5)
             wait(0.03)
         if touching("Basket"):
