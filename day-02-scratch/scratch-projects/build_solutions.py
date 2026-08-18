@@ -113,6 +113,17 @@ def patch_score_fields(project: dict, id_map: dict[str, str]) -> None:
             monitor["id"] = next(iter(set(id_map.values())))
 
 
+def patch_clone_menus(project: dict) -> None:
+    """py2sb3 writes 'myself'; Scratch only spawns clones when the menu value is '_myself_'."""
+    for target in project["targets"]:
+        for block in target.get("blocks", {}).values():
+            if block.get("opcode") != "control_create_clone_of_menu":
+                continue
+            field = block.get("fields", {}).get("CLONE_OPTION")
+            if field and field[0] == "myself":
+                field[0] = "_myself_"
+
+
 def patch_sprites(project: dict) -> None:
     stage = project["targets"][0]
     stage["costumes"] = [COSTUME_BACKDROP]
@@ -136,6 +147,7 @@ def build_catch_game_project() -> dict:
         project = json.loads(zf.read("project.json"))
     id_map = collect_score_ids(project)
     patch_score_fields(project, id_map)
+    patch_clone_menus(project)
     patch_sprites(project)
     project.setdefault("monitors", [])
     score_id = next(iter(set(id_map.values())))

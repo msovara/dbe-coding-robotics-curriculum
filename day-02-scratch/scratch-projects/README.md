@@ -20,8 +20,7 @@ You were **not** running it wrong — an earlier version of the generated file h
 
 | Symptom | Likely cause |
 |---------|----------------|
-| Only the basket moves | Old `.sb3` — re-download or run `build_solutions.py` again |
-| No fruit falling | Green flag not clicked, or project did not load fully — reload the file |
+| Only the basket moves; no fruit falls | Old or broken `.sb3` — **re-download** from GitHub (see link below) or run `build_solutions.py` again. In Scratch, Fruit script 1 must use **create clone of myself** and **hide** the original. |
 | Cannot catch fruit | Move the **bowl** under the falling **apple**; widen catch by moving early |
 | No win message | Score must reach **20**; watch the score monitor |
 
