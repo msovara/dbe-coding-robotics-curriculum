@@ -31,6 +31,7 @@ You were **not** running it wrong — an earlier version of the generated file h
 | File | Project | Status |
 |------|---------|--------|
 | `01-catch-game.sb3` | Project 1: Catch Game | Generated (matches memo script) |
+| [Catch Game facilitator annotations](01-catch-game-facilitator-annotations.md) | What to **say** for each block | Separate teaching guide (not in Scratch) |
 | [`01-catch-game-solution.mp4`](videos/01-catch-game-solution.mp4) | Catch Game **video walkthrough** (~8 min) | Generated (slides + narration) |
 | `02-quiz-game.sb3` | Project 2: Interactive Quiz | *Add manually or extend build script* |
 | `03-platformer.sb3` | Project 3: Platformer | *Planned* |

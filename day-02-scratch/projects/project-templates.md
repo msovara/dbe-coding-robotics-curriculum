@@ -50,6 +50,8 @@ Make a game where a basket at the bottom of the stage catches falling fruit. The
 
 **Video solution:** [`01-catch-game-solution.mp4`](../scratch-projects/videos/01-catch-game-solution.mp4) (~8 min walkthrough). Facilitator script: [video script](../scratch-projects/videos/01-catch-game-video-script.md).
 
+**Facilitator annotations (what to say for each block):** [Catch Game facilitator annotations](../scratch-projects/01-catch-game-facilitator-annotations.md) — separate from the scripts below; use while explaining, not in Scratch.
+
 **How to run:** Load the `.sb3` in Scratch (**File → Load from your computer**), click the **green flag** once, move the basket with **←/→**. See [scratch-projects README](../scratch-projects/README.md#how-to-run-01-catch-gamesb3).
 
 **Setup:** sprites `Basket`, `Fruit`, optional `Referee`. Variable `score` (for all sprites). Message `win`.
@@ -96,8 +98,6 @@ forever
   change y by (-5)
   wait (0.03) seconds
 ```
-
-**Facilitator note:** Score and **delete this clone** must be **inside** the `if touching or off bottom` block, **before** `stop (this script)`. If they sit below the `forever` loop, `stop` ends the script and clones never disappear.
 
 **Referee sprite**
 
