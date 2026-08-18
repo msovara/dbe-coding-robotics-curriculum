@@ -9,7 +9,7 @@ Official Scratch library costumes, bundled so the `.sb3` files open with the int
 | `c9630e30e59e4565e785a26f58568904.svg` | **Cloud** | Cloud |
 | `406808d86aff20a15d592b308e166a32.svg` | **Sun** | Sun |
 | `1c44b7494dec047371f74c705f1d99fc.svg` | **Ball** (costume e) | Droplet |
-| `grass-strip.svg` | Custom full-width grass | Ground |
+| `d903687e5ae79a777b4720f3bc7966fa.svg` | Custom full-width grass | Ground |
 
 Source: [Scratch sprite library](https://github.com/scratchfoundation/scratch-gui/tree/develop/src/lib/libraries) (MIT-licensed Scratch assets).
 

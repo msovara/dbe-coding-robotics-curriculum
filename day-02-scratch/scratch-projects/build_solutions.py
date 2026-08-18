@@ -8,6 +8,7 @@ Run:
 
 from __future__ import annotations
 
+import hashlib
 import json
 import shutil
 import subprocess
@@ -93,15 +94,52 @@ COSTUME_CLOUD = {
     "rotationCenterX": 71,
     "rotationCenterY": 45,
 }
-COSTUME_GROUND = {
-    "assetId": "grass-strip",
-    "name": "grass",
-    "bitmapResolution": 1,
-    "md5ext": "grass-strip.svg",
-    "dataFormat": "svg",
-    "rotationCenterX": 240,
-    "rotationCenterY": 35,
-}
+
+GRASS_SVG = (
+    b'<svg version="1.1" width="480" height="70" viewBox="0 0 480 70" '
+    b'xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">'
+    b'<rect x="0" y="28" width="480" height="42" fill="#3d9e3a"/>'
+    b'<rect x="0" y="22" width="480" height="14" fill="#4caf50"/>'
+    b'<rect x="0" y="58" width="480" height="12" fill="#2e7d32"/>'
+    b'<rect x="8" y="10" width="6" height="22" fill="#57c257"/>'
+    b'<rect x="28" y="6" width="5" height="26" fill="#66bb6a"/>'
+    b'<rect x="52" y="12" width="6" height="20" fill="#57c257"/>'
+    b'<rect x="76" y="8" width="5" height="24" fill="#66bb6a"/>'
+    b'<rect x="104" y="11" width="6" height="21" fill="#57c257"/>'
+    b'<rect x="132" y="7" width="5" height="25" fill="#66bb6a"/>'
+    b'<rect x="160" y="10" width="6" height="22" fill="#57c257"/>'
+    b'<rect x="190" y="6" width="5" height="26" fill="#66bb6a"/>'
+    b'<rect x="220" y="12" width="6" height="20" fill="#57c257"/>'
+    b'<rect x="250" y="8" width="5" height="24" fill="#66bb6a"/>'
+    b'<rect x="280" y="11" width="6" height="21" fill="#57c257"/>'
+    b'<rect x="310" y="7" width="5" height="25" fill="#66bb6a"/>'
+    b'<rect x="340" y="10" width="6" height="22" fill="#57c257"/>'
+    b'<rect x="370" y="6" width="5" height="26" fill="#66bb6a"/>'
+    b'<rect x="400" y="12" width="6" height="20" fill="#57c257"/>'
+    b'<rect x="430" y="8" width="5" height="24" fill="#66bb6a"/>'
+    b'<rect x="458" y="11" width="6" height="21" fill="#57c257"/>'
+    b"</svg>"
+)
+
+
+def grass_costume() -> dict:
+    asset_id = hashlib.md5(GRASS_SVG).hexdigest()
+    ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+    path = ASSETS_DIR / f"{asset_id}.svg"
+    if not path.exists() or path.read_bytes() != GRASS_SVG:
+        path.write_bytes(GRASS_SVG)
+    return {
+        "assetId": asset_id,
+        "name": "grass",
+        "bitmapResolution": 1,
+        "md5ext": f"{asset_id}.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 240,
+        "rotationCenterY": 35,
+    }
+
+
+COSTUME_GROUND = grass_costume()
 
 WATER_LAYOUT = {
     "Sun": {"costumes": [COSTUME_SUN], "size": 90, "x": 170, "y": 120},
@@ -191,6 +229,7 @@ def patch_sprites(project: dict, layout_map: dict) -> None:
             target["y"] = layout["y"]
         if "visible" in layout:
             target["visible"] = layout["visible"]
+        target["sounds"] = []
 
 
 def make_monitor(var_id: str, name: str, x: int, y: int) -> dict:
@@ -256,7 +295,7 @@ def ensure_sprite_assets() -> None:
         COSTUME_SUN["md5ext"],
         COSTUME_DROPLET["md5ext"],
         COSTUME_CLOUD["md5ext"],
-        COSTUME_GROUND["md5ext"],
+        grass_costume()["md5ext"],
     ]
     missing = [name for name in required if not (ASSETS_DIR / name).exists()]
     if not missing:
@@ -268,13 +307,27 @@ def ensure_sprite_assets() -> None:
         urllib.request.urlretrieve(f"{base}/{name}/get/", ASSETS_DIR / name)
 
 
+def collect_project_assets(project: dict) -> set[str]:
+    names: set[str] = set()
+    for target in project["targets"]:
+        for item in target.get("costumes", []) + target.get("sounds", []):
+            md5ext = item.get("md5ext")
+            if md5ext:
+                names.add(md5ext)
+    return names
+
+
 def write_sb3(project: dict, output_path: Path) -> None:
     ensure_sprite_assets()
+    grass_costume()
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    needed = collect_project_assets(project)
     with zipfile.ZipFile(output_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
-        for asset in ASSETS_DIR.iterdir():
-            if asset.is_file() and asset.suffix.lower() in {".svg", ".png", ".wav", ".jpg", ".jpeg"}:
-                zf.write(asset, arcname=asset.name)
+        for name in sorted(needed):
+            asset = ASSETS_DIR / name
+            if not asset.exists():
+                raise FileNotFoundError(f"Missing costume/sound in zip: {name}")
+            zf.write(asset, arcname=name)
         zf.writestr("project.json", json.dumps(project, separators=(",", ":")))
 
 
