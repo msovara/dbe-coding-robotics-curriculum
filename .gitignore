@@ -72,6 +72,14 @@ docs/*
 day-02-scratch/scratch-projects/_verify/
 day-02-scratch/scratch-projects/_debug/
 day-02-scratch/scratch-projects/_sprites.json
+day-02-scratch/scratch-projects/_py2sb3_build.sb3
+day-02-scratch/scratch-projects/_inject.js
+day-02-scratch/scratch-projects/_project.json
+day-02-scratch/scratch-projects/_test_vm.js
+day-02-scratch/scratch-projects/node_modules/
+day-02-scratch/scratch-projects/package-lock.json
+day-02-scratch/scratch-projects/solutions/_minimal-fruit.sb3
+day-02-scratch/scratch-projects/solutions/01-catch-game-py2sb3.sb3
 day-02-scratch/scratch-projects/_template.zip
 day-02-scratch/scratch-projects/sample*
 day-02-scratch/scratch-projects/videos/_video_build/
