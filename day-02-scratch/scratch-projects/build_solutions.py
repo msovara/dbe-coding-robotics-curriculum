@@ -110,7 +110,21 @@ class Blocks:
             "topLevel": False,
         }
         self._append(bid)
+        self._attach_input_blocks(bid, inputs or {})
         return bid
+
+    def _attach_input_blocks(self, parent_id: str, inputs: dict[str, list[Any]]) -> None:
+        """Set parent on blocks nested in inputs (Scratch VM expects this)."""
+        for spec in inputs.values():
+            if not spec:
+                continue
+            kind = spec[0]
+            if kind in (1, 2, 3) and len(spec) > 1 and isinstance(spec[1], str):
+                child = spec[1]
+                if child in self.data:
+                    self.data[child]["parent"] = parent_id
+            if kind == 3 and len(spec) > 2 and isinstance(spec[2], str) and spec[2] in self.data:
+                self.data[spec[2]]["parent"] = parent_id
 
     def bool_block(self, opcode: str, *, inputs: dict | None = None, fields: dict | None = None) -> str:
         bid = _id()
@@ -144,6 +158,8 @@ class Blocks:
         inputs: dict[str, list[Any]] = {}
         if condition is not None:
             inputs["CONDITION"] = [2, condition]
+            if condition in self.data:
+                self.data[condition]["parent"] = bid
         self.data[bid] = {
             "opcode": opcode,
             "next": None,
@@ -178,7 +194,16 @@ class Blocks:
 
     def touching(self, sprite: str) -> str:
         menu = self.menu_shadow("sensing_touchingobjectmenu", "TOUCHINGOBJECTMENU", sprite)
-        return self.bool_block("sensing_touchingobject", inputs={"TOUCHINGOBJECTMENU": [1, menu]})
+        bid = self.bool_block("sensing_touchingobject", inputs={"TOUCHINGOBJECTMENU": [1, menu]})
+        self.data[menu]["parent"] = bid
+        return bid
+
+    def or_bool(self, left: str, right: str) -> str:
+        bid = self.bool_block("operator_or", inputs={"OPERAND1": [2, left], "OPERAND2": [2, right]})
+        for child in (left, right):
+            if child in self.data:
+                self.data[child]["parent"] = bid
+        return bid
 
     def compare(self, op: str, left: Any, right: Any) -> str:
         def input_for(value: Any) -> list[Any]:
@@ -188,10 +213,11 @@ class Blocks:
                 return [1, value]
             return [1, _num(value)]
 
-        return self.bool_block(op, inputs={"OPERAND1": input_for(left), "OPERAND2": input_for(right)})
-
-    def or_bool(self, left: str, right: str) -> str:
-        return self.bool_block("operator_or", inputs={"OPERAND1": [2, left], "OPERAND2": [2, right]})
+        bid = self.bool_block(op, inputs={"OPERAND1": input_for(left), "OPERAND2": input_for(right)})
+        for child in (left, right):
+            if isinstance(child, str) and child in self.data:
+                self.data[child]["parent"] = bid
+        return bid
 
     def pick_random(self, low: int, high: int) -> str:
         bid = _id()
@@ -277,17 +303,17 @@ def build_catch_game() -> dict[str, Any]:
     fruit.hat("event_whenflagclicked", x=40, y=40)
     fruit.stmt("looks_hide")
     with fruit.mouth("control_forever"):
-        clone_menu = fruit.menu_shadow("control_create_clone_of_menu", "CLONE_OPTION", "myself")
+        clone_menu = fruit.menu_shadow("control_create_clone_of_menu", "CLONE_OPTION", "_myself_")
         fruit.stmt("control_create_clone_of", inputs={"CLONE_OPTION": [1, clone_menu]})
         wait_rand = fruit.pick_random(1, 3)
-        fruit.stmt("control_wait", inputs={"DURATION": [3, wait_rand, [4, "1"]]})
+        fruit.stmt("control_wait", inputs={"DURATION": [1, wait_rand]})
 
     clone = Blocks()
     clone.hat("control_start_as_clone", x=40, y=220)
     rand_x = clone.pick_random(-200, 200)
     clone.stmt(
         "motion_gotoxy",
-        inputs={"X": [3, rand_x, [4, "0"]], "Y": [1, _num(170)]},
+        inputs={"X": [1, rand_x], "Y": [1, _num(170)]},
     )
     clone.stmt("looks_show")
     y_pos = clone.bool_block("motion_yposition")
