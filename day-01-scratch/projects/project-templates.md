@@ -125,67 +125,102 @@
 
 **How to read memo scripts:** Each indented line is a block nested inside the block above it. Scratch has no `end` block.
 
-**Facilitator teaching guide (how to teach, what to say, exercises with full scripts):** [Interactive Story (Day 1) facilitator guide](03-interactive-story-facilitator-guide.md) — separate from the build steps below.
+**Facilitator teaching guide (how to teach, what to say, exercises):** [Interactive Story (Day 1) facilitator guide](03-interactive-story-facilitator-guide.md)
 
 Day 1 is a **linear** story (click and arrow to turn the page). Branching choices (`ask`, `if`, path A/B) are [Day 2 Project 5](../day-02-scratch/projects/project-templates.md#project-5-interactive-story-with-choices).
 
 ### Instructions
 
-1. **Plan your story:**
-   - Beginning, middle, end
-   - Characters
-   - Settings (backgrounds)
-   - User interactions
-
-2. **Set up backgrounds:**
-   - Add at least 3 backgrounds
-   - Name them clearly
-
-3. **Create opening scene:**
-   ```
-   when green flag clicked
-   switch backdrop to [Scene 1]
-   say [Once upon a time...] for 2 seconds
-   ```
-
-4. **Add character interactions:**
-   ```
-   when this sprite clicked
-   say [Hello! Click the arrow to continue] for 2 seconds
-   ```
-
-5. **Add scene transitions:**
-   ```
-   when [right arrow] key pressed
-   switch backdrop to [next backdrop]
-   ```
-
-6. **Add multiple characters:**
-   - Each character can have different scripts
-   - Use "broadcast" to coordinate actions
+1. Plan beginning, middle, and end on paper.
+2. Add three backdrops. Name them `Home`, `Road`, `School` (in that order).
+3. Add sprites `Child` and `Friend`.
+4. Create message `scene 2`.
+5. Build the memo scripts below. Run with the green flag, then click, then right arrow.
 
 ### Story Template Structure
 
-**Scene 1: Introduction**
-- Introduce characters
-- Set the scene
-- Present a problem
+**Scene 1: Introduction** — who, where, problem (Home).  
+**Scene 2: Development** — try to solve it (Road; Friend appears).  
+**Scene 3: Resolution** — lesson / ending (School).
 
-**Scene 2: Development**
-- Character tries to solve problem
-- User makes choices
-- Consequences of choices
+On Day 1, “user interaction” means **click** and **arrow**, not `ask` / `if`.
 
-**Scene 3: Resolution**
-- Problem is solved
-- Lesson learned
-- Happy ending
+### Memo: suggested Scratch script
+
+All Day 1 story code is here. Copy from this section only.
+
+**Setup:** sprites `Child`, `Friend`. Backdrops `Home`, `Road`, `School` (in that order). Message `scene 2`.
+
+**Stage**
+
+```text
+when green flag clicked
+switch backdrop to (Home)
+```
+
+```text
+when I receive (scene 2)
+switch backdrop to (Road)
+```
+
+**Child**
+
+```text
+when green flag clicked
+show
+go to x: (-80) y: (-60)
+switch backdrop to (Home)
+say [I missed the taxi. I am late for school.] for (2) seconds
+```
+
+```text
+when this sprite clicked
+say [I need help. Press the right arrow.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+broadcast (scene 2)
+hide
+```
+
+**Friend**
+
+```text
+when green flag clicked
+hide
+go to x: (80) y: (-60)
+```
+
+```text
+when I receive (scene 2)
+show
+say [Walk with me. Press the arrow again.] for (2) seconds
+```
+
+```text
+when [right arrow] key pressed
+switch backdrop to (next backdrop)
+say [We arrived on time. Next time I will leave earlier.] for (2) seconds
+```
+
+**How to run:** Green flag (Home, Child speaks) → click Child → right arrow (Road, Friend appears, Child hides) → right arrow (School, ending line).
+
+**Check:** three named backdrops; Friend hidden on flag; `scene 2` spelled the same on broadcast and receive.
+
+**Other say lines (same scripts, change only the text)**
+
+| Prompt | Child on flag | Child on click | Friend on `scene 2` | Friend on last arrow |
+|--------|---------------|----------------|---------------------|----------------------|
+| Kindness | My classmate dropped their books. | I will help you pick them up. | Thank you. Press the arrow. | We did it together. Kindness helps. |
+| Water | The tap is running. We are wasting water. | Close the tap. Save water. | The tap is closed. Press the arrow. | We saved water. |
+| Two languages | Hello! Sawubona! | How are you? Unjani? | I am fine. Ngiyaphila. | Goodbye! Hamba kahle! |
 
 ### Extensions
 - Add sound effects
-- Create multiple endings based on choices
 - Add animations
-- Include educational content
+- Include educational content (see say-line table)
+- Day 2: multiple endings with `ask` and `if`
 
 ---
 

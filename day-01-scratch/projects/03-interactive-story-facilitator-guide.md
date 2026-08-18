@@ -7,8 +7,10 @@
 
 | File | Purpose |
 |------|---------|
-| [Project 3 memo](project-templates.md#project-3-interactive-story-intermediate) | Short build steps (answer key) |
+| **[Project 3 memo — all Scratch code](project-templates.md#memo-suggested-scratch-script)** | Every block script in **one** place |
 | [Day 2 branching story](../day-02-scratch/scratch-projects/05-interactive-story-facilitator-annotations.md) | Choices, `ask`, `if`, broadcasts — **tomorrow** |
+
+> **Copy scripts from the memo only:** [Memo: suggested Scratch script](project-templates.md#memo-suggested-scratch-script). This page is how to teach and which exercise to run. Do not hunt for code in the exercises below.
 
 ---
 
@@ -131,7 +133,9 @@ The memo’s Scene 2 says “user makes choices.” On **Day 1** that means clic
 
 ## Exercises
 
-Each Scratch exercise below has the **full block script**. Learners copy these after the paper or debug step. Do not start with Exercise 6 unless the group has already finished Exercise 2.
+**All block scripts are in the [Project 3 memo](project-templates.md#memo-suggested-scratch-script).** Use that page to copy code. Use this list only for the classroom task.
+
+Do not start with Exercise 6 unless the group has finished Exercise 2.
 
 ### Exercise 1 — Unplugged: broken instructions (10 min)
 
@@ -142,319 +146,54 @@ Give this storyboard. Ask what is missing.
 
 **Task:** Write Scene 2 in three sentences. Then list **three Scratch events** you would use (flag, click, key).
 
-**Sample Scene 2 (facilitator answer):** A friend sees the child and says they can walk together. They take the road to school. The child starts to smile.
+**Sample Scene 2:** A friend sees the child and says they can walk together. They take the road to school.
 
-**Three events (facilitator answer):**
+**Three events:** `when green flag clicked` (Scene 1), `when this sprite clicked` (talk), `when [right arrow] key pressed` (next scene).
 
-| Event | Why |
-|-------|-----|
-| `when green flag clicked` | Open Scene 1 (late for school) |
-| `when this sprite clicked` | Friend speaks in Scene 2 |
-| `when [right arrow] key pressed` | Turn the page to Scene 3 (on time) |
-
-If they code it afterwards, use the Exercise 2 / 5 scripts with these lines:
-
-```text
-when green flag clicked
-switch backdrop to (Scene 1)
-say [I missed the taxi. I am late for school.] for (2) seconds
-```
-
-```text
-when this sprite clicked
-say [Walk with me. We can still get there.] for (2) seconds
-```
-
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-```
-
-On Scene 3 the same sprite (or a second click) can say:
-
-```text
-when this sprite clicked
-say [We arrived on time. Next time I will leave earlier.] for (2) seconds
-```
+Then build the story from the [memo](project-templates.md#memo-suggested-scratch-script).
 
 **Success:** Scene 2 connects the problem to the ending; events are named.
 
----
-
 ### Exercise 2 — Scratch: three named backdrops (15 min)
 
-**Setup:** Backdrops named `Home`, `Road`, `School`, in that order. One sprite (for example the cat).
-
-**Sprite — Script 1 (start at Home)**
-
-```text
-when green flag clicked
-switch backdrop to (Home)
-say [I am at home. I must go to school.] for (2) seconds
-```
-
-**Sprite — Script 2 (talk when clicked)**
-
-```text
-when this sprite clicked
-say [Hello! Press the right arrow to continue.] for (2) seconds
-```
-
-**Sprite — Script 3 (turn the page)**
-
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-```
-
-**How to run:** Green flag → click the sprite → right arrow (Home → Road) → right arrow (Road → School).
+**Task:** Name backdrops `Home`, `Road`, `School` in that order. Build **Child** only from the memo (flag, click, arrow). You may skip Friend and `broadcast` until Exercise 4.
 
 **Check:** Someone else can play it without explanation.
 
----
-
 ### Exercise 3 — Debug (pairs, 10 min)
 
-Write **one** broken script on the board. Pairs fix it. Facilitator answer is the **fixed** column.
+Compare the broken line to the [memo](project-templates.md#memo-suggested-scratch-script). Each pair fixes **one**.
 
-**Bug A — bubble vanishes**
-
-Broken:
-
-```text
-when green flag clicked
-switch backdrop to (Scene 1)
-say [Once upon a time...]
-```
-
-Fixed:
-
-```text
-when green flag clicked
-switch backdrop to (Scene 1)
-say [Once upon a time...] for (2) seconds
-```
-
-**Bug B — extra character in Scene 1**
-
-Broken (Friend sprite):
-
-```text
-when green flag clicked
-show
-```
-
-Fixed (Friend sprite):
-
-```text
-when green flag clicked
-hide
-```
-
-**Bug C — arrow does nothing (script on the wrong sprite)**
-
-Put this on the **main** sprite (or on the **Stage**), not on a hidden sprite:
-
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-```
-
-**Bug D — backdrops in the wrong order**
-
-No new blocks. In the Backdrops pane, drag them to: `Home`, then `Road`, then `School`. Then this script works:
-
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-```
-
----
+| Bug | What they see | Fix (as in the memo) |
+|-----|----------------|----------------------|
+| `say [Once upon a time...]` with no time | Bubble flashes | `say [] for (2) seconds` |
+| Friend `show` on green flag | Two people in Scene 1 | Friend: `hide` on flag |
+| Arrow script on a hidden sprite | Arrow seems dead | Put arrow / broadcast on **Child** |
+| Backdrops in the wrong order | Story jumps Home → School | Order: Home, Road, School |
 
 ### Exercise 4 — Hide the unused character (10 min)
 
-**Sprites:** `Child` (Sprite A), `Friend` (Sprite B).  
-**Backdrops:** `Home`, `Road`, `School` in that order.
-
-**Child**
-
-```text
-when green flag clicked
-show
-go to x: (-80) y: (-60)
-switch backdrop to (Home)
-say [I am late.] for (2) seconds
-```
-
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-hide
-```
-
-**Friend**
-
-```text
-when green flag clicked
-hide
-go to x: (80) y: (-60)
-```
-
-```text
-when [right arrow] key pressed
-show
-say [Walk with me!] for (2) seconds
-```
-
-**How to run:** Green flag — only Child is visible. Right arrow — Child hides, Friend appears.
+**Task:** Add **Friend** from the memo. Child `hide`s after the arrow; Friend `show`s on `scene 2`.
 
 **Success:** Only the character who belongs in that scene is visible.
 
----
-
 ### Exercise 5 — Language / Life Skills story (15–20 min)
 
-**Setup:** Backdrops `Home`, `Road`, `School`. One sprite.
+**Task:** Keep the memo scripts. Change only the `say` text using the table in the memo (kindness, water, or two languages).
 
-**Prompt A — kindness (full memo script)**
+**Success:** Same three scenes; at least two full-sentence `say` lines.
 
-```text
-when green flag clicked
-switch backdrop to (Home)
-say [My classmate dropped their books.] for (2) seconds
-```
+### Exercise 6 — Broadcast preview (optional, 10 min)
 
-```text
-when this sprite clicked
-say [I will help you pick them up.] for (2) seconds
-```
+**Task:** Build the full memo: Stage + Child `broadcast (scene 2)` + Friend `when I receive (scene 2)`. Do **not** add Forest/Space choices.
 
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-```
-
-On the last scene, click again (same sprite, extra script is optional). Simpler: change the click line after they reach School, or add:
-
-```text
-when [space] key pressed
-switch backdrop to (School)
-say [We did it together. Kindness helps.] for (2) seconds
-```
-
-**Prompt B — water (full memo script)**
-
-```text
-when green flag clicked
-switch backdrop to (Home)
-say [The tap is running. We are wasting water.] for (2) seconds
-```
-
-```text
-when this sprite clicked
-say [Close the tap. Save water.] for (2) seconds
-```
-
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-```
-
-**Prompt C — two languages (full memo script)**
-
-```text
-when green flag clicked
-switch backdrop to (Home)
-say [Hello! Sawubona!] for (2) seconds
-```
-
-```text
-when this sprite clicked
-say [How are you? Unjani?] for (2) seconds
-```
-
-```text
-when [right arrow] key pressed
-switch backdrop to (next backdrop)
-```
-
-Same three-scene rule. At least **two** `say` lines in full sentences.
-
----
-
-### Exercise 6 — Broadcast preview (optional, 10 min, stronger groups)
-
-Do **not** add Forest/Space choices yet. Message name: `scene 2`.
-
-**Stage**
-
-```text
-when green flag clicked
-switch backdrop to (Scene 1)
-```
-
-```text
-when I receive (scene 2)
-switch backdrop to (Scene 2)
-```
-
-```text
-when I receive (scene 3)
-switch backdrop to (Scene 3)
-```
-
-**Child**
-
-```text
-when green flag clicked
-show
-go to x: (-80) y: (-60)
-say [I missed the taxi.] for (2) seconds
-```
-
-```text
-when this sprite clicked
-say [I need help.] for (2) seconds
-```
-
-```text
-when [right arrow] key pressed
-broadcast (scene 2)
-hide
-```
-
-**Friend**
-
-```text
-when green flag clicked
-hide
-go to x: (80) y: (-60)
-```
-
-```text
-when I receive (scene 2)
-show
-say [Walk with me. Press the arrow again.] for (2) seconds
-```
-
-```text
-when [right arrow] key pressed
-broadcast (scene 3)
-```
-
-**How to run:** Green flag → click Child → right arrow (Friend appears, Scene 2) → right arrow (Scene 3).
-
-**Success:** Two sprites react to **one** message. That is the seed of Day 2 Guide / Scientist / Robot.
-
----
+**Success:** Two sprites react to **one** message.
 
 ### Exercise 7 — Exit ticket (3 min, paper)
 
-Complete (facilitator answers in brackets):
-
-1. Green flag should always start at scene ______ . **[1 / Home / Scene 1]**  
+1. Green flag should always start at scene ______ . **[Home / Scene 1]**  
 2. `when this sprite clicked` is for ______ ; `when key pressed` is for ______ . **[talking / turning the page]**  
-3. Tomorrow’s story will let the player **choose**. Today’s story only lets the player ______ . **[turn the page / continue]**
+3. Tomorrow’s story will let the player **choose**. Today’s story only lets the player ______ . **[turn the page]**
 
 ---
 
@@ -496,5 +235,5 @@ If you have the full 60–90 minutes from the project template, add Exercise 4, 
 
 ## Links
 
-- **Day 1 memo:** [Project 3: Interactive Story](project-templates.md#project-3-interactive-story-intermediate)  
+- **All Scratch code (one place):** [Project 3 memo](project-templates.md#memo-suggested-scratch-script)  
 - **Day 2 (do not teach today):** [Interactive Story with choices](../day-02-scratch/scratch-projects/05-interactive-story-facilitator-annotations.md) · [Download Day 2 `.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/05-interactive-story.sb3)
