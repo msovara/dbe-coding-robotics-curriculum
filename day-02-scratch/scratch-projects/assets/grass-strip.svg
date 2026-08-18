@@ -1,0 +1,7 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480" height="70" viewBox="0 0 480 70">
+  <!-- Continuous grass strip for Water Cycle Ground (full stage width). -->
+  <rect x="0" y="28" width="480" height="42" fill="#3d9e3a"/>
+  <rect x="0" y="22" width="480" height="14" fill="#4caf50"/>
+  <path d="M0 36 Q20 8 40 36 Q60 10 80 36 Q100 6 120 36 Q140 12 160 36 Q180 8 200 36 Q220 14 240 36 Q260 6 280 36 Q300 12 320 36 Q340 8 360 36 Q380 14 400 36 Q420 8 440 36 Q460 12 480 36 V70 H0 Z" fill="#57c257"/>
+  <rect x="0" y="58" width="480" height="12" fill="#2e7d32"/>
+</svg>

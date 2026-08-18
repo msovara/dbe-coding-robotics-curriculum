@@ -29,9 +29,9 @@ Say something like:
 
 **How the demo runs**
 
-1. Click the **green flag** (reset counters; droplet at the bottom).  
-2. Click the **Sun** (not the flag again).  
-3. Watch: droplet rises → cloud says “Condensation” → droplet falls as rain → “Collection” and counters update.
+1. Click the **green flag** (reset counters; after a short pause evaporation starts).  
+2. Or **click the Sun** to start another cycle.  
+3. Watch: droplet rises → cloud says “Condensation” → droplet falls onto the **grass** → “Collection”.
 
 ---
 
@@ -69,10 +69,12 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 | `when green flag clicked` | Place the sun and reset the game. | “Setup on green flag; the *start of science* is a **click**, not the flag.” |
 | `go to x: (170) y: (120)` | Top-right of the stage. | “Keep the sun out of the droplet’s path.” |
 | `show` | Make the sun visible. | “Learners must see what to click.” |
+| `say [Click me, or wait...]` | Hint that the sun starts the cycle. | “Green flag resets; the sun *starts* evaporation.” |
+| `wait (1) seconds` then `broadcast (evaporate)` | First cycle starts on its own. | “So ‘running the project’ is not a blank stage. Clicking the sun still works for extra cycles.” |
 | `when this sprite clicked` | Hat for a mouse click on the sun. | “Different hat from green flag — Events palette.” |
 | `broadcast (evaporate)` | Tell the droplet to rise. | “The sun does not move the water. It only sends a message.” |
 
-**Demo tip:** Click the sun once. If nothing happens, they clicked the flag again instead of the sun.
+**Demo tip:** Green flag waits a few seconds, then the droplet should rise. Click the sun for another cycle.
 
 ---
 
@@ -80,8 +82,8 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 
 | Block | What it does | What to say |
 |-------|----------------|-------------|
-| `when green flag clicked` | Put the droplet at the “surface”. | “x −100, y −130 is a pond / river at the bottom left.” |
-| `go to x: (-100) y: (-130)` | Starting collection point. | “This is also where it returns after rain.” |
+| `when green flag clicked` | Put the droplet at the “surface”. | “x −100, y −100 sits just above the grass.” |
+| `go to x: (-100) y: (-100)` | Starting collection point. | “This is also where it returns after rain — just above the grass.” |
 | `show` | Show the droplet at the start. | “One droplet sprite plays *all* stages of the cycle.” |
 
 ---
@@ -130,7 +132,7 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 | `go to x: (-70) y: (100)` | Appear under the cloud. | “Teleport to the sky; we are not showing every vapour molecule.” |
 | `show` | Raindrop becomes visible. | “After hide during evaporation, we must `show` again.” |
 | `forever` | Fall until the ground. | “Mirror of rising: now y decreases.” |
-| `if ‹touching (Ground)?›` | Has rain reached the land? | “Sprite name must be exactly **Ground** or touching never fires.” |
+| `if ‹touching (Ground)? or (y position) < (-150)›` | Has rain reached the land? | “Grass strip across the bottom, plus a y check so rain cannot fall forever.” |
 | `broadcast (collected)` | Start collection. | “Broadcast **before** `stop` so the next script can run.” |
 | `stop (this script)` | Stop falling. | “If you only `stop` and never broadcast, the cycle hangs.” |
 | `change y by (-6)` | Move **down**. | “Negative y = falling rain.” |
@@ -145,7 +147,7 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 |-------|----------------|-------------|
 | `when I receive (collected)` | Rain has hit the ground. | “Fourth hat on Droplet — one sprite, four jobs.” |
 | `change (ground water) by (1)` | One collection event. | “This is the ‘water in rivers / soil’ counter.” |
-| `go to x: (-100) y: (-130)` | Return to the pond. | “The cycle can start again when they click the sun.” |
+| `go to x: (-100) y: (-100)` | Return to the pond. | “The cycle can start again when they click the sun.” |
 | `say [Collection] for (2) seconds` | Label the last stage. | “Four science words in the project: evaporate, condense, precipitate, collect.” |
 
 ---
@@ -155,8 +157,8 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 | Block | What it does | What to say |
 |-------|----------------|-------------|
 | `when green flag clicked` | Place the land at the bottom. | “Ground is mostly a **target** for `touching`.” |
-| `go to x: (0) y: (-140)` | Bottom of the stage. | “Make it wide enough that the falling droplet cannot miss.” |
-| `show` | Land is visible. | “Trees / grass costume is fine; name must stay **Ground**.” |
+| `go to x: (0) y: (-165)` | Full-width **grass** along the bottom. | “A tree is too narrow — rain can miss it. Continuous grass is a landing strip.” |
+| `show` | Land is visible. | “Keep the sprite name **Ground** so `touching (Ground)` still works.” |
 
 ---
 
@@ -164,7 +166,8 @@ In the memo, **Stage** resets the four counters. In the `.sb3`, the **Sun** does
 
 | Mistake | Symptom | Fix |
 |---------|---------|-----|
-| Clicking green flag instead of the sun | Counters reset; nothing rises | “Green flag = reset. **Click the sun** to evaporate.” |
+| Clicking green flag and waiting 0 seconds | Cycle has a 3-second hint before it starts | Wait for the sun speech bubble, or click the sun |
+| Ground is a small tree | Rain never “lands”; droplet falls off stage | Use a **full-width grass** costume named **Ground** |
 | Cloud not hidden on green flag | Cloud visible from the start | Add `hide` on Cloud’s flag script |
 | `repeat until not …` for rising/falling | Droplet never moves (same Catch Game bug) | Use `forever` + `if` + `stop this script` |
 | `stop` before `broadcast` | Cycle stops in the sky or mid-fall | Broadcast **then** stop, inside the `if` |

@@ -345,7 +345,7 @@ Simulate the water cycle: evaporation, condensation, precipitation, collection.
 
 **Facilitator annotations (what to say for each block):** [Water Cycle facilitator annotations](../scratch-projects/04-water-cycle-facilitator-annotations.md) — separate from the scripts below.
 
-**How to run:** Load the `.sb3`, click the **green flag**, then **click the Sun**. The droplet rises, the cloud appears, rain falls, and `ground water` increases.
+**How to run:** Load the `.sb3` and click the **green flag**. After a short pause the sun starts evaporation (you can also **click the Sun**). The droplet rises, the cloud appears, rain falls onto the **grass**, and `ground water` increases.
 
 **Setup:** messages `evaporate`, `condense`, `rain`, `collected`. Cloud starts hidden. Variables `evaporated`, `condensed`, `precipitated`, `ground water` (for all sprites).
 
@@ -365,6 +365,9 @@ set (ground water) to (0)
 when green flag clicked
 go to x: (170) y: (120)
 show
+say [Click me, or wait...] for (2) seconds
+wait (1) seconds
+broadcast (evaporate)
 ```
 
 ```text
@@ -376,7 +379,7 @@ broadcast (evaporate)
 
 ```text
 when green flag clicked
-go to x: (-100) y: (-130)
+go to x: (-100) y: (-100)
 show
 ```
 
@@ -420,7 +423,7 @@ when I receive (rain)
 go to x: (-70) y: (100)
 show
 forever
-  if <touching (Ground)?> then
+  if <<touching (Ground)?> or <(y position) < (-150)>> then
     broadcast (collected)
     stop (this script)
   change y by (-6)
@@ -433,7 +436,7 @@ forever
 ```text
 when I receive (collected)
 change (ground water) by (1)
-go to x: (-100) y: (-130)
+go to x: (-100) y: (-100)
 say [Collection] for (2) seconds
 ```
 
@@ -441,7 +444,7 @@ say [Collection] for (2) seconds
 
 ```text
 when green flag clicked
-go to x: (0) y: (-140)
+go to x: (0) y: (-165)
 show
 ```
 

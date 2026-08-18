@@ -94,20 +94,20 @@ COSTUME_CLOUD = {
     "rotationCenterY": 45,
 }
 COSTUME_GROUND = {
-    "assetId": "551b3fae8eab06b49013f54009a7767a",
-    "name": "trees-a",
+    "assetId": "grass-strip",
+    "name": "grass",
     "bitmapResolution": 1,
-    "md5ext": "551b3fae8eab06b49013f54009a7767a.svg",
+    "md5ext": "grass-strip.svg",
     "dataFormat": "svg",
-    "rotationCenterX": 49,
-    "rotationCenterY": 94,
+    "rotationCenterX": 240,
+    "rotationCenterY": 35,
 }
 
 WATER_LAYOUT = {
     "Sun": {"costumes": [COSTUME_SUN], "size": 90, "x": 170, "y": 120},
-    "Droplet": {"costumes": [COSTUME_DROPLET], "size": 60, "x": -100, "y": -130},
+    "Droplet": {"costumes": [COSTUME_DROPLET], "size": 60, "x": -100, "y": -100},
     "Cloud": {"costumes": [COSTUME_CLOUD], "size": 110, "x": -70, "y": 120, "visible": False},
-    "Ground": {"costumes": [COSTUME_GROUND], "size": 160, "x": 0, "y": -140},
+    "Ground": {"costumes": [COSTUME_GROUND], "size": 100, "x": 0, "y": -165},
 }
 
 

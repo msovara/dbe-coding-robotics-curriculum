@@ -29,12 +29,12 @@ You were **not** running it wrong — an earlier version of the generated file h
 ## How to run `04-water-cycle.sb3`
 
 1. **Load the project** — Scratch → **File → Load from your computer** → `04-water-cycle.sb3`.
-2. Click the **green flag** (resets counters; droplet at the bottom).
-3. Click the **Sun** (top-right) — not the flag again.
+2. Click the **green flag**. The sun says “Click me, or wait...” then evaporation starts.
+3. You can also **click the Sun** for another cycle.
 4. You should see:
    - droplet **rises** (evaporation)
    - **Cloud** appears and says “Condensation”
-   - droplet **falls** as rain
+   - droplet **falls** onto the **grass**
    - “Collection” and **ground water** increases
 5. Click the Sun again to run another cycle.
 
