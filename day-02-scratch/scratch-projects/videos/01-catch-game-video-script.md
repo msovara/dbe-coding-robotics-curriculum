@@ -77,7 +77,7 @@ The Fruit sprite needs **two separate scripts on the same sprite**. Script one: 
 
 ### 7 — Fruit script 2
 
-Script two starts with **when I start as a clone**. Go to a random x between −200 and 200, and y 170, then **show**. Inside **forever**: **if** touching the Basket **or** y is below −170, **stop this script**; otherwise change y by −5 and wait 0.03 seconds. After the loop, **if** touching the Basket, change **score** by 1, then **delete this clone**.
+Script two starts with **when I start as a clone**. Go to a random x between −200 and 200, and y 170, then **show**. Inside **forever**: **if** touching the Basket **or** y is below −170, then **if** touching add 1 to **score**, **delete this clone**, and **stop this script**; otherwise change y by −5 and wait 0.03 seconds.
 
 ### 8 — Referee
 

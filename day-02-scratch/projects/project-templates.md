@@ -89,15 +89,15 @@ go to x: (pick random (-200) to (200)) y: (170)
 show
 forever
   if <<touching (Basket)?> or <(y position) < (-170)>> then
+    if <touching (Basket)?> then
+      change (score) by (1)
+    delete this clone
     stop (this script)
   change y by (-5)
   wait (0.03) seconds
-if <touching (Basket)?> then
-  change (score) by (1)
-delete this clone
 ```
 
-**Facilitator note:** This matches the working `.sb3`. Use **`forever` + `if … stop (this script)`** for the fall loop. Do **not** use `repeat until <not <touching …> or …>` — that stops on the first frame and the fruit never falls.
+**Facilitator note:** Score and **delete this clone** must be **inside** the `if touching or off bottom` block, **before** `stop (this script)`. If they sit below the `forever` loop, `stop` ends the script and clones never disappear.
 
 **Referee sprite**
 
