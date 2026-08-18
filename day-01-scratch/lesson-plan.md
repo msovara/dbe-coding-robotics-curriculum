@@ -107,8 +107,8 @@
   - Create a story with multiple scenes
   - Use events to trigger scene changes
   - Add user interaction
-  - **How to teach and exercises:** [Interactive Story (Day 1) facilitator guide](projects/03-interactive-story-facilitator-guide.md)
-  - **Scratch code (GitHub Pages):** [Interactive Story code](projects/03-interactive-story-code.md)
+  - **How to teach:** [Interactive Story facilitator annotations](projects/03-interactive-story-facilitator-guide.md)
+  - **Memo (scripts):** [Interactive Story memo](projects/03-interactive-story-code.md)
 
 **Lunch Break (12:00 - 13:00)**
 

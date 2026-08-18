@@ -72,8 +72,8 @@ nav:
           - Computational thinking exercises: day-01-scratch/activities/computational-thinking-exercises.md
       - Projects:
           - Project templates: day-01-scratch/projects/project-templates.md
-          - Interactive Story code: day-01-scratch/projects/03-interactive-story-code.md
-          - Interactive Story facilitator guide: day-01-scratch/projects/03-interactive-story-facilitator-guide.md
+          - Interactive Story memo: day-01-scratch/projects/03-interactive-story-code.md
+          - Interactive Story facilitator annotations: day-01-scratch/projects/03-interactive-story-facilitator-guide.md
       - Assessment:
           - Rubric: day-01-scratch/assessment/rubric.md
   - Day 2 – Advanced Scratch:

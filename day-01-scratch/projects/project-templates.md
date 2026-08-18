@@ -117,39 +117,40 @@
 ---
 
 ## Project 3: Interactive Story (Intermediate)
-**Time:** 60-90 minutes
-**Learning Objectives:**
-- Use multiple events
-- Create scenes with backgrounds
-- Add user interaction
 
-**How to read memo scripts:** Each indented line is a block nested inside the block above it. Scratch has no `end` block.
-
-**Facilitator teaching guide (how to teach, what to say, exercises):** [Interactive Story (Day 1) facilitator guide](03-interactive-story-facilitator-guide.md)
+**Time:** 60–90 minutes  
+**Concepts:** events, backdrops, broadcast
 
 Day 1 is a **linear** story (click and arrow to turn the page). Branching choices (`ask`, `if`, path A/B) are [Day 2 Project 5](../day-02-scratch/projects/project-templates.md#project-5-interactive-story-with-choices).
 
-### Instructions
+### Task
 
-1. Plan beginning, middle, and end on paper.
-2. Add three backdrops. Name them `Home`, `Road`, `School` (in that order).
-3. Add sprites `Child` and `Friend`.
-4. Create message `scene 2`.
-5. Build the memo scripts below. Run with the green flag, then click, then right arrow.
+Make a three-scene story: Home → Road → School. The player turns the page with a **click** and the **right arrow**.
 
-### Story Template Structure
+### Requirements
 
-**Scene 1: Introduction** — who, where, problem (Home).  
-**Scene 2: Development** — try to solve it (Road; Friend appears).  
-**Scene 3: Resolution** — lesson / ending (School).
+- Sprites: **Child**, **Friend**.
+- Backdrops: **Home**, **Road**, **School** (in that order).
+- Green flag starts at Home. Friend stays **hidden**.
+- Clicking **Child** shows a line of dialogue.
+- Right arrow broadcasts `scene 2`: backdrop Road, Child hides, Friend appears.
+- Right arrow again goes to School and the ending line.
 
-On Day 1, “user interaction” means **click** and **arrow**, not `ask` / `if`.
+### Extensions
+
+- Change only the `say` text (kindness, water, two languages — table in the memo).
+- Sound effects.
+- Day 2: two paths with `ask` and `if`.
 
 ### Memo: suggested Scratch script
 
-The same scripts are also on the short GitHub Pages page **[Interactive Story code](03-interactive-story-code.md)** (Day 1 → Projects → Interactive Story code).
+**Scratch scripts (GitHub Pages):** [Interactive Story memo](03-interactive-story-code.md)
 
-**Setup:** sprites `Child`, `Friend`. Backdrops `Home`, `Road`, `School` (in that order). Message `scene 2`.
+**Facilitator annotations (what to say for each block):** [Interactive Story facilitator annotations](03-interactive-story-facilitator-guide.md) — separate from the scripts below; use while explaining, not in Scratch.
+
+**How to run:** Green flag (Home, Child speaks) → **click** Child → **right arrow** (Road, Friend appears) → **right arrow** (School, ending line).
+
+**Setup:** sprites `Child`, `Friend`. Backdrops `Home`, `Road`, `School` (in that order). Message `scene 2`. Friend starts hidden.
 
 **Stage**
 
@@ -163,7 +164,7 @@ when I receive (scene 2)
 switch backdrop to (Road)
 ```
 
-**Child**
+**Child — start position**
 
 ```text
 when green flag clicked
@@ -173,10 +174,14 @@ switch backdrop to (Home)
 say [I missed the taxi. I am late for school.] for (2) seconds
 ```
 
+**Child — click**
+
 ```text
 when this sprite clicked
 say [I need help. Press the right arrow.] for (2) seconds
 ```
+
+**Child — next scene**
 
 ```text
 when [right arrow] key pressed
@@ -184,7 +189,7 @@ broadcast (scene 2)
 hide
 ```
 
-**Friend**
+**Friend — start hidden**
 
 ```text
 when green flag clicked
@@ -192,11 +197,15 @@ hide
 go to x: (80) y: (-60)
 ```
 
+**Friend — scene 2**
+
 ```text
 when I receive (scene 2)
 show
 say [Walk with me. Press the arrow again.] for (2) seconds
 ```
+
+**Friend — ending**
 
 ```text
 when [right arrow] key pressed
@@ -204,9 +213,7 @@ switch backdrop to (next backdrop)
 say [We arrived on time. Next time I will leave earlier.] for (2) seconds
 ```
 
-**How to run:** Green flag (Home, Child speaks) → click Child → right arrow (Road, Friend appears, Child hides) → right arrow (School, ending line).
-
-**Check:** three named backdrops; Friend hidden on flag; `scene 2` spelled the same on broadcast and receive.
+**Check:** three named backdrops; Friend hidden on green flag; `scene 2` spelled the same on broadcast and receive.
 
 **Other say lines (same scripts, change only the text)**
 
@@ -215,12 +222,6 @@ say [We arrived on time. Next time I will leave earlier.] for (2) seconds
 | Kindness | My classmate dropped their books. | I will help you pick them up. | Thank you. Press the arrow. | We did it together. Kindness helps. |
 | Water | The tap is running. We are wasting water. | Close the tap. Save water. | The tap is closed. Press the arrow. | We saved water. |
 | Two languages | Hello! Sawubona! | How are you? Unjani? | I am fine. Ngiyaphila. | Goodbye! Hamba kahle! |
-
-### Extensions
-- Add sound effects
-- Add animations
-- Include educational content (see say-line table)
-- Day 2: multiple endings with `ask` and `if`
 
 ---
 
