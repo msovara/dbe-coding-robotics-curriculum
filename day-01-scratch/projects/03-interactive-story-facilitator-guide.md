@@ -4,17 +4,17 @@
 **Use this for:** What to **say** while explaining each block — not text to paste into Scratch.
 
 **Download the Scratch file (same file as the exercises):**  
-[Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+[Download `03-interactive-story.sb3`](03-interactive-story-code/03-interactive-story.sb3)
 
-In Scratch: **File → Load from your computer**. Scripts and exercises: [Interactive Story memo](03-interactive-story-code.md#exercises).
+In Scratch: **File → Load from your computer**. Scripts and exercises: [Interactive Story memo](03-interactive-story-code/#exercises).
 
 **Companion files**
 
 | File | Purpose |
 |------|---------|
 | [Project 3 memo](project-templates.md#project-3-interactive-story-intermediate) | Clean block scripts (answer key) |
-| [Interactive Story memo](03-interactive-story-code.md) | Scripts **and exercises** (includes `.sb3` download) |
-| [Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3) | Working project to demo |
+| [Interactive Story memo](03-interactive-story-code/) | Scripts **and exercises** (includes `.sb3` download) |
+| [Download `03-interactive-story.sb3`](03-interactive-story-code/03-interactive-story.sb3) | Working project to demo |
 
 ---
 
@@ -174,9 +174,9 @@ If you have 60–90 minutes, add the exercises below.
 
 ## Exercises
 
-**Download:** [Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+**Download:** [Download `03-interactive-story.sb3`](03-interactive-story-code/03-interactive-story.sb3)
 
-The full exercise list and the block scripts are on the **same page:** [Interactive Story memo — Exercises](03-interactive-story-code.md#exercises).
+The full exercise list and the block scripts are on the **same page:** [Interactive Story memo — Exercises](03-interactive-story-code/#exercises).
 
 Load the `.sb3` with **File → Load from your computer**. Then use the memo scripts as the answer key.
 
@@ -194,6 +194,6 @@ Load the `.sb3` with **File → Load from your computer**. Then use the memo scr
 
 ## Links
 
-- **Download `.sb3`:** [raw GitHub file](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)  
-- **Memo (scripts):** [Interactive Story memo](03-interactive-story-code.md)  
+- **Download `.sb3`:** [03-interactive-story.sb3](03-interactive-story-code/03-interactive-story.sb3)  
+- **Memo (scripts):** [Interactive Story memo](03-interactive-story-code/)  
 - **Day 2 (do not teach today):** [Interactive Story with choices](../day-02-scratch/scratch-projects/05-interactive-story-facilitator-annotations.md) · [Download Day 2 `.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/05-interactive-story.sb3)

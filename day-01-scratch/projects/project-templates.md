@@ -144,11 +144,11 @@ Make a three-scene story: Home → Road → School. The player turns the page wi
 
 ### Memo: suggested Scratch script
 
-**Scratch file:** [`03-interactive-story.sb3`](../scratch-projects/solutions/03-interactive-story.sb3) — open in Scratch to see and test the blocks.
+**Scratch file:** [`03-interactive-story.sb3`](03-interactive-story-code/03-interactive-story.sb3) — open in Scratch to see and test the blocks.
 
-**Download:** [Download `03-interactive-story.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+**Download:** [Download `03-interactive-story.sb3`](03-interactive-story-code/03-interactive-story.sb3)
 
-**Scratch scripts (GitHub Pages):** [Interactive Story memo](03-interactive-story-code.md)
+**Scratch scripts (GitHub Pages):** [Interactive Story memo](03-interactive-story-code/)
 
 **Facilitator annotations (what to say for each block):** [Interactive Story facilitator annotations](03-interactive-story-facilitator-guide.md) — separate from the scripts below; use while explaining, not in Scratch.
 

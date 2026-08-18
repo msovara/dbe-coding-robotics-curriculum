@@ -28,7 +28,7 @@ Make a three-scene story: Home → Road → School. The player turns the page wi
 
 **Scratch file:** [`03-interactive-story.sb3`](03-interactive-story.sb3) — download from this page, then **File → Load from your computer**.
 
-**Facilitator annotations (what to say for each block):** [Interactive Story facilitator annotations](03-interactive-story-facilitator-guide.md) — separate from the scripts below; use while explaining, not in Scratch.
+**Facilitator annotations (what to say for each block):** [Interactive Story facilitator annotations](../03-interactive-story-facilitator-guide.md) — separate from the scripts below; use while explaining, not in Scratch.
 
 **How to run:** Load the `.sb3` (**File → Load from your computer**). Green flag (Home, Child speaks) → **click** Child → **right arrow** (Road, Friend appears) → **right arrow** (School, ending line).
 
@@ -123,4 +123,4 @@ Load it with **File → Load from your computer**. Use the scripts above as the 
 | 6 | Full memo with `broadcast (scene 2)`. No Forest/Space choices. | 10 min |
 | 7 | Exit ticket: flag starts at _____; click is for _____; arrow is for _____. | 3 min |
 
-**Facilitator annotations (what to say):** [Interactive Story facilitator annotations](03-interactive-story-facilitator-guide.md)
+**Facilitator annotations (what to say):** [Interactive Story facilitator annotations](../03-interactive-story-facilitator-guide.md)

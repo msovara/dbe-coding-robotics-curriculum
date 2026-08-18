@@ -108,8 +108,8 @@
   - Use events to trigger scene changes
   - Add user interaction
   - **How to teach:** [Interactive Story facilitator annotations](projects/03-interactive-story-facilitator-guide.md)
-  - **Memo (scripts):** [Interactive Story memo](projects/03-interactive-story-code.md)
-  - **Download `.sb3`:** [03-interactive-story.sb3](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-01-scratch/scratch-projects/solutions/03-interactive-story.sb3)
+  - **Memo (scripts):** [Interactive Story memo](projects/03-interactive-story-code/)
+  - **Download `.sb3`:** [03-interactive-story.sb3](projects/03-interactive-story-code/03-interactive-story.sb3)
 
 **Lunch Break (12:00 - 13:00)**
 

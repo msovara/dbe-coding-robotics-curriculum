@@ -460,7 +460,7 @@ Optional: clicking the Cloud can also `broadcast (rain)`.
 **Time:** 60–75 minutes  
 **Concepts:** broadcasting, conditions, branching story
 
-Builds on the [Day 1 linear story](../../day-01-scratch/projects/03-interactive-story-code.md) (click and arrow to turn the page). This project adds **choices**.
+Builds on the [Day 1 linear story](../../day-01-scratch/projects/03-interactive-story-code/) (click and arrow to turn the page). This project adds **choices**.
 
 ### Task
 

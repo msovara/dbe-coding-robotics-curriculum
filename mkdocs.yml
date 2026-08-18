@@ -72,7 +72,7 @@ nav:
           - Computational thinking exercises: day-01-scratch/activities/computational-thinking-exercises.md
       - Projects:
           - Project templates: day-01-scratch/projects/project-templates.md
-          - Interactive Story memo (scripts, exercises, .sb3): day-01-scratch/projects/03-interactive-story-code.md
+          - Interactive Story memo (scripts, exercises, .sb3): day-01-scratch/projects/03-interactive-story-code/index.md
           - Interactive Story facilitator annotations: day-01-scratch/projects/03-interactive-story-facilitator-guide.md
       - Assessment:
           - Rubric: day-01-scratch/assessment/rubric.md

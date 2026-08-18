@@ -745,6 +745,15 @@ def main() -> None:
     day1_out = DAY1_OUTPUT_DIR / "03-interactive-story.sb3"
     write_sb3(day1, day1_out)
     print(f"Wrote {day1_out}")
+    day1_pages = (
+        ROOT.parent.parent
+        / "day-01-scratch"
+        / "projects"
+        / "03-interactive-story-code"
+        / "03-interactive-story.sb3"
+    )
+    shutil.copy2(day1_out, day1_pages)
+    print(f"Wrote {day1_pages}")
 
 
 if __name__ == "__main__":
