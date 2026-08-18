@@ -1,6 +1,4 @@
-# Catch Game sprite assets (Scratch 3 library)
-
-Official Scratch library costumes, bundled so the `.sb3` opens with the intended art.
+Official Scratch library costumes, bundled so the `.sb3` files open with the intended art.
 
 | File | Scratch library sprite | Used as |
 |------|------------------------|---------|
@@ -8,6 +6,10 @@ Official Scratch library costumes, bundled so the `.sb3` opens with the intended
 | `3826a4091a33e4d26f87a2fac7cf796b.svg` | **Apple** | Fruit |
 | `46dde2baba61a7e48463ae8e58441470.svg` | **Referee** | Referee |
 | `cd21514d0531fdffb22204e0ec5ed84a.svg` | Default backdrop | Stage |
+| `c9630e30e59e4565e785a26f58568904.svg` | **Cloud** | Cloud |
+| `406808d86aff20a15d592b308e166a32.svg` | **Sun** | Sun |
+| `1c44b7494dec047371f74c705f1d99fc.svg` | **Ball** (costume e) | Droplet |
+| `551b3fae8eab06b49013f54009a7767a.svg` | **Trees** | Ground |
 
 Source: [Scratch sprite library](https://github.com/scratchfoundation/scratch-gui/tree/develop/src/lib/libraries) (MIT-licensed Scratch assets).
 

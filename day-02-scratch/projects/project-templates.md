@@ -339,9 +339,17 @@ Simulate the water cycle: evaporation, condensation, precipitation, collection.
 
 ### Memo: suggested Scratch script
 
-**Setup:** messages `evaporate`, `condense`, `rain`, `collected`. Cloud starts hidden.
+**Scratch file:** [`04-water-cycle.sb3`](../scratch-projects/solutions/04-water-cycle.sb3) — open in Scratch to see and test the blocks.
 
-**Stage**
+**Download:** [Download `04-water-cycle.sb3`](https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/04-water-cycle.sb3)
+
+**Facilitator annotations (what to say for each block):** [Water Cycle facilitator annotations](../scratch-projects/04-water-cycle-facilitator-annotations.md) — separate from the scripts below.
+
+**How to run:** Load the `.sb3`, click the **green flag**, then **click the Sun**. The droplet rises, the cloud appears, rain falls, and `ground water` increases.
+
+**Setup:** messages `evaporate`, `condense`, `rain`, `collected`. Cloud starts hidden. Variables `evaporated`, `condensed`, `precipitated`, `ground water` (for all sprites).
+
+**Stage (or Sun on green flag):** reset counters
 
 ```text
 when green flag clicked
@@ -349,7 +357,6 @@ set (evaporated) to (0)
 set (condensed) to (0)
 set (precipitated) to (0)
 set (ground water) to (0)
-switch backdrop to (Water Cycle)
 ```
 
 **Sun**
@@ -365,7 +372,7 @@ when this sprite clicked
 broadcast (evaporate)
 ```
 
-**Droplet — start position and evaporation**
+**Droplet — start position**
 
 ```text
 when green flag clicked
@@ -373,14 +380,19 @@ go to x: (-100) y: (-130)
 show
 ```
 
+**Droplet — evaporation**
+
 ```text
 when I receive (evaporate)
-repeat until <(y position) > (90)>
+show
+forever
+  if <(y position) > (90)> then
+    hide
+    broadcast (condense)
+    stop (this script)
   change y by (5)
   change (evaporated) by (1)
   wait (0.05) seconds
-hide
-broadcast (condense)
 ```
 
 **Cloud**
@@ -401,18 +413,22 @@ broadcast (rain)
 hide
 ```
 
-**Droplet — rain and collection (same sprite)**
+**Droplet — rain**
 
 ```text
 when I receive (rain)
 go to x: (-70) y: (100)
 show
-repeat until <touching (Ground)?>
+forever
+  if <touching (Ground)?> then
+    broadcast (collected)
+    stop (this script)
   change y by (-6)
   change (precipitated) by (1)
   wait (0.05) seconds
-broadcast (collected)
 ```
+
+**Droplet — collection (same sprite)**
 
 ```text
 when I receive (collected)
@@ -421,9 +437,17 @@ go to x: (-100) y: (-130)
 say [Collection] for (2) seconds
 ```
 
+**Ground**
+
+```text
+when green flag clicked
+go to x: (0) y: (-140)
+show
+```
+
 Optional: clicking the Cloud can also `broadcast (rain)`.
 
-**Check:** message names match everywhere; Ground is where the droplet can touch it; Cloud starts hidden.
+**Check:** message names match everywhere; Ground is where the droplet can touch it; Cloud starts hidden; `broadcast` is **inside** the `if`, **before** `stop (this script)`.
 
 ---
 

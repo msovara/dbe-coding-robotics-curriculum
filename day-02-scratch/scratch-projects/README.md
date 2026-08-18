@@ -26,6 +26,22 @@ You were **not** running it wrong — an earlier version of the generated file h
 
 **Sprites:** The `.sb3` uses official Scratch library art — **Bowl** (Basket), **Apple** (Fruit), **Referee** — stored in [`assets/`](assets/README.md).
 
+## How to run `04-water-cycle.sb3`
+
+1. **Load the project** — Scratch → **File → Load from your computer** → `04-water-cycle.sb3`.
+2. Click the **green flag** (resets counters; droplet at the bottom).
+3. Click the **Sun** (top-right) — not the flag again.
+4. You should see:
+   - droplet **rises** (evaporation)
+   - **Cloud** appears and says “Condensation”
+   - droplet **falls** as rain
+   - “Collection” and **ground water** increases
+5. Click the Sun again to run another cycle.
+
+**Download:** `https://github.com/msovara/dbe-coding-robotics-curriculum/raw/main/day-02-scratch/scratch-projects/solutions/04-water-cycle.sb3`
+
+Teaching notes: [04-water-cycle-facilitator-annotations.md](04-water-cycle-facilitator-annotations.md).
+
 ## What is in `solutions/`
 
 | File | Project | Status |
@@ -35,7 +51,8 @@ You were **not** running it wrong — an earlier version of the generated file h
 | [`01-catch-game-solution.mp4`](videos/01-catch-game-solution.mp4) | Catch Game **video walkthrough** (~8 min) | Generated (slides + narration) |
 | `02-quiz-game.sb3` | Project 2: Interactive Quiz | *Add manually or extend build script* |
 | `03-platformer.sb3` | Project 3: Platformer | *Planned* |
-| `04-water-cycle.sb3` | Project 4: Water Cycle | *Planned* |
+| `04-water-cycle.sb3` | Project 4: Water Cycle | Generated (matches memo script) |
+| [Water Cycle facilitator annotations](04-water-cycle-facilitator-annotations.md) | What to **say** for each block | Separate teaching guide (not in Scratch) |
 | `05-*` | Project 5 | *Planned* |
 
 You can also drag an `.sb3` onto [TurboWarp](https://turbowarp.org/) for a fast preview without signing in.
@@ -52,7 +69,7 @@ Keep solutions aligned with the **memo** in `project-templates.md` so they stay 
 
 ## Regenerate generated files
 
-The catch game is built from Python (not hand-edited in Scratch):
+The catch game and water cycle are built from Python (not hand-edited in Scratch):
 
 ```bash
 python day-02-scratch/scratch-projects/build_solutions.py
