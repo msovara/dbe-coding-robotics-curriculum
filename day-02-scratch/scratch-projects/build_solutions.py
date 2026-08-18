@@ -15,7 +15,45 @@ from typing import Any, Iterator
 
 ROOT = Path(__file__).parent
 TEMPLATE_DIR = ROOT / "_template_extracted"
+ASSETS_DIR = ROOT / "assets"
 OUTPUT_DIR = ROOT / "solutions"
+
+# Scratch 3 library costumes (see assets/README.md)
+COSTUME_BOWL = {
+    "assetId": "d147f16e3e2583719c073ac5b55fe3ca",
+    "name": "bowl-a",
+    "bitmapResolution": 1,
+    "md5ext": "d147f16e3e2583719c073ac5b55fe3ca.svg",
+    "dataFormat": "svg",
+    "rotationCenterX": 30,
+    "rotationCenterY": 15,
+}
+COSTUME_APPLE = {
+    "assetId": "3826a4091a33e4d26f87a2fac7cf796b",
+    "name": "apple",
+    "bitmapResolution": 1,
+    "md5ext": "3826a4091a33e4d26f87a2fac7cf796b.svg",
+    "dataFormat": "svg",
+    "rotationCenterX": 31,
+    "rotationCenterY": 31,
+}
+COSTUME_REFEREE = {
+    "assetId": "46dde2baba61a7e48463ae8e58441470",
+    "name": "referee-a",
+    "bitmapResolution": 1,
+    "md5ext": "46dde2baba61a7e48463ae8e58441470.svg",
+    "dataFormat": "svg",
+    "rotationCenterX": 44,
+    "rotationCenterY": 63,
+}
+COSTUME_BACKDROP = {
+    "assetId": "cd21514d0531fdffb22204e0ec5ed84a",
+    "name": "backdrop1",
+    "md5ext": "cd21514d0531fdffb22204e0ec5ed84a.svg",
+    "dataFormat": "svg",
+    "rotationCenterX": 240,
+    "rotationCenterY": 180,
+}
 
 
 def _id() -> str:
@@ -169,21 +207,14 @@ class Blocks:
         return bid
 
 
-def default_costume() -> list[dict[str, Any]]:
-    return [
-        {
-            "assetId": "bcf454acf82e4504149f7ffe07081dbc",
-            "name": "costume1",
-            "bitmapResolution": 1,
-            "md5ext": "bcf454acf82e4504149f7ffe07081dbc.svg",
-            "dataFormat": "svg",
-            "rotationCenterX": 48,
-            "rotationCenterY": 50,
-        }
-    ]
-
-
-def make_sprite(name: str, blocks: Blocks, layer: int, **kwargs: Any) -> dict[str, Any]:
+def make_sprite(
+    name: str,
+    blocks: Blocks,
+    layer: int,
+    *,
+    costumes: list[dict[str, Any]],
+    **kwargs: Any,
+) -> dict[str, Any]:
     return {
         "isStage": False,
         "name": name,
@@ -193,14 +224,14 @@ def make_sprite(name: str, blocks: Blocks, layer: int, **kwargs: Any) -> dict[st
         "blocks": blocks.data,
         "comments": {},
         "currentCostume": 0,
-        "costumes": default_costume(),
+        "costumes": costumes,
         "sounds": [],
         "volume": 100,
         "layerOrder": layer,
         "visible": kwargs.get("visible", True),
         "x": kwargs.get("x", 0),
         "y": kwargs.get("y", 0),
-        "size": 100,
+        "size": kwargs.get("size", 100),
         "direction": 90,
         "draggable": False,
         "rotationStyle": "all around",
@@ -217,16 +248,7 @@ def make_stage(**kwargs: Any) -> dict[str, Any]:
         "blocks": kwargs.get("blocks", {}),
         "comments": {},
         "currentCostume": 0,
-        "costumes": [
-            {
-                "assetId": "cd21514d0531fdffb22204e0ec5ed84a",
-                "name": "backdrop1",
-                "md5ext": "cd21514d0531fdffb22204e0ec5ed84a.svg",
-                "dataFormat": "svg",
-                "rotationCenterX": 240,
-                "rotationCenterY": 180,
-            }
-        ],
+        "costumes": [COSTUME_BACKDROP],
         "sounds": [],
         "volume": 100,
         "layerOrder": 0,
@@ -321,9 +343,31 @@ def build_catch_game() -> dict[str, Any]:
     return {
         "targets": [
             make_stage(variables={score_id: ["score", 0]}, broadcasts={win_id: "win"}),
-            make_sprite("Basket", basket, 1, y=-145),
-            make_sprite("Fruit", fruit_all, 2, visible=True),
-            make_sprite("Referee", referee, 3, visible=False),
+            make_sprite(
+                "Basket",
+                basket,
+                1,
+                costumes=[COSTUME_BOWL],
+                y=-145,
+                size=130,
+            ),
+            make_sprite(
+                "Fruit",
+                fruit_all,
+                2,
+                costumes=[COSTUME_APPLE],
+                visible=True,
+                size=75,
+            ),
+            make_sprite(
+                "Referee",
+                referee,
+                3,
+                costumes=[COSTUME_REFEREE],
+                visible=False,
+                y=40,
+                size=85,
+            ),
         ],
         "monitors": [
             {
@@ -353,6 +397,33 @@ def build_catch_game() -> dict[str, Any]:
     }
 
 
+def ensure_sprite_assets() -> None:
+    ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+    required = [
+        COSTUME_BOWL["md5ext"],
+        COSTUME_APPLE["md5ext"],
+        COSTUME_REFEREE["md5ext"],
+        COSTUME_BACKDROP["md5ext"],
+    ]
+    missing = [name for name in required if not (ASSETS_DIR / name).exists()]
+    if not missing:
+        return
+    try:
+        import urllib.request
+
+        base = "https://cdn.assets.scratch.mit.edu/internalapi/asset"
+        for name in missing:
+            url = f"{base}/{name}/get/"
+            dest = ASSETS_DIR / name
+            print(f"Downloading {name} ...")
+            urllib.request.urlretrieve(url, dest)
+    except OSError as exc:
+        raise FileNotFoundError(
+            f"Missing sprite assets in {ASSETS_DIR}: {', '.join(missing)}. "
+            "Run with network access or copy files from assets/README.md."
+        ) from exc
+
+
 def ensure_template_assets() -> None:
     if TEMPLATE_DIR.exists():
         return
@@ -367,11 +438,11 @@ def ensure_template_assets() -> None:
 
 
 def write_sb3(project: dict[str, Any], output_path: Path) -> None:
-    ensure_template_assets()
+    ensure_sprite_assets()
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(output_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
-        for asset in TEMPLATE_DIR.iterdir():
-            if asset.name != "project.json":
+        for asset in ASSETS_DIR.iterdir():
+            if asset.is_file() and asset.suffix.lower() in {".svg", ".png", ".wav", ".jpg", ".jpeg"}:
                 zf.write(asset, arcname=asset.name)
         zf.writestr("project.json", json.dumps(project, separators=(",", ":")))
 

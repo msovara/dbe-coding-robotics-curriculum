@@ -11,9 +11,9 @@ You were **not** running it wrong — an earlier version of the generated file h
 3. Click the **green flag** once (top of the stage, not the “Full screen” button alone).
 4. You should see:
    - **score** in the top-left corner (stage monitor)
-   - **Basket** (cat costume) at the bottom — move with **←** and **→**
-   - **Fruit clones** falling from the top every 1–3 seconds (original Fruit hides on flag)
-   - **Referee** stays hidden until you reach **score 20**, then says “You win!”
+   - **Basket** (Scratch **Bowl** costume) at the bottom — move with **←** and **→**
+   - **Apple** clones falling from the top every 1–3 seconds (original Fruit hides on flag)
+   - **Referee** (Scratch library sprite) hidden until **score 20**, then says “You win!”
 5. Click the **red stop sign** to reset, then green flag again for a new game.
 
 **If something still looks wrong**
@@ -22,12 +22,10 @@ You were **not** running it wrong — an earlier version of the generated file h
 |---------|----------------|
 | Only the basket moves | Old `.sb3` — re-download or run `build_solutions.py` again |
 | No fruit falling | Green flag not clicked, or project did not load fully — reload the file |
-| Cannot catch fruit | Sprites overlap visually (all use cat costume) — widen the basket under the fruit |
+| Cannot catch fruit | Move the **bowl** under the falling **apple**; widen catch by moving early |
 | No win message | Score must reach **20**; watch the score monitor |
 
-Swap cat costumes for basket/fruit/backdrop from the Scratch library when demoing to learners.
-
-You can also drag an `.sb3` onto [TurboWarp](https://turbowarp.org/) for a fast preview without signing in.
+**Sprites:** The `.sb3` uses official Scratch library art — **Bowl** (Basket), **Apple** (Fruit), **Referee** — stored in [`assets/`](assets/README.md).
 
 ## What is in `solutions/`
 
@@ -40,7 +38,7 @@ You can also drag an `.sb3` onto [TurboWarp](https://turbowarp.org/) for a fast 
 | `04-water-cycle.sb3` | Project 4: Water Cycle | *Planned* |
 | `05-*` | Project 5 | *Planned* |
 
-Sprites use the default Scratch cat costume so the logic loads reliably. After opening, swap in basket/fruit/backdrop art from the Scratch library.
+You can also drag an `.sb3` onto [TurboWarp](https://turbowarp.org/) for a fast preview without signing in.
 
 ## For facilitators: save your own solution
 
