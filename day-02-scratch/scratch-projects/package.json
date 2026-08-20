@@ -1,0 +1,13 @@
+{
+  "name": "scratch-projects",
+  "version": "1.0.0",
+  "description": "This folder holds **real Scratch block projects** you can open in the editor for testing — easier than reading the text memos in [project-templates.md](../projects/project-templates.md).",
+  "main": "_inject.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
