@@ -39,6 +39,8 @@ TODO-personal.md
 *.pdf
 *.ppt
 *.pptx
+!supporting-materials/Workshop_Quality_Feedback_Session.pptx
+!exports/dbe-scratch-days-1-2.zip
 
 # Keep PDFs if they're curriculum materials, but ignore large ones
 # Uncomment if you want to ignore all PDFs:
